@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prompt Eficiente em Tecnologia — Guia Prático para Liderança Técnica</title>
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+  <main class="container">
+    <a class="nav-back" href="../../">← Voltar ao portal</a>
+
+    <header class="presentation-header">
+      <span class="section-label">Engenharia de Prompt</span>
+      <h1>Prompt Eficiente em Tecnologia</h1>
+      <p class="subtitle">Guia prático para líderes técnicos, arquitetos, gestores e profissionais de produto e engenharia</p>
+      <p class="meta">Abril 2026 · Leitura contínua · ~12 min</p>
+    </header>
+
+    <!-- 1. Por que isso importa -->
+    <section class="presentation-section">
+      <span class="section-label">Contexto</span>
+      <h2>Por que dominar prompts importa para quem lidera tecnologia?</h2>
+      <p>Modelos de linguagem de grande escala (LLMs) já são parte do stack de muitas equipes — de geração de código a análise de requisitos. Mas a diferença entre uma resposta genérica e uma acionável está na qualidade do prompt. Para liderança técnica, essa habilidade impacta diretamente:</p>
+      <div class="grid-3">
+        <div class="card-block">
+          <h4>⚡ Velocidade</h4>
+          <p>Reduz ciclos de revisão entre IA e desenvolvedor</p>
+        </div>
+        <div class="card-block">
+          <h4>🎯 Precisão</h4>
+          <p>Respostas alinhadas ao contexto do domínio</p>
+        </div>
+        <div class="card-block">
+          <h4>🔍 Qualidade</h4>
+          <p>Menos alucinações, mais output útil</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Princípios de um bom prompt -->
+    <section class="presentation-section">
+      <span class="section-label">Fundamentos</span>
+      <h2>Os 6 princípios de um bom prompt</h2>
+      <p>Inspirados nas melhores práticas consolidadas (Anthropic, Google, OpenAI) e adaptados para o contexto técnico:</p>
+
+      <h3>1. Seja específico</h3>
+      <p>Elimine ambiguidades. Quanto mais detalhado o pedido, menor a margem para interpretação livre.</p>
+      <div class="highlight">
+        <strong>Vago:</strong> "Explique microservices"<br/>
+        <strong>Específico:</strong> "Explique os padrões de comunicação entre microsserviços (sync vs async), cite exemplos com Kafka e REST, e aponte 3 armadilhas operacionais em produção."
+      </div>
+
+      <h3>2. Forneça contexto</h3>
+      <p>O modelo não conhece seu ambiente. Dê stack, restrições de negócio, versões de tecnologia e público da resposta.</p>
+      <div class="highlight">
+        <strong>Sem contexto:</strong> "Crie uma API REST"<br/>
+        <strong>Com contexto:</strong> "Crie uma API REST em Node.js 20 + Express para um serviço de pedidos em e-commerce. Usar PostgreSQL, autenticação JWT, padrão Repository, e escrito em português do Brasil nos comentários."
+      </div>
+
+      <h3>3. Defina o formato de saída</h3>
+      <p>Especifique estrutura, extensão, linguagem e estilo. Isso evita respostas em formato inútil para o fluxo de trabalho.</p>
+
+      <h3>4. Estabeleça restrições e limites</h3>
+      <p>O que NÃO fazer é tão importante quanto o que fazer. Bloqueie respostas genéricas, proíba suposições sem fundamento.</p>
+
+      <h3>5. Use exemplos (few-shot)</h3>
+      <p>Um ou dois exemplos de entrada/saída guiam o modelo com mais eficácia que páginas de instrução.</p>
+
+      <h3>6. Itere e refaque</h3>
+      <p>Prompt engineering é processo, não ato único. Use a primeira resposta como baseline e refin-a.</p>
+    </section>
+
+    <!-- 3. Estrutura de um prompt técnico -->
+    <section class="presentation-section">
+      <span class="section-label">Estrutura</span>
+      <h2>Anatomia de um prompt técnico eficiente</h2>
+      <p>Use esta estrutura modular ao construir prompts para qualquer tarefa em tecnologia:</p>
+
+      <div class="grid-2">
+        <div class="phase-block">
+          <div class="timeline">Bloco 1</div>
+          <h4>Persona / Papel</h4>
+          <p>"Atue como um arquiteto de software sênior com 15 anos de experiência em sistemas distribuídos."</p>
+        </div>
+        <div class="phase-block">
+          <div class="timeline">Bloco 2</div>
+          <h4>Tarefa clara</h4>
+          <p>"Analise o diagrama de arquitetura anotado e identifique riscos de escalabilidade."</p>
+        </div>
+        <div class="phase-block">
+          <div class="timeline">Bloco 3</div>
+          <h4>Contexto / Dados</h4>
+          <p>Inclua stack, volumes, SLAs, constraints regulatórias, exemplos de código.</p>
+        </div>
+        <div class="phase-block">
+          <div class="timeline">Bloco 4</div>
+          <h4>Formato de saída</h4>
+          <p>"Responda em tabela Markdown com colunas: Risco, Impacto (1-5), Mitigação, Esforço estimado."</p>
+        </div>
+        <div class="phase-block">
+          <div class="timeline">Bloco 5</div>
+          <h4>Restrições</h4>
+          <p>"Não invente ferramentas inexistentes. Se não tiver informação, diga 'dados insuficientes'."</p>
+        </div>
+        <div class="phase-block">
+          <div class="timeline">Bloco 6</div>
+          <h4>Exemplos (opcional)</h4>
+          <p>"Exemplo de saída esperada: [tabela preenchida com 1 linha]."</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Exemplos bons vs ruins -->
+    <section class="presentation-section">
+      <span class="section-label">Comparação</span>
+      <h2>Exemplos: bom prompt vs. ruim prompt</h2>
+
+      <div class="grid-2">
+        <div class="risk-block" style="border-left-color: #e53e3e;">
+          <h4>❌ Ruim</h4>
+          <p><strong>Cenário: Análise de código legado</strong><br/>
+          "Analise esse código e me diga se está bom."</p>
+        </div>
+        <div class="phase-block" style="border-left: 4px solid #38a169;">
+          <h4 style="color: #38a169;">✅ Bom</h4>
+          <p><strong>Cenário: Análise de código legado</strong><br/>
+          "Atue como engenheiro de software sênior. Analise o código Java abaixo focando em: (1) smell codes, (2) violações do SOLID, (3) riscos de performance. Formate a resposta como lista numerada com severidade (baixa/média/crítica) e sugestão de refatoração. Código: [anexado]"</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="risk-block" style="border-left-color: #e53e3e;">
+          <h4>❌ Ruim</h4>
+          <p><strong>Cenário: Documentação técnica</strong><br/>
+          "Escreva a doc desse módulo."</p>
+        </div>
+        <div class="phase-block" style="border-left: 4px solid #38a169;">
+          <h4 style="color: #38a169;">✅ Bom</h4>
+          <p><strong>Cenário: Documentação técnica</strong><br/>
+          "Escreva uma README.md para o módulo de pagamentos em Python. Inclua: visão geral, requisitos (Python 3.11+, Stripe SDK), instalação, exemplo de uso com código, e seção de troubleshooting para erros 402 e 429. Tom: técnico mas acessível para devs plenos."</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="risk-block" style="border-left-color: #e53e3e;">
+          <h4>❌ Ruim</h4>
+          <p><strong>Cenário: Troubleshooting</strong><br/>
+          "Não está funcionando, o que faço?"</p>
+        </div>
+        <div class="phase-block" style="border-left: 4px solid #38a169;">
+          <h4 style="color: #38a169;">✅ Bom</h4>
+          <p><strong>Cenário: Troubleshooting</strong><br/>
+          "Estou recebendo erro 502 Bad Gateway no Nginx ao fazer proxy para uma API Node.js na porta 3000. Servidor Ubuntu 22.04, Nginx 1.24, PM2. Logs anexados. Liste as 5 causas mais prováveis em ordem de probabilidade, com comando de diagnóstico para cada uma."</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Erros comuns -->
+    <section class="presentation-section">
+      <span class="section-label">Armadilhas</span>
+      <h2>7 erros comuns ao escrever prompts em tecnologia</h2>
+      <ul>
+        <li><strong>Prompt vago demais:</strong> "Faça algo com isso" — sem contexto, o modelo inventa.</li>
+        <li><strong>Over-prompting:</strong> 500 palavras de contexto quando 100 bastam — o modelo se perde no ruído.</li>
+        <li><strong>Ignorar formato de saída:</strong> pedir "um resumo" sem especificar extensão ou estrutura gera respostas inúteis.</li>
+        <li><strong>Não usar sistema de mensagens:</strong> em APIs, a message role "system" define persona e restrições — não a ignore.</li>
+        <li><strong>Confiar sem validar:</strong> LLMs alucinam. Sempre verifique factos, código e números.</li>
+        <li><strong>Não iterar:</strong> primeira rara é raramente a melhor. Refine, peça ajustes, testes.</li>
+        <li><strong>Misturar idiomas inconsistentemente:</strong> defina o idioma da resposta no prompt e mantenha.</li>
+      </ul>
+    </section>
+
+    <!-- 6. Adaptação por domínio -->
+    <section class="presentation-section">
+      <span class="section-label">Adaptação</span>
+      <h2>Como adaptar prompts para cada contexto de tecnologia</h2>
+
+      <h3>📊 Análise e Dados</h3>
+      <p>Foque em precisão estatística, fontes citáveis e limitações dos dados. Peça códigos SQL/Python validados e justificativa para cada transformação.</p>
+      <div class="highlight">
+        <strong>Exemplo:</strong> "Analise este dataset de latência de API (CSV anexo). Calcule p50, p95, p99 por endpoint. Gere código Python com pandas e matplotlib. Inclua análise de outliers com IQR. Relatório em Markdown."
+      </div>
+
+      <h3>🏗️ Arquitetura</h3>
+      <p>Forneça diagramas, restrições de compliance, volumes, e SLAs. Peça trade-offs explícitos, não apenas recomendações.</p>
+      <div class="highlight">
+        <strong>Exemplo:</strong> "Preciso migrar monolito Spring Boot para microsserviços. Stack atual: Java 17, Oracle DB, 500 req/s. Restrições: zero downtime, PCI-DSS. Liste 3 estratégias de migração com prós/contras, risco e timeline estimado."
+      </div>
+
+      <h3>💻 Código</h3>
+      <p>Especifique linguagem, versão, padrões, testes. Peça explicação inline e sempre valide com CI.</p>
+      <div class="highlight">
+        <strong>Exemplo:</strong> "Escreva uma función em Go 1.22 que recebe um slice de inteiros e retorna os dois números que somam um target (Two Sum). Use hash map. Inclua testes com table-driven tests e benchmark. Código com comentários em PT-BR."
+      </div>
+
+      <h3>📝 Documentação</h3>
+      <p>Defina audiência, formato final (README, ADR, runbook), e exemplos de uso. Tom deve refletir o leitor.</p>
+
+      <h3>🔧 Troubleshooting</h3>
+      <p>Sempre inclua: stack completo, versões, logs (anexados), passos para reproduzir, e o que já tentou.</p>
+    </section>
+
+    <!-- 7. Checklist -->
+    <section class="presentation-section">
+      <span class="section-label">Checklist</span>
+      <h2>Checklist: antes de enviar seu prompt</h2>
+      <ul>
+        <li>☐ <strong>Papel definido?</strong> O modelo sabe que papel desempenhar?</li>
+        <li>☐ <strong>Tarefa clara?</strong> Um verbo de ação e um objeto específico?</li>
+        <li>☐ <strong>Contexto suficiente?</strong> Stack, versões, restrições de negócio?</li>
+        <li>☐ <strong>Formato de saída especificado?</strong> Tabela, código, Markdown, JSON?</li>
+        <li>☐ <strong>Restrições explícitas?</strong> O que NÃO fazer, limites de escopo?</li>
+        <li>☐ <strong>Exemplos incluídos?</strong> Pelo menos 1 exemplo de entrada/saída?</li>
+        <li>☐ <strong>Idioma definido?</strong> PT-BR ou EN? Tom técnico ou acessível?</li>
+        <li>☐ <strong>Validação planejada?</strong> Como você vai revisar a resposta?</li>
+      </ul>
+    </section>
+
+    <!-- 8. Referências -->
+    <section class="presentation-section">
+      <span class="section-label">Referências</span>
+      <h2>Referências e fontes</h2>
+      <ul>
+        <li><a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview" target="_blank">Anthropic — Prompt Engineering Guide</a></li>
+        <li><a href="https://developers.google.com/gemini/api/guides/prompting" target="_blank">Google — Prompting Strategies (Gemini)</a></li>
+        <li><a href="https://platform.openai.com/docs/guides/prompt-engineering" target="_blank">OpenAI — Prompt Engineering Guide</a></li>
+        <li><a href="https://www.alura.com.br/artigos/dicas-de-como-escrever-bom-prompt" target="_blank">Alura — Como criar um prompt: guia completo com dicas</a></li>
+        <li><a href="https://www.v7labs.com/blog/prompt-engineering-guide" target="_blank">V7 Labs — The Ultimate Guide to AI Prompt Engineering [2025]</a></li>
+      </ul>
+      <p style="margin-top: 24px; font-size: 14px; color: #999;">Elaborado com pesquisa em português do Brasil e inglês, com foco em aplicabilidade para liderança e equipes técnicas.</p>
+    </section>
+
+  </main>
+</body>
+</html>
