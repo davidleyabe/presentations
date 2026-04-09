@@ -1,0 +1,6 @@
+{
+  "title": "Supply Chain Flow",
+  "slug": "supply-chain-flow",
+  "outputDir": "assets/diagrams",
+  "nodes": ["Fornecedores", "Estoque", "Lojas"]
+}

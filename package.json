@@ -1,0 +1,29 @@
+{
+  "name": "presentations-site",
+  "version": "1.0.0",
+  "description": "Site base para hospedar apresentações via GitHub Pages.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "diagram:test": "node scripts/test-excalidraw.mjs",
+    "diagram:generate": "node scripts/generate-excalidraw-diagram.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidleyabe/presentations.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidleyabe/presentations/issues"
+  },
+  "homepage": "https://github.com/davidleyabe/presentations#readme",
+  "dependencies": {
+    "@excalidraw/excalidraw": "^0.18.0",
+    "playwright": "^1.59.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "vite": "^8.0.8"
+  }
+}
