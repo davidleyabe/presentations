@@ -15,12 +15,15 @@ Receber um pedido de apresentação, pesquisar o tema, montar uma apresentação
 ## Output padrão
 - Título da apresentação
 - Resumo executivo
-- Slides ou seções objetivas
+- Seções objetivas em formato de landing page
 - Link final publicado
+- Referências relevantes quando usadas
 
 ## Convenções
 - Preferir linguagem executiva e visual limpa.
 - Cada apresentação deve ter URL própria.
-- Reutilizar o CSS padrão do portal.
+- Fundamentar o conteúdo em pesquisa web real, em português do Brasil e inglês, sempre que isso for relevante.
+- Priorizar Tailwind CSS como base visual das páginas.
+- Reutilizar o CSS padrão do portal quando fizer sentido, sem abandonar a direção visual definida.
 - Quando houver diagrama, salvar a imagem e o arquivo-fonte editável no repositório e referenciar a imagem no HTML final.
 - **Formato padrão (a partir de 2026-04-09):** todas as apresentações são landing pages com fundo branco, leitura contínua vertical, visual limpo e minimalista. NÃO usar formato de slides HTML, carrosséis ou navegação entre slides.
