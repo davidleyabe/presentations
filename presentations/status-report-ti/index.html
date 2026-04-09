@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Como construir um bom Status Report de Projeto de TI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .traffic-light { display: inline-block; width: 18px; height: 18px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+    .green { background: #22c55e; }
+    .yellow { background: #eab308; }
+    .red { background: #ef4444; }
+    .section-divider { border-top: 1px solid #e5e7eb; margin: 3rem 0; }
+    .code-block { background: #f3f4f6; border-left: 3px solid #6366f1; padding: 1rem; font-size: 0.9rem; overflow-x: auto; }
+    pre { white-space: pre-wrap; margin: 0; }
+    .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    @media (max-width: 768px) { .comparison-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body class="bg-white text-gray-800 leading-relaxed">
+
+<div class="max-w-3xl mx-auto px-6 py-12">
+
+  <a href="../../index.html" class="text-indigo-600 hover:underline text-sm">&larr; voltar para a lista</a>
+
+  <!-- HEADER -->
+  <header class="mt-8 mb-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-3">Como construir um bom Status Report de Projeto de TI</h1>
+    <p class="text-lg text-gray-600 mb-2">Guia prático para líderes, gerentes e equipes que precisam comunicar o estado real de um projeto — sem ruído, sem surpresa.</p>
+    <p class="text-sm text-gray-400">Abril 2026 · Leitura contínua · ~10 min</p>
+  </header>
+
+  <!-- 1. DEFINIÇÃO -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-semibold text-gray-900 mb-3">1. O que é um Status Report</h2>
+    <p>Um <strong>Status Report</strong> (ou relatório de status) é a comunicação periódica e estruturada sobre o estado atual de um projeto de TI. Ele resume onde o projeto está em relação ao plano — cronograma, custo, escopo, riscos e entregas — e serve como principal mecanismo de transparência entre a equipe técnica e os stakeholders.</p>
+    <p class="mt-3">Não é um dashboard automático. Não é um e-mail longo cheio de detalhes técnicos. É uma <strong>foto honesta e acionável</strong> do projeto em um momento dado.</p>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- 2. POR QUE IMPORTA -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-semibold text-gray-900 mb-3">2. Por que ele importa</h2>
+    <div class="bg-indigo-50 border border-indigo-100 rounded-lg p-5 mb-4">
+      <p class="font-medium text-indigo-900 mb-2">Sem status report:</p>
+      <ul class="list-disc list-inside text-indigo-800 space-y-1 text-sm">
+        <li>Stakeholders descobrem problemas tarde demais.</li>
+        <li>Patrocinadores perdem confiança na capacidade de entrega.</li>
+        <li>Equipes trabalham em silos, sem alinhamento de prioridades.</li>
+        <li>Riscos viram surpresas, e surpresas viram crises.</li>
+      </ul>
+    </div>
+    <div class="bg-green-50 border border-green-100 rounded-lg p-5">
+      <p class="font-medium text-green-900 mb-2">Com um bom status report:</p>
+      <ul class="list-disc list-inside text-green-800 space-y-1 text-sm">
+        <li>Decisões são tomadas com base em fatos, não em suposições.</li>
+        <li>Expectativas são alinhadas antes que desvios se acumulem.</li>
+        <li>A equipe tem um ritual de reflexão que melhora a execução.</li>
+        <li>A liderança tem visibilidade sem precisar interromper o time.</li>
+      </ul>
+    </div>
+    <p class="mt-4 text-sm text-gray-500">O PMBOK e o Prince2 incluem a comunicação de status como processo essencial. Na prática ágil, o status report evolui para o sprint review, mas a necessidade de comunicação periódica com stakeholders externos permanece.</p>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- 3. AUDIÊNCIA -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-semibold text-gray-900 mb-3">3. Ajuste a profundidade para a audiência</h2>
+    <p>Um erro comum é usar o <strong>mesmo relatório</strong> para todos. A profundidade, o vocabulário e a frequência devem mudar conforme o público:</p>
+    <div class="overflow-x-auto mt-4">
+      <table class="w-full text-sm border border-gray-200 rounded-lg overflow-hidden">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="text-left p-3 font-medium">Público</th>
+            <th class="text-left p-3 font-medium">Foco</th>
+            <th class="text-left p-3 font-medium">Frequência</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          <tr>
+            <td class="p-3 font-medium">Patrocinador / C-Level</td>
+            <td class="p-3">Resultado de negócio, riscos críticos, semáforo</td>
+            <td class="p-3">Semanal ou quinzenal</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Gerente de Programa</td>
+            <td class="p-3">Desvios de cronograma/custo, dependências, decisões pendentes</td>
+            <td class="p-3">Semanal</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Equipe Técnica</td>
+            <td class="p-3">Bloqueios, prioridades da semana, impedimentos</td>
+            <td class="p-3">Diária ou semanal (standup/sprint)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4">Regra prática: <strong>a cada nível acima, menos detalhe técnico e mais impacto de negócio.</strong> Um CTO não precisa saber qual PR está parada. Precisa saber se a entrega da funcionalidade X está em risco e o que está sendo feito a respeito.</p>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- 4. COMPONENTES ESSENCIAIS -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-semibold text-gray-900 mb-3">4. Componentes essenciais</h2>
+    <p>Todo bom status report deve responder a estas perguntas, independentemente do formato:</p>
+    <ol class="list-decimal list-inside space-y-3 mt-4">
+      <li><strong>Semáforo do projeto</strong> — status geral (verde, amarelo, vermelho)</li>
+      <li><strong>Resumo executivo</strong> — 2 a 3 frases com o estado atual</li>
+      <li><strong>Conquistas da semana</strong> — o que foi concluído</li>
+      <li><strong>Próximos passos</strong> — o que será feito no próximo período</li>
+      <li><strong>Riscos e bloqueios</strong> — o que pode atrasar ou impactar o projeto</li>
+      <li><strong>Decisões pendentes</strong> — o que precisa de aprovação ou definição</li>
+      <li><strong>Métricas-chave</strong> — % concluído, burn rate, velocity, etc.</li>
+      <li><strong> Solicitações / pedidos</strong> — o que a equipe precisa da organização</li>
+    </ol>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- 5. SEMÁFORO -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-semibold text-gray-900 mb-3">5. Semáforo e critérios de saúde</h2>
+    <p>O semáforo (RAG — Red, Amber, Green) é o elemento visual mais poderoso de um status report. Mas ele só funciona se os critérios forem <strong>claros e definidos antes do projeto começar</strong>.</p>
+
+    <div class="mt-6 space-y-4">
+      <div class="flex items-start gap-3 p-4 bg-green-50 rounded-lg border border-green-200">
+        <span class="traffic-light green mt-1 flex-shrink-0"></span>
+        <div>
+          <p class="font-semibold text-green-900">Verde — Tudo dentro do esperado</p>
+          <p class="text-sm text-green-800 mt-1">Cronograma dentro da margem aceitável (ex: ≤ 1 semana de desvio). Sem riscos críticos sem mitigação. Entregas sendo feitas conforme planejado. Orçamento dentro do planejado.</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-yellow-50 rounded-lg border border-yellow-200">
+        <span class="traffic-light yellow mt-1 flex-shrink-0"></span>
+        <div>
+          <p class="font-semibold text-yellow-900">Amarelo — Atenção necessária</p>
+          <p class="text-sm text-yellow-800 mt-1">Desvio de cronograma entre 1 e 3 semanas. Riscos identificados que precisam de ação. Dependências atrasadas que podem impactar. Orçamento com desvio moderado.</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-red-50 rounded-lg border border-red-200">
+        <span class="traffic-light red mt-1 flex-shrink-0"></span>
+        <div>
+          <p class="font-semibold text-red-900">Vermelho — Intervenção imediata</p>
+          <p class="text-sm text-red-800 mt-1">Desvio superior a 3 semanas sem plano de recuperação. Risco materializado ou bloqueio sem resolução. Entregas críticas atrasadas. Orçamento estourado ou com risco iminente de estouro.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-6 bg-gray-50 border border-gray-200 rounded-lg p-4">
+      <p class="font-medium text-gray-800 mb-2">⚠️ Regra de ouro</p>
+      <p class="text-sm text-gray-700">O semáforo deve refletir a <strong>situação real</strong>, não a esperança. Um projeto que está "vermelho" com 2 meses de atraso mas recebeu "verde" porque o gerente "acha que vai recuperar" é um projeto que falhou em comunicação. Seja honesto: a cor errada agora vira crise maior depois.</p>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- 6. CADÊNCIA -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-semibold text-gray-900 mb-3">6. Cadência de comunicação</h2>
+    <p>Não existe frequência mágica. A cadência ideal depende da velocidade de mudança do projeto e da necessidade dos stakeholders:</p>
+    <ul class="list-disc list-inside space-y-2 mt-3">
+      <li><strong>Diária (standup):</strong> para a equipe. Foco em bloqueios e próximas 24h.</li>
+      <li><strong>Semanal:</strong> formato padrão para a maioria dos projetos de TI. Equilibrado entre frequência e esforço.</li>
+      <li><strong>Quinzenal:</strong> para projetos estáveis, baixa volatilidade, ou stakeholders de nível executivo.</li>
+      <li><strong>Mensal:</strong> relatório consolidado / steerco. Visão de programa, não de projeto.</li>
+    </ul>
+    <p class="mt-4 text-sm text-gray-500">Dica: a regra do "momentum" — se o intervalo entre reports for tão grande que os stakeholders perdem o fio da meada, a cadência está errada. Se o esforço de preparar o report é maior que o valor gerado, o formato precisa ser simplificado.</p>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- 7. ERROS COMUNS -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-semibold text-gray-900 mb-3">7. Erros comuns</h2>
+    <div class="space-y-4 mt-4">
+      <div class="border-l-4 border-red-400 pl-4">
+        <p class="font-medium">1. O "tudo verde" até explodir</p>
+        <p class="text-sm text-gray-600">Projetos que ficam verde por semanas e de repente viram vermelho sem aviso. O problema não era o projeto — era a comunicação.</p>
+      </div>
+      <div class="border-l-4 border-red-400 pl-4">
+        <p class="font-medium">2. Excesso de detalhe técnico</p>
+        <p class="text-sm text-gray-600">O relatório vira um dump de atividades do Jira. O leitor não entende o quadro geral. Pior: ele se perde no ruído.</p>
+      </div>
+      <div class="border-l-4 border-red-400 pl-4">
+        <p class="font-medium">3. Sem plano de ação para problemas</p>
+        <p class="text-sm text-gray-600">Reportar que algo está atrasado sem dizer o que será feito a respeito é só gerar ansiedade. Sem ação, o problema persiste.</p>
+      </div>
+      <div class="border-l-4 border-red-400 pl-4">
+        <p class="font-medium">4. Omitir riscos</p>
+        <p class="text-sm text-gray-600">Receio de parecer incompetente leva a esconder problemas. Resultado: o risco cresce até virar catástrofe, e a confiança se perde.</p>
+      </div>
+      <div class="border-l-4 border-red-400 pl-4">
+        <p class="font-medium">5. Frequência irregular</p>
+        <p class="text-sm text-gray-600">Reportar quando dá vontade. Os stakeholders param de confiar e começam a pedir atualizações à força — que é exatamente o que o report deveria evitar.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- 8. EXEMPLO RUIM vs BOM -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-semibold text-gray-900 mb-3">8. Exemplo: ruim vs. bom</h2>
+    <div class="comparison-grid">
+      <!-- Ruim -->
+      <div class="border border-red-200 rounded-lg p-4 bg-red-50/50">
+        <p class="font-semibold text-red-700 mb-3">❌ Exemplo ruim</p>
+        <div class="text-sm space-y-2">
+          <p><strong>Status:</strong> Verde</p>
+          <p><strong>Atualização:</strong> "A equipe continuou trabalhando nas funcionalidades da sprint. Alguns membros tiveram reuniões com o cliente. O banco de dados está quase pronto. Seguimos no cronograma."</p>
+          <p class="text-red-700 font-medium mt-3 text-xs">Problemas: vago, sem métricas, sem semáforo claro, sem ações, sem riscos, "verde" sem justificativa.</p>
+        </div>
+      </div>
+      <!-- Bom -->
+      <div class="border border-green-200 rounded-lg p-4 bg-green-50/50">
+        <p class="font-semibold text-green-700 mb-3">✅ Exemplo bom</p>
+        <div class="text-sm space-y-2">
+          <p><strong>Status Geral:</strong> <span class="traffic-light yellow"></span> Amarelo</p>
+          <p><strong>Resumo:</strong> Sprint 7 concluída com 82% das stories entregues. Módulo de pagamentos com atraso de 3 dias (dependência de API externa). Risco ativo na integração com sistema legado.</p>
+          <p><strong>Concluído:</strong> Autenticação SSO, tela de dashboard, testes de regressão do módulo fiscal.</p>
+          <p><strong>Próxima semana:</strong> Iniciar integração com ERP, retomar módulo de pagamentos, refinar specs do relatório gerencial.</p>
+          <p><strong>Risco:</strong> API do sistema legado com response time instável. Ação: reunião com fornecedor agendada para quinta.</p>
+          <p><strong>Decisão pendente:</strong> Aprovação do orçamento extra para ambiente de homologação (R$ 18k). Prazo: 10/04.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- 9. TEMPLATE -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-semibold text-gray-900 mb-3">9. Template reutilizável</h2>
+    <p>Copie e adapte este template para o seu projeto:</p>
+    <div class="code-block mt-4 rounded-lg">
+      <pre><code>STATUS REPORT — [Nome do Projeto]
+Período: [semana / data a data]
+Status Geral: 🟢 Verde | 🟡 Amarelo | 🔴 Vermelho
+
+─── RESUMO EXECUTIVO ───
+[2-3 frases: onde estamos, principal atenção, trajectory]
+
+─── CONQUISTAS DESTA SEMANA ───
+• [entrega 1]
+• [entrega 2]
+
+─── PRÓXIMOS PASSOS (próxima semana) ───
+• [atividade 1]
+• [atividade 2]
+
+─── RISCOS E BLOQUEIOS ───
+• [risco 1] — Impacto: [alto/médio/baixo] — Ação: [plano]
+• [bloqueio 1] — Resolução: [o que está sendo feito]
+
+─── MÉTRICAS ───
+• % Concluído: [X%]
+• Desvio de cronograma: [X dias/semanas]
+• Orçamento utilizado: [X% do total]
+
+─── DECISÕES PENDENTES ───
+• [decisão 1] — Precisa de: [quem] — Prazo: [data]
+
+─── SOLICITAÇÕES ───
+• [o que a equipe precisa da organização]
+
+Próximo report: [data]</code></pre>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- 10. CHECKLIST -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-semibold text-gray-900 mb-3">10. Checklist final</h2>
+    <p>Antes de enviar o status report, valide:</p>
+    <div class="mt-4 space-y-2">
+      <label class="flex items-start gap-3 cursor-pointer">
+        <input type="checkbox" class="mt-1 h-4 w-4 rounded border-gray-300" />
+        <span>Semáforo reflete a situação real (sem "wishful coloring")</span>
+      </label>
+      <label class="flex items-start gap-3 cursor-pointer">
+        <input type="checkbox" class="mt-1 h-4 w-4 rounded border-gray-300" />
+        <span>Resumo executivo cabe em 3 frases e responde "onde estamos"</span>
+      </label>
+      <label class="flex items-start gap-3 cursor-pointer">
+        <input type="checkbox" class="mt-1 h-4 w-4 rounded border-gray-300" />
+        <span>Conquistas são específicas (não "trabalhamos no sistema")</span>
+      </label>
+      <label class="flex items-start gap-3 cursor-pointer">
+        <input type="checkbox" class="mt-1 h-4 w-4 rounded border-gray-300" />
+        <span>Riscos têm plano de ação ou mitigação associado</span>
+      </label>
+      <label class="flex items-start gap-3 cursor-pointer">
+        <input type="checkbox" class="mt-1 h-4 w-4 rounded border-gray-300" />
+        <span>Decisões pendentes identificam quem precisa decidir e até quando</span>
+      </label>
+      <label class="flex items-start gap-3 cursor-pointer">
+        <input type="checkbox" class="mt-1 h-4 w-4 rounded border-gray-300" />
+        <span>Métricas relevantes estão presentes (não excesso, não ausência)</span>
+      </label>
+      <label class="flex items-start gap-3 cursor-pointer">
+        <input type="checkbox" class="mt-1 h-4 w-4 rounded border-gray-300" />
+        <span>O relatório está adequado ao público que vai ler</span>
+      </label>
+      <label class="flex items-start gap-3 cursor-pointer">
+        <input type="checkbox" class="mt-1 h-4 w-4 rounded border-gray-300" />
+        <span>Data do próximo report está clara</span>
+      </label>
+      <label class="flex items-start gap-3 cursor-pointer">
+        <input type="checkbox" class="mt-1 h-4 w-4 rounded border-gray-300" />
+        <span>Alguém de fora consegue entender o status em menos de 2 minutos</span>
+      </label>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- FONTES -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-semibold text-gray-900 mb-3">Fontes e referências</h2>
+    <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+      <li>PMI — <em>A Guide to the Project Management Body of Knowledge (PMBOK Guide)</em>, 7th Edition. Comunicação de projetos e stakeholders.</li>
+      <li>AXELOS — <em>Managing Successful Projects with Prince2</em>, 7th Edition. Relatórios de exception e highlight.</li>
+      <li>Atlassian — <em>Status Reports: Best Practices for Keeping Stakeholders in the Loop</em>. Disponível em atlassian.com.</li>
+      <li>Wrike — <em>How to Write a Project Status Report (+ Free Template)</em>. Disponível em wrike.com.</li>
+      <li>Google DORA — <em>Accelerate: State of DevOps Report</em>. Métricas de performance de entrega de software.</li>
+    </ul>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="border-t border-gray-200 pt-6 mt-12">
+    <p class="text-sm text-gray-400">Conteúdo produzido com pesquisa e boas práticas consolidadas de gestão de projetos de TI. Compartilhe, adapte e use.</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
