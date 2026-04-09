@@ -11,14 +11,12 @@ Transformar pedidos em apresentações prontas para uso, cada uma com sua própr
 - Home do portal: `index.html`
 - Estilo base: `css/style.css`
 - Apresentações individuais: `presentations/<slug>/index.html`
-- Gerador de diagramas Excalidraw: `scripts/generate-excalidraw-diagram.mjs`
 
 ## Regras operacionais
 - Cada nova apresentação deve ganhar uma URL própria.
 - A home deve ser atualizada com link para a nova apresentação.
 - O CSS padrão deve ser reaproveitado sempre que possível.
 - Novas páginas devem priorizar Tailwind CSS como base visual, mantendo visual limpo, moderno e responsivo.
-- Quando um diagrama ajudar a explicar melhor o conteúdo, usar o gerador real de Excalidraw do workspace para produzir `.png` e `.excalidraw.json`.
 - Publicação deve ocorrer no repositório GitHub `davidleyabe/presentations`.
 - O resultado final esperado é uma URL publicada em `https://davidleyabe.github.io/presentations/`.
 

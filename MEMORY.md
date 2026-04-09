@@ -21,7 +21,6 @@ Every presentation should be publishable through this workspace without requirin
 - Presentation content should be grounded in real web research in Brazilian Portuguese and English, not only model prior knowledge.
 - When relevant, the final presentation should include source links that materially informed the content.
 - Tailwind CSS is the visual default for new pages and meaningful portal evolution, including icon choices aligned with that stack.
-- Excalidraw diagrams can now be generated autonomously through `scripts/generate-excalidraw-diagram.mjs`, exported as image plus source JSON, stored in the repo, and embedded in the final published HTML.
 - For presentation refactors, the preferred behavior is to update the existing presentation in the same slug instead of publishing a parallel duplicate, unless there is a clear reason not to.
 - Fast publication is important, but not at the expense of editorial quality.
 
@@ -31,4 +30,3 @@ Every presentation should be publishable through this workspace without requirin
 
 ## Next step
 - Review and tighten security rules for this agent and the main agent.
-- Evolve the Excalidraw spec generation so the agent can create richer diagrams beyond the current flow-oriented baseline.
