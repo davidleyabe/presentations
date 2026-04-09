@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Engenharia de Software como Prática Organizacional</title>
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+  <main class="container">
+    <a href="../../index.html" class="nav-back">← voltar</a>
+
+    <header class="presentation-header">
+      <h1>Engenharia de Software como prática organizacional</h1>
+      <p class="subtitle">Como transformar desenvolvimento em uma capacidade previsível, escalável e orientada a valor</p>
+      <p class="meta">Abril 2026 · Proposta executiva com benchmarks e recomendações práticas</p>
+    </header>
+
+    <section class="presentation-section" id="contexto">
+      <span class="section-label">01 — Contexto</span>
+      <h2>O ponto principal: engenharia de software não é só codar melhor</h2>
+      <p>Se a empresa quer aumentar velocidade com qualidade, usar IA com segurança e reduzir retrabalho, engenharia de software precisa virar prática organizacional. Isso significa ter padrões, rituais, métricas, ownership técnico e uma comunidade que sustente a evolução do modelo no dia a dia.</p>
+      <div class="highlight">
+        <strong>Tese:</strong> sem uma prática explícita de engenharia, a IA acelera volume, mas também acelera inconsistência, débito técnico e risco operacional.
+      </div>
+      <div class="grid-2">
+        <div class="card-block">
+          <h4>O que normalmente acontece hoje</h4>
+          <p>Times trabalham com boas intenções, mas com padrões fragmentados, reviews irregulares, baixa comparabilidade entre squads e pouca visibilidade real sobre produtividade, qualidade e impacto da IA.</p>
+        </div>
+        <div class="card-block">
+          <h4>O que a empresa precisa passar a ter</h4>
+          <p>Uma disciplina de engenharia com governança leve, automação forte, indicadores claros e um chapter que crie alinhamento técnico contínuo entre times.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="presentation-section" id="por-que-agora">
+      <span class="section-label">02 — Por que agora</span>
+      <h2>IA aumenta a urgência, não reduz a necessidade de engenharia</h2>
+      <p>Com assistentes de código e geração automatizada, o gargalo deixa de ser apenas produzir código e passa a ser controlar qualidade, consistência arquitetural, segurança, tempo de revisão e aprendizado coletivo. É por isso que o processo precisa ser medido e parcialmente automatizado.</p>
+      <div class="grid-3">
+        <div class="card-block metric">
+          <div class="number">+IA</div>
+          <div class="label">mais volume de código entrando no fluxo</div>
+        </div>
+        <div class="card-block metric">
+          <div class="number">+risco</div>
+          <div class="label">mais chance de regressão sem guardrails</div>
+        </div>
+        <div class="card-block metric">
+          <div class="number">+disciplina</div>
+          <div class="label">mais necessidade de padrões e métricas</div>
+        </div>
+      </div>
+      <p>Na prática, a empresa precisa tratar engenharia de software como um sistema de operação, e não como uma competência isolada de alguns bons desenvolvedores.</p>
+    </section>
+
+    <section class="presentation-section" id="objetivos">
+      <span class="section-label">03 — Objetivos</span>
+      <h2>5 objetivos claros para implantar a prática</h2>
+      <p>Seus 3 objetivos iniciais estão corretos. A melhor forma é refiná-los e completar o conjunto com mais 2 objetivos que fechem o modelo operacional.</p>
+      <div class="grid-2" style="grid-template-columns: 1fr;">
+        <div class="card-block">
+          <h4>1. Medir o impacto da IA no ciclo de desenvolvimento</h4>
+          <p>Estabelecer uma linha de base e acompanhar se a IA está reduzindo tempo de entrega, esforço de revisão e retrabalho, sem piorar qualidade ou estabilidade.</p>
+        </div>
+        <div class="card-block">
+          <h4>2. Implementar code review automatizado com IA como primeira camada</h4>
+          <p>Usar IA para revisar pull requests em 100% dos casos como filtro inicial, apontando bugs, padrões quebrados, riscos de segurança e inconsistências antes da revisão humana final.</p>
+        </div>
+        <div class="card-block">
+          <h4>3. Criar e animar o chapter de engenharia de software</h4>
+          <p>Institucionalizar a comunidade técnica responsável por padrões, rituais, capacitação, onboarding técnico e evolução das práticas entre squads.</p>
+        </div>
+        <div class="card-block">
+          <h4>4. Padronizar o modelo de engenharia entre squads</h4>
+          <p>Definir mínimos comuns para branching, review, testes, Definition of Done, observabilidade, arquitetura e qualidade, reduzindo variação excessiva entre times.</p>
+        </div>
+        <div class="card-block">
+          <h4>5. Criar um ciclo contínuo de melhoria com base em dados</h4>
+          <p>Sair da discussão subjetiva sobre produtividade e qualidade e passar a priorizar melhorias com base em evidência operacional recorrente.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="presentation-section" id="kpis">
+      <span class="section-label">04 — KPIs</span>
+      <h2>3 KPIs claros para medir a efetividade</h2>
+      <p>A recomendação é evitar excesso de indicadores no começo. Estes 3 cobrem velocidade, qualidade e adoção operacional.</p>
+      <div class="grid-3">
+        <div class="card-block">
+          <h4>1. Lead Time de mudança</h4>
+          <p><strong>Definição:</strong> tempo entre abertura do trabalho técnico e deploy em produção.</p>
+          <p><strong>Por que importa:</strong> mostra se o fluxo está ficando mais rápido de verdade.</p>
+          <p><strong>Como acompanhar:</strong> por squad, tipo de demanda e tendência mensal.</p>
+        </div>
+        <div class="card-block">
+          <h4>2. Taxa de retrabalho pós-merge</h4>
+          <p><strong>Definição:</strong> percentual de entregas que exigem correção relevante após merge ou deploy, por bug, rollback, hotfix ou ajuste corretivo.</p>
+          <p><strong>Por que importa:</strong> mostra se velocidade veio com perda de qualidade.</p>
+          <p><strong>Como acompanhar:</strong> por release, criticidade e causa raiz.</p>
+        </div>
+        <div class="card-block">
+          <h4>3. Cobertura de review automatizado com IA</h4>
+          <p><strong>Definição:</strong> percentual de pull requests que passaram por revisão automática com IA antes da aprovação final.</p>
+          <p><strong>Por que importa:</strong> mede adoção real da nova prática e ajuda a escalar consistência.</p>
+          <p><strong>Como acompanhar:</strong> por squad, repositório e tipo de recomendação gerada.</p>
+        </div>
+      </div>
+      <div class="highlight">
+        <strong>Leitura executiva:</strong> se o lead time cai, o retrabalho não sobe e a cobertura de review com IA cresce, a implantação está gerando ganho operacional real.
+      </div>
+    </section>
+
+    <section class="presentation-section" id="review-ia">
+      <span class="section-label">05 — Code review com IA</span>
+      <h2>Como implementar review 100% automatizado com IA, sem perder controle</h2>
+      <p>O melhor desenho não é remover o humano do processo, e sim usar IA como primeira camada obrigatória em todos os PRs. Isso reduz fila, aumenta cobertura e deixa a revisão humana focada em contexto, arquitetura e decisão de negócio.</p>
+      <div class="grid-2">
+        <div>
+          <h3>Benefícios esperados</h3>
+          <ul>
+            <li>Menor tempo de revisão manual</li>
+            <li>Mais consistência na aplicação de padrões</li>
+            <li>Maior cobertura de bugs simples, smells e riscos de segurança</li>
+            <li>Melhor escalabilidade com aumento de volume de código por IA</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Guardrails necessários</h3>
+          <ul>
+            <li>Bloquear promoção automática sem política clara</li>
+            <li>Separar findings críticos de sugestões cosméticas</li>
+            <li>Auditar falso positivo e falso negativo</li>
+            <li>Manter aprovação humana final em mudanças sensíveis</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-block">
+        <h4>Modelo operacional recomendado</h4>
+        <p><strong>Passo 1:</strong> IA revisa 100% dos PRs. <strong>Passo 2:</strong> regras críticas viram quality gate. <strong>Passo 3:</strong> review humano foca nas exceções, arquitetura e trade-offs. <strong>Passo 4:</strong> chapter revisa padrões recorrentes e ajusta prompts, regras e playbooks.</p>
+      </div>
+      <p>Como benchmark de operating model, a ADEO descreve uma abordagem hub-and-spoke para IA, com estrutura central definindo frameworks e times locais aplicando no produto. Essa lógica é útil aqui: o padrão do review automatizado deve ser centralmente definido, mas aplicado dentro do fluxo real de cada time.</p>
+    </section>
+
+    <section class="presentation-section" id="chapter">
+      <span class="section-label">06 — Chapter</span>
+      <h2>O chapter é o mecanismo de sustentação da prática</h2>
+      <p>Sem um chapter ativo, a implantação vira iniciativa pontual. Com chapter, a empresa cria um motor contínuo de alinhamento, evolução e aprendizado técnico entre squads.</p>
+      <div class="grid-2">
+        <div class="card-block">
+          <h4>Papel do chapter</h4>
+          <ul>
+            <li>Definir e revisar padrões de engenharia</li>
+            <li>Compartilhar boas práticas e decisões técnicas</li>
+            <li>Apoiar onboarding e capacitação</li>
+            <li>Identificar gargalos sistêmicos entre times</li>
+          </ul>
+        </div>
+        <div class="card-block">
+          <h4>Cadência mínima recomendada</h4>
+          <ul>
+            <li>Encontro quinzenal do chapter</li>
+            <li>Review mensal dos KPIs</li>
+            <li>Guildas temáticas por assunto crítico</li>
+            <li>Demos de ferramentas, casos e lições aprendidas</li>
+          </ul>
+        </div>
+      </div>
+      <div class="highlight">
+        <strong>Ownership:</strong> o chapter não substitui gestão de squad. Ele cria consistência transversal, acelera maturidade e evita reinvenção local desnecessária.
+      </div>
+    </section>
+
+    <section class="presentation-section" id="sugestoes-adicionais">
+      <span class="section-label">07 — Sugestões adicionais</span>
+      <h2>Outras ações que fortalecem a implantação</h2>
+      <div class="grid-2">
+        <div class="card-block">
+          <h4>Baseline inicial de engenharia</h4>
+          <p>Mapear estágio atual por squad: fluxo de PR, testes, incidentes, padrões, automação e uso de IA.</p>
+        </div>
+        <div class="card-block">
+          <h4>Playbook único de engenharia</h4>
+          <p>Consolidar princípios, templates, critérios de review, checklists e definição de qualidade mínima.</p>
+        </div>
+        <div class="card-block">
+          <h4>Piloto com 2 ou 3 squads</h4>
+          <p>Validar o modelo em times com perfis diferentes antes de escalar para toda a engenharia.</p>
+        </div>
+        <div class="card-block">
+          <h4>Painel executivo mensal</h4>
+          <p>Publicar KPIs, evolução por time e principais aprendizados para dar visibilidade e tração organizacional.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="presentation-section" id="roadmap">
+      <span class="section-label">08 — Roadmap</span>
+      <h2>Roadmap prático em 90 dias</h2>
+      <div class="grid-2">
+        <div class="phase-block">
+          <div class="timeline">0-30 dias</div>
+          <h4>Diagnóstico e desenho</h4>
+          <ul>
+            <li>Definir sponsor e owner da iniciativa</li>
+            <li>Medir baseline dos 3 KPIs</li>
+            <li>Selecionar piloto de review automatizado com IA</li>
+            <li>Estruturar charter do chapter</li>
+          </ul>
+        </div>
+        <div class="phase-block">
+          <div class="timeline">31-60 dias</div>
+          <h4>Piloto operacional</h4>
+          <ul>
+            <li>Ativar IA em 100% dos PRs dos times piloto</li>
+            <li>Publicar primeiros dashboards</li>
+            <li>Rodar primeira rotina quinzenal do chapter</li>
+            <li>Ajustar padrões e guardrails</li>
+          </ul>
+        </div>
+        <div class="phase-block">
+          <div class="timeline">61-90 dias</div>
+          <h4>Escala controlada</h4>
+          <ul>
+            <li>Expandir para novos repositórios e squads</li>
+            <li>Formalizar playbook de engenharia</li>
+            <li>Revisar ganhos e pontos críticos</li>
+            <li>Levar status e decisão para liderança</li>
+          </ul>
+        </div>
+        <div class="phase-block">
+          <div class="timeline">Após 90 dias</div>
+          <h4>Institucionalização</h4>
+          <ul>
+            <li>Transformar KPIs em rotina de gestão</li>
+            <li>Evoluir o chapter como fórum de melhoria contínua</li>
+            <li>Refinar regras de IA review por tipo de sistema</li>
+            <li>Expandir para arquitetura, testes e confiabilidade</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="presentation-section" id="mensagem-final">
+      <span class="section-label">09 — Fechamento</span>
+      <h2>Mensagem final para a liderança</h2>
+      <p>Se a empresa quer escalar desenvolvimento com IA sem perder qualidade, ela precisa formalizar engenharia de software como prática. O caminho recomendado é simples: medir, automatizar, padronizar e sustentar a mudança com um chapter ativo.</p>
+      <div class="highlight">
+        <strong>Decisão proposta:</strong> iniciar agora um piloto de 90 dias com 3 KPIs, review automatizado com IA em 100% dos PRs do escopo piloto e lançamento formal do chapter de engenharia de software.
+      </div>
+    </section>
+
+    <section class="presentation-section" id="fontes">
+      <span class="section-label">10 — Fontes</span>
+      <h2>Fontes de referência</h2>
+      <ul>
+        <li><a href="https://dora.dev/guides/dora-metrics-four-keys/">DORA Metrics, software delivery performance</a></li>
+        <li><a href="https://cloud.google.com/blog/products/devops-sre/using-the-four-keys-to-measure-your-devops-performance">Google Cloud, Four Keys metrics</a></li>
+        <li><a href="https://www.artefact.com/br/blog/matthieu-grymonprez-global-cdo-cio-of-adeo-at-the-adopt-ai-summit-foster-the-development-industrialization-of-ai-within-a-global-group/">Artefact, ADEO e industrialização de IA em modelo hub-and-spoke</a></li>
+        <li><a href="https://www.digitalocean.com/resources/articles/ai-code-review-tools">DigitalOcean, AI code review tools</a></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
