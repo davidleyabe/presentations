@@ -23,7 +23,8 @@ Every presentation should be publishable through this workspace without requirin
 - Tailwind CSS is the visual default for new pages and meaningful portal evolution, including icon choices aligned with that stack.
 - Excalidraw diagrams can now be generated autonomously through `scripts/generate-excalidraw-diagram.mjs`, exported as image plus source JSON, stored in the repo, and embedded in the final published HTML.
 - For presentation refactors, the preferred behavior is to update the existing presentation in the same slug instead of publishing a parallel duplicate, unless there is a clear reason not to.
-- Fast publication is important, but not at the expense of editorial quality: avoid broken characters, accidental mixed-language fragments, or unsupported metrics in published pages.
+- Fast publication is important, but not at the expense of editorial quality: avoid broken characters, accidental mixed-language fragments, unsupported metrics, or visibly broken copy in published pages.
+- When a user points out one example of a broken character or text defect in a presentation, the presentation agent should treat that as a trigger to audit and sanitize the entire page before republishing, not just the quoted snippet.
 
 ## GitHub auth status
 - The original broad GitHub token used during setup was revoked.
