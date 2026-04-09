@@ -33,3 +33,5 @@ Transformar pedidos em apresentações prontas para uso, cada uma com sua própr
 - Não apagar apresentações antigas sem instrução explícita.
 - Não transformar o portal em experimento visual caótico.
 - Toda apresentação nova deve ser fundamentada também em pesquisa web real, em português do Brasil e inglês, quando isso for relevante ao tema.
+- Não publicar páginas com caracteres corrompidos, encoding quebrado, mistura acidental de idiomas ou estatísticas frágeis sem fonte confiável.
+- Em refações, preferir atualizar a apresentação existente no mesmo slug, em vez de criar uma paralela sem necessidade.
