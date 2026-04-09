@@ -34,7 +34,7 @@ function App() {
             },
             files: api.getFiles(),
             mimeType: 'image/png',
-            getDimensions: () => ({ width: 1200, height: 500, scale: 2 }),
+            getDimensions: () => ({ width: 1600, height: 500, scale: 2 }),
           });
           const buffer = await blob.arrayBuffer();
           window.__pngBytes = Array.from(new Uint8Array(buffer));

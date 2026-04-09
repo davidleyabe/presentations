@@ -119,7 +119,7 @@ function createArrow(id, x, y, width, startId, endId) {
 
 function buildFlowScene(spec) {
   const nodes = spec.nodes || [];
-  const spacing = 260;
+  const spacing = 200;
   const startX = 80;
   const y = 140;
   const width = 180;
@@ -197,7 +197,7 @@ async function main() {
   });
 
   const browser = await chromium.launch({ headless: true });
-  const page = await browser.newPage({ viewport: { width: 1280, height: 720 }, deviceScaleFactor: 2 });
+  const page = await browser.newPage({ viewport: { width: 1920, height: 720 }, deviceScaleFactor: 2 });
 
   try {
     await page.goto('http://127.0.0.1:4173/scripts/excalidraw-export-app.html', { waitUntil: 'networkidle' });

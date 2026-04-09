@@ -1,0 +1,6 @@
+{
+  "title": "Modelo Operacional Hub & Spokes",
+  "slug": "modelo-operacional-hub-spokes",
+  "outputDir": "assets/diagrams",
+  "nodes": ["Hub (Dados)", "Spokes (Negócio)", "IA CoE"]
+}
