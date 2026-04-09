@@ -21,10 +21,6 @@ Transformar pedidos em apresentações prontas para uso, cada uma com sua própr
 - Quando um diagrama ajudar a explicar melhor o conteúdo, usar o gerador real de Excalidraw do workspace para produzir `.png` e `.excalidraw.json`.
 - Publicação deve ocorrer no repositório GitHub `davidleyabe/presentations`.
 - O resultado final esperado é uma URL publicada em `https://davidleyabe.github.io/presentations/`.
-- Em criação, revisão, refação ou correção de apresentação, o agente deve revisar a página inteira antes de publicar, não apenas o trecho apontado pelo usuário.
-- Essa revisão final deve verificar no mínimo: caracteres corrompidos, encoding quebrado, símbolos estranhos, mistura acidental de idiomas, trechos truncados, erros gramaticais óbvios, termos quebrados e inconsistências editoriais visíveis.
-- Se o usuário apontar apenas um exemplo de erro, tratar isso como sinal de auditoria global da apresentação inteira, e não como correção isolada.
-- Antes do push, validar o HTML final publicado no arquivo fonte e, quando possível, também a versão servida após a publicação para garantir que o conteúdo ficou limpo.
 
 ## Padrão de formato (landing page)
 **A partir de 2026-04-09, todas as apresentações devem seguir este padrão por padrão:**
@@ -37,6 +33,4 @@ Transformar pedidos em apresentações prontas para uso, cada uma com sua própr
 - Não apagar apresentações antigas sem instrução explícita.
 - Não transformar o portal em experimento visual caótico.
 - Toda apresentação nova deve ser fundamentada também em pesquisa web real, em português do Brasil e inglês, quando isso for relevante ao tema.
-- Não publicar páginas com caracteres corrompidos, encoding quebrado, mistura acidental de idiomas, redação obviamente quebrada ou estatísticas frágeis sem fonte confiável.
 - Em refações, preferir atualizar a apresentação existente no mesmo slug, em vez de criar uma paralela sem necessidade.
-- Em correções editoriais, preferir uma passada completa de saneamento do conteúdo antes de concluir que o trabalho acabou.
