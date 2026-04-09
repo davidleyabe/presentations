@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Softwares para Empreender no Brasil na Era do Vibe Coding</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text { background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .risk-bar { height: 8px; border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white">
+        <div class="max-w-6xl mx-auto px-6 py-20">
+            <div class="flex items-center gap-3 mb-8">
+                <span class="text-3xl">🪄</span>
+                <span class="text-sm font-medium text-blue-300 uppercase tracking-wider">Vibe Coding Era</span>
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+                5 Ideias de Software<br>
+                <span class="text-blue-300">para Empreender no Brasil</span>
+            </h1>
+            <p class="text-xl text-blue-100 max-w-3xl leading-relaxed">
+                A IA reduziu drasticamente a barreira de prototipagem. Mas prototipar não é o mesmo que construir um negócio. 
+                <strong class="text-white">Distribuição, operação, dados, compliance e confiança</strong> continuam sendo os reais diferenciais.
+            </p>
+            <p class="text-lg text-blue-200 mt-6 max-w-3xl">
+                Estas 5 ideias existem nessa lacuna: oportunidades onde o código é acessível, mas a execução é difícil — 
+                e defensável para quem souber resolver o problema certo com profundidade.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-6 py-16">
+
+        <!-- Idea 1 -->
+        <article class="mb-20">
+            <div class="flex items-center gap-4 mb-6">
+                <span class="flex items-center justify-center w-12 h-12 bg-blue-900 text-white rounded-xl text-xl font-bold">01</span>
+                <h2 class="text-3xl font-bold text-gray-900">Automação de Compliance Tributário para MEI e Simples Nacional</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-sm font-semibold text-blue-900 uppercase tracking-wider mb-2">O Problema</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Mais de <strong>22 milhões de MEIs</strong> no Brasil operam sob regimes tributários complexos. 
+                            A maioria não entende seus obrigações mensais (DAS, guias INSS, declaração anual) e acaba pagando multas por erro ou esquecimento. 
+                            Contadores cobram caro para tarefas repetitivas, e a Receita Federal aumenta a fiscalização digital.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-blue-900 uppercase tracking-wider mb-2">Público-Alvo</h3>
+                        <p class="text-gray-600">Microempreendedores individuais (MEI), pequenos contadores que atendem MEs, e plataformas de contabilidade digital (Omie, ContaAzul) como parceiros de integração.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-blue-900 uppercase tracking-wider mb-2">Demanda Local</h3>
+                        <p class="text-gray-600">
+                            O SIMPLES Nacional responde por ~50% da arrecadação federal. O governo pressiona por digitalização (SPED, NF-e, NFC-e), 
+                            mas a maioria dos pequenos negócios ainda faz tudo na mão ou paga alguém sem automatizar. O mercado de "contabilidade para MEI" 
+                            é enorme e profundamente fragmentado.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-sm font-semibold text-blue-900 uppercase tracking-wider mb-2">Por que é Defensável?</h3>
+                        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                            <ul class="text-gray-700 space-y-2 text-sm">
+                                <li>• <strong>Regras locais específicas:</strong> tributação brasileira muda por município (ISS, ICMS), perfil do contribuinte e CNAE — não é replicável com um prompt genérico.</li>
+                                <li>• <strong>Integrações oficiais:</strong> requer conexão com sistemas da Receita, eSocial, NF-e — barreira técnica e regulatória.</li>
+                                <li>• <strong>Confiança:</strong> ninguém coloca CPF e dados tributários em qualquer app. Requer reputação e conformidade com LGPD.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-blue-900 uppercase tracking-wider mb-2">MVP Realista</h3>
+                        <p class="text-gray-600">Chatbot que recebe CNPJ/CPF, identifica perfil tributário, e envia lembretes mensais com valor exato do DAS e passo a passo de pagamento. Depois: importação automática de NF-e e preenchimento de declarações.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-red-700 uppercase tracking-wider mb-2">Riscos</h3>
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="flex-1 bg-gray-200 rounded-full risk-bar">
+                                <div class="bg-yellow-500 risk-bar" style="width: 50%"></div>
+                            </div>
+                            <span class="text-sm text-gray-500">Médio</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">Erros tributários geram responsabilidade civil. Exige investimento em precisão de regras e parceria com contadores. Regulamentação do setor pode mudar rapidamente.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Idea 2 -->
+        <article class="mb-20">
+            <div class="flex items-center gap-4 mb-6">
+                <span class="flex items-center justify-center w-12 h-12 bg-emerald-900 text-white rounded-xl text-xl font-bold">02</span>
+                <h2 class="text-3xl font-bold text-gray-900">Inteligência de Demanda Sazonal para Varejo Regional</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-sm font-semibold text-emerald-900 uppercase tracking-wider mb-2">O Problema</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Varejistas regionais no Brasil (padarias, lojas de bairro, distribuidoras) operam no escuro quanto à demanda futura. 
+                            Sem estoque adequado, perdem vendas; com excesso, perdem margem. As ferramentas existentes (SAP, Oracle) são caras demais, 
+                            e o Excel não captura sazonalidades locais — feriados municipais, clima, eventos regionais.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-emerald-900 uppercase tracking-wider mb-2">Público-Alvo</h3>
+                        <p class="text-gray-600">Lojistas independentes com 5-50 funcionários, distribuidoras regionais, franquias com 10+ unidades, e plataformas de commerce B2B (OrderChat, Yubats).</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-emerald-900 uppercase tracking-wider mb-2">Demanda Local</h3>
+                        <p class="text-gray-600">
+                            O varejo brasileiro é composto por ~13 milhões de estabeços. Mais de 70% das compras ainda acontecem em lojas físicas. 
+                            A sazonalidade no Brasil é particularmente forte: Carnaval, Festas Juninas, Black Friday, Natal — cada uma com perfil diferente por região. 
+                            Nenhuma ferramenta global resolve isso para os bairros de Curitiba ou interior da Bahia.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-sm font-semibold text-emerald-900 uppercase tracking-wider mb-2">Por que é Defensável?</h3>
+                        <div class="bg-emerald-50 border-l-4 border-emerald-500 p-4 rounded-r-lg">
+                            <ul class="text-gray-700 space-y-2 text-sm">
+                                <li>• <strong>Dados locais:</strong> o modelo aprende com histórico de vendas por CEP, clima local, calendário escolar, eventos — dados que empresas globais não coletam.</li>
+                                <li>• <strong>Efeito de rede:</strong> quanto mais lojas em uma cidade, melhor a previsão para todos — barreira de rede progressiva.</li>
+                                <li>• <strong>Complexidade operacional:</strong> prever demanda envolve integrar PDVs, fornecedores, logística — não é um problema de UI.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-emerald-900 uppercase tracking-wider mb-2">MVP Realista</h3>
+                        <p class="text-gray-600">Integração com um PDV popular (e.g., TouchBistro, Tiny), dashboard com previsão semanal de demanda por SKU principal, e alerta de reposição. Começar com 1 vertical (padarias) em 1 cidade.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-red-700 uppercase tracking-wider mb-2">Riscos</h3>
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="flex-1 bg-gray-200 rounded-full risk-bar">
+                                <div class="bg-yellow-500 risk-bar" style="width: 60%"></div>
+                            </div>
+                            <span class="text-sm text-gray-500">Médio-Alto</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">Aquisição de lojistas é lenta. Dados iniciais escassos (cold start). Precisa de integrações com muitos PDVs diferentes — trabalho de artesanato por canal.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Idea 3 -->
+        <article class="mb-20">
+            <div class="flex items-center gap-4 mb-6">
+                <span class="flex items-center justify-center w-12 h-12 bg-purple-900 text-white rounded-xl text-xl font-bold">03</span>
+                <h2 class="text-3xl font-bold text-gray-900">Gestão de Compliance Trabalhista para Times Distribuídos</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-sm font-semibold text-purple-900 uppercase tracking-wider mb-2">O Problema</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            A CLT brasileira tem mais de 900 artigos, e a legislação trabalhista muda constantemente. Startups e PMEs com times híbridos/remotos 
+                            não têm RH estruturado e acabam expostas a passivos trabalhistas: horas extras não pagas, registro incorreto de jornada, 
+                            férias não gozadas,fgts mal calculado. Uma única ação trabalhista pode custar dezenas de milhares de reais.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-purple-900 uppercase tracking-wider mb-2">Público-Alvo</h3>
+                        <p class="text-gray-600">Startups com 20-200 funcionários, empresas de tecnologia com times remotos/híbridos, e escritórios de advocacia trabalhista que querem oferecer monitoramento contínuo como serviço.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-purple-900 uppercase tracking-wider mb-2">Demanda Local</h3>
+                        <p class="text-gray-600">
+                            O Brasil tem a maior carga regulatória trabalhista da América Latina. Em 2024, foram ~2 milhões de ações trabalhistas movidas. 
+                            A pandemia acelerou o trabalho remoto mas a legislação não acompanhou — o "home office" na CLT ainda é nebuloso. 
+                            O mercado de RH Tech no Brasil é estimado em R$ 8 bilhões, mas dominado por soluções de payroll, não de compliance preventivo.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-sm font-semibold text-purple-900 uppercase tracking-wider mb-2">Por que é Defensável?</h3>
+                        <div class="bg-purple-50 border-l-4 border-purple-500 p-4 rounded-r-lg">
+                            <ul class="text-gray-700 space-y-2 text-sm">
+                                <li>• <strong>Jurisprudência brasileira:</strong> regras não estão em um livro — variam por estado, tribunal e precedente. Requer modelo treinado em jurisprudência real.</li>
+                                <li>• <strong>Risco financeiro do cliente:</strong> o produto evita prejuízo real (multas, ações). Valor percebido alto, churn baixo.</li>
+                                <li>• <strong>Integrações profundas:</strong> precisa ler point sheets, escalas, eSocial, folha de pagamento — dados sensíveis que impedem "clone rápido".</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-purple-900 uppercase tracking-wider mb-2">MVP Realista</h3>
+                        <p class="text-gray-600">Scanner automatizado que conecta com TOTVS/Sage ou planilhas, identifica 5-10 riscos mais comuns (jornada, intervalo, férias), e gera relatório de conformidade com recomendações. Vender para startups de tecnologia primeiro.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-red-700 uppercase tracking-wider mb-2">Riscos</h3>
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="flex-1 bg-gray-200 rounded-full risk-bar">
+                                <div class="bg-orange-500 risk-bar" style="width: 70%"></div>
+                            </div>
+                            <span class="text-sm text-gray-500">Alto</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">Exige expertise jurídica real — uma recomendação errada pode gerar mais risco. Credibilidade leva tempo. Integrações com sistemas de RH são complexas e variadas.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Idea 4 -->
+        <article class="mb-20">
+            <div class="flex items-center gap-4 mb-6">
+                <span class="flex items-center justify-center w-12 h-12 bg-amber-800 text-white rounded-xl text-xl font-bold">04</span>
+                <h2 class="text-3xl font-bold text-gray-900">Orquestrador de Operações para Foodtechs de Médio Porte</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-sm font-semibold text-amber-900 uppercase tracking-wider mb-2">O Problema</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Foodtechs brasileiras (kiosks, delivery próprio, dark kitchens) operam com 3-6 plataformas simultaneamente: 
+                            iFood, Rappi, WhatsApp, Instagram, cardápio próprio, PDV. Cada uma com fluxo diferente, comissões diferentes, 
+                            e relatórios desconectados. O gestor perde horas cruzando planilhas para saber o lucro real, e o estoque vive em descompasso com a demanda.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-amber-900 uppercase tracking-wider mb-2">Público-Alvo</h3>
+                        <p class="text-gray-600">Foodtechs com 2-15 unidades, dark kitchens em expansão, franquias de fast-food nacional, e restaurantes com delivery próprio que operam multi-plataforma.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-amber-900 uppercase tracking-wider mb-2">Demanda Local</h3>
+                        <p class="text-gray-600">
+                            O delivery de comida no Brasil é um mercado de ~R$ 65 bilhões (2025), com crescimento anual de ~15%. 
+                            A maioria das foodtechs nasce com operação manual e enfrenta "o muro das 3-5 unidades" — 
+                            o ponto onde operação manual quebra. iFood não resolve gestão interna, e ERPs genéricos não entendem comissões por canal, 
+                            margem por prato, e desperdício.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-sm font-semibold text-amber-900 uppercase tracking-wider mb-2">Por que é Defensável?</h3>
+                        <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg">
+                            <ul class="text-gray-700 space-y-2 text-sm">
+                                <li>• <strong>Operação específica:</strong> cada canal tem API diferente, regras de comissão próprias, e lógica de pedidos particular — conhecimento de domínio profundo.</li>
+                                <li>• <strong>Dados de margem:</strong> o sistema precisa entender custo real por prato (ingrediente + mão de obra + comissão + embalagem) — dados competitivos sensíveis que o cliente não compartilha com concorrentes.</li>
+                                <li>• <strong>Lock-in operacional:</strong>一旦嵌入工作流 (uma vez integrado ao fluxo diário), a migração é dolorosa — retenção natural alta.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-amber-900 uppercase tracking-wider mb-2">MVP Realista</h3>
+                        <p class="text-gray-600">Conector com iFood + 1 PDV popular (iFood Lab, Totvs), dashboard único com vendas consolidadas, margem por prato, e alerta de estoque baixo. Começar com dark kitchens de uma cidade.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-red-700 uppercase tracking-wider mb-2">Riscos</h3>
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="flex-1 bg-gray-200 rounded-full risk-bar">
+                                <div class="bg-yellow-500 risk-bar" style="width: 55%"></div>
+                            </div>
+                            <span class="text-sm text-gray-500">Médio</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">Dependência das APIs de mercado (iFood, Rappi) que podem mudar. Concorrência com ERPs específicos (SaborEx, Tiny). Precisa de conhecimento operacional real de foodservice.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Idea 5 -->
+        <article class="mb-20">
+            <div class="flex items-center gap-4 mb-6">
+                <span class="flex items-center justify-center w-12 h-12 bg-rose-900 text-white rounded-xl text-xl font-bold">05</span>
+                <h2 class="text-3xl font-bold text-gray-900">Plataforma de Due Diligence Automatizada para Startups Brasileiras</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-sm font-semibold text-rose-900 uppercase tracking-wider mb-2">O Problema</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Investidores (VCs, anjos, Private Equity) que investem em startups brasileiras fazem due diligence manualmente: 
+                            pedem documentos por WhatsApp, cruzam informações em Excel, verificam CNPJ, certidões negativas, cap table, 
+                            contratos. O processo leva 2-6 semanas, é caro (advogados), e propenso a erro. Startups perdem momentum durante o processo.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-rose-900 uppercase tracking-wider mb-2">Público-Alvo</h3>
+                        <p class="text-gray-600">Fundos de venture capital (500+ no Brasil), family offices, corporate VCs, plataformas de equity crowdfunding (EqSeed, Brave Capital), e startups que querem preparar sua own data room.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-rose-900 uppercase tracking-wider mb-2">Demanda Local</h3>
+                        <p class="text-gray-600">
+                            O Brasil é o maior ecossistema de VC da América Latina, com ~US$ 3 bilhões investidos anualmente. 
+                            Porém, a due diligence local é artesanal: não existe padrão, os VCs reinventam o processo a cada deal. 
+                            Certidões (Certidão Negativa, FGTS, Trabalhista) ainda são obtidas manualmente nos sites do governo. 
+                            O mercado de legal tech no Brasil é incipiente comparado aos EUA.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-sm font-semibold text-rose-900 uppercase tracking-wider mb-2">Por que é Defensável?</h3>
+                        <div class="bg-rose-50 border-l-4 border-rose-500 p-4 rounded-r-lg">
+                            <ul class="text-gray-700 space-y-2 text-sm">
+                                <li>• <strong>Integrações governamentais:</strong> consultar CNPJ, Certidões da Receita, TST, CNDL/PCDCB em tempo real requer autenticação e conhecimento de APIs públicas brasileiras — não replicável por prompts.</li>
+                                <li>• <strong>Knowledge base regulatória:</strong> mapear riscos legais exige compreensão de Lei 6.404 (S/A), Lei 12.441 (Ltda), normas CVM — expertise jurídica em português.</li>
+                                <li>• <strong>Dados sensíveis da transação:</strong> cap tables, valuation, term sheets — confiança é tudo. Um data breach acaba com o negócio.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-rose-900 uppercase tracking-wider mb-2">MVP Realista</h3>
+                        <p class="text-gray-600">Upload de documentos (contrato social, certidões, cap table), OCR + verificação automática de CNPJ e certidões negativas, checklist de due diligence com status. Vender para 2-3 VCs como pilot.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-red-700 uppercase tracking-wider mb-2">Riscos</h3>
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="flex-1 bg-gray-200 rounded-full risk-bar">
+                                <div class="bg-orange-500 risk-bar" style="width: 65%"></div>
+                            </div>
+                            <span class="text-sm text-gray-500">Médio-Alto</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">Vendas para VCs são longas e consultivas. Requer validação jurídica para cada parecer emitido. Concorrência com DocuSign / Intralinks (globais) e soluções artesanais já aceitas pelo mercado.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Closing Section -->
+        <section class="bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-10 mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Como Escolher: Critérios Práticos</h2>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-10">
+                <div class="space-y-3">
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl">🎯</span>
+                        <h3 class="text-lg font-semibold text-gray-900">Faça Você Mesmo (Build for Yourself)</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Se você já vive o problema — é MEI e cansou de esquecer o DAS, é gestor de foodtech e sabe a dor do multi-canal — comece pela Ideia #1 ou #4. 
+                        Sua dor é o melhor filtro.
+                    </p>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl">💰</span>
+                        <h3 class="text-lg font-semibold text-gray-900">Maior TAM Acessível</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Ideia #1 (MEI) tem 22 milhões de potenciais clientes. Ideia #4 (Foodtech) tem um mercado de R$ 65bi. 
+                        Se busca escala, priorize mercados grandes com pouca concorrência estruturada.
+                    </p>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl">🛡️</span>
+                        <h3 class="text-lg font-semibold text-gray-900">Maior Barreira Defensável</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Ideia #3 (Compliance Trabalhista) e #5 (Due Diligence) exigem expertise jurídica real. 
+                        Quanto mais você precisa saber de regulamentação brasileira, mais difícil é ser copiado — mesmo com IA.
+                    </p>
+                </div>
+            </div>
+
+            <div class="border-t border-blue-200 pt-8">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Checklist Rápido de Validação</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="flex items-start gap-3">
+                        <span class="text-emerald-500 mt-1">✓</span>
+                        <p class="text-gray-600 text-sm">Você consegue descrever o cliente ideal em 1 frase e ele tem dinheiro para pagar?</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-emerald-500 mt-1">✓</span>
+                        <p class="text-gray-600 text-sm">O problema exige dados ou integrações que um vibecoder não monta em um fim de semana?</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-emerald-500 mt-1">✓</span>
+                        <p class="text-gray-600 text-sm">O cliente usa o produto diariamente ou semanalmente (não mensalmente)?</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-emerald-500 mt-1">✓</span>
+                        <p class="text-gray-600 text-sm">Você pode listar 3 concorrentes — e explicar por que o seu é diferente (não "mais barato")?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-gray-400 text-sm py-8 border-t border-gray-100">
+            <p>Preparado com 🪄 no contexto da era do Vibe Coding • Abril 2026</p>
+        </footer>
+
+    </main>
+</body>
+</html>
