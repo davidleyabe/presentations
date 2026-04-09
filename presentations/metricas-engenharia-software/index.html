@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Por que medir engenharia de software muda a qualidade da entrega</title>
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+  <main class="container">
+    <a href="../../index.html" class="nav-back">← voltar</a>
+
+    <header class="presentation-header">
+      <h1>Por que medir engenharia de software muda a qualidade da entrega</h1>
+      <p class="subtitle">Métricas que transformam intuição em decisão e retrabalho em melhoria contínua</p>
+      <p class="meta">Abril 2026 · Leitura rápida · 4 seções + 3 métricas recomendadas</p>
+    </header>
+
+    <!-- SEÇÃO 1 -->
+    <section class="presentation-section" id="problema">
+      <span class="section-label">01 — O problema</span>
+      <h2>Intenção não substitui evidência</h2>
+      <p>Times entregam funcionalidades, mas ninguém consegue dizer com clareza: quanto tempo uma demanda leva do início ao produção? Qual a taxa de falha por deploy? Quanto tempo levamos para recuperar quando algo quebra?</p>
+      <p>Sem resposta objetiva, decisões viram opinião. Prioridades viram pressão. Qualidade vira achismo.</p>
+      <div class="highlight">
+        <strong>Fato (DORA, Google):</strong> times que medem e praticam contínua melhoria entregam <strong>software 2×</strong> mais rápido, com <strong>taxa de falha 3×</strong> menor e se recuperam <strong>24×</strong> mais rápido que times medianos.
+      </div>
+    </section>
+
+    <!-- SEÇÃO 2 -->
+    <section class="presentation-section" id="por-que-medir">
+      <span class="section-label">02 — Por que medir</span>
+      <h2>Métricas revelam gargalos que percepção esconde</h2>
+      <div class="grid-2">
+        <div class="card-block">
+          <h4>Sem métricas</h4>
+          <p>Retrabalho alto aparece como "a entrega é complexa". PRs parados aparecem como "o time está ocupado". Falta de qualidade aparece como "falta gente boa".</p>
+        </div>
+        <div class="card-block">
+          <h4>Com métricas</h4>
+          <p>Onde engasga fica visível. Tendências negativas são detectadas antes da crise. Time e liderança conversam com o mesmo dado.</p>
+        </div>
+      </div>
+      <p>Medir não é fiscalizar. É dar ao time a informação que ele precisa para melhorar com autonomia.</p>
+    </section>
+
+    <!-- SEÇÃO 3 -->
+    <section class="presentation-section" id="metricas">
+      <span class="section-label">03 — Três métricas recomendadas</span>
+      <h2>Escolhidas por cobrir velocidade, estabilidade e recuperação</h2>
+
+      <div class="grid-3">
+        <div class="card-block metric">
+          <div class="number">1</div>
+          <div class="label"><strong>Lead Time for Changes</strong></div>
+          <p style="margin-top: 8px; font-size: 0.95rem;">Tempo do primeiro commit até o deploy em produção. Mede a <em>velocidade real</em> do fluxo de entrega, incluindo revisão, CI/CD e deploy.</p>
+        </div>
+        <div class="card-block metric">
+          <div class="number">2</div>
+          <div class="label"><strong>Change Failure Rate</strong></div>
+          <p style="margin-top: 8px; font-size: 0.95rem;">Percentual de deploys que causam falha em produção (incidente, rollback ou hotfix). Mede a <em>estabilidade</em> do processo de entrega.</p>
+        </div>
+        <div class="card-block metric">
+          <div class="number">3</div>
+          <div class="label"><strong>MTTR</strong></div>
+          <p style="margin-top: 8px; font-size: 0.95rem;">Mean Time to Restore — tempo médio entre a detecção de uma falha e a normalização do serviço. Mede a <em>capacidade de recuperação</em> do time.</p>
+        </div>
+      </div>
+
+      <div class="highlight">
+        <strong>Dica:</strong> essas três métricas fazem parte do framework DORA (DevOps Research and Assessment), adotado por milhares de times no mundo e documentado publicamente em <a href="https://dora.dev" target="_blank" rel="noopener">dora.dev</a>.
+      </div>
+    </section>
+
+    <!-- SEÇÃO 4 -->
+    <section class="presentation-section" id="como-comecar">
+      <span class="section-label">04 — Como começar</span>
+      <h2>Não precisa de ferramenta cara. Precisa de disciplina simples.</h2>
+      <p>Comece com o que já tem: repositório, pipeline e incidentes registrados. Extraia os dados manualmente se necessário. O importante é começar a observar a tendência.</p>
+
+      <div class="grid-2">
+        <div class="card-block">
+          <h4>Semana 1 — Instrumentar</h4>
+          <p>Defina onde medir (CI/CD, issue tracker). Padronize a definição de "deploy" e "incidente".</p>
+        </div>
+        <div class="card-block">
+          <h4>Semana 2 — Observar</h4>
+          <p>Calcule os três números atuais. Mostre ao time sem julgamento. Estabeleça a linha de base.</p>
+        </div>
+        <div class="card-block">
+          <h4>Semana 3 — Agir</h4>
+          <p>Identifique o maior gargalo. Defina uma melhoria concreta e mensurável. Reavalie em 2 semanas.</p>
+        </div>
+        <div class="card-block">
+          <h4>Semana 4 — Repetir</h4>
+          <p>Inclua a leitura de métricas nos rituais existentes. Tornar visível é o primeiro passo para melhorar.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONCLUSÃO -->
+    <section class="presentation-section" id="conclusao">
+      <span class="section-label">Conclusão</span>
+      <h2>Medir não é um fim. É um começo.</h2>
+      <p>Times que medem com intenção melhoram com consistência. Métricas não substituem conversa — mas criam a base para conversas produtivas e decisões baseadas em evidência.</p>
+      <p>Comece com Lead Time, Change Failure Rate e MTTR. Cresça a partir daí.</p>
+      <div class="highlight">
+        <strong>Referências:</strong>
+        <a href="https://dora.dev/guides/dora-metrics-four-keys/" target="_blank" rel="noopener">DORA — Four Key Metrics</a> ·
+        <a href="https://kodus.io/metricas-de-software-um-guia-para-lideres-de-desenvolvimento/" target="_blank" rel="noopener">Kodus — Métricas de Software</a> ·
+        <a href="https://www.atlassian.com/devops/frameworks/dora-metrics" target="_blank" rel="noopener">Atlassian — DORA Metrics</a>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
