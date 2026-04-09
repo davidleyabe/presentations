@@ -18,5 +18,9 @@ Every presentation should be publishable through this workspace without requirin
 - The agent is expected to create presentations under `presentations/<slug>/index.html` and update the portal home page.
 - The main agent should delegate presentation-related requests to `Presentation Publisher`.
 
+## GitHub auth status
+- The original broad GitHub token used during setup was revoked.
+- Future publishing should use a token restricted to the `davidleyabe/presentations` repository.
+
 ## Next step
 - Review and tighten security rules for this agent and the main agent.
