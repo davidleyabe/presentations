@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OpenClaw vs Hermes Agent — Comparação Executiva e Técnica</title>
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+  <main class="container">
+    <a href="../../index.html" class="nav-back">← voltar</a>
+
+    <header class="presentation-header">
+      <h1>OpenClaw vs Hermes Agent</h1>
+      <p class="subtitle">Arquitetura, memória, ecossistema e casos de uso — quando usar cada um (e por quê)</p>
+      <p class="meta">Abril 2026 · Comparação executiva e técnica para decisores e desenvolvedores</p>
+    </header>
+
+    <!-- 01 — Panorama -->
+    <section class="presentation-section" id="panorama">
+      <span class="section-label">01 — Panorama</span>
+      <h2>Dois agentes de IA de código aberto, duas filosofias distintas</h2>
+      <p>OpenClaw e Hermes Agent surgiram no final de 2025 e início de 2026 como duas das plataformas de agentes autônomos de código abixo mais relevantes do mercado. Ambos são self-hosted, suportam múltiplos canais de mensageria e rodam com modelos de linguagem de última geração. A partir daí, os caminhos divergem.</p>
+      <div class="grid-2">
+        <div class="card-block">
+          <h4>OpenClaw</h4>
+          <p>Lançado em novembro de 2025 (originalmente Clawdbot) pelo desenvolvedor austríaco Peter Steinberger. Mais de 214.000 estrelas no GitHub até fevereiro de 2026. Foco em ecossistema amplo: dezenas de canais, marketplace de 700+ skills e runtime em Node.js.</p>
+        </div>
+        <div class="card-block">
+          <h4>Hermes Agent</h4>
+          <p>Lançado em fevereiro de 2026 pela Nous Research, licença MIT. Framework voltado à memória estruturada e ao aprendizado progressivo por Skill Documents. Runtime em Python, com integração nativa ao ecossistema de ML.</p>
+        </div>
+      </div>
+      <div class="highlight">
+        <strong>Princípio norteador:</strong> OpenClaw prioriza alcance e conectividade — quanto mais canais e ferramentas, melhor. Hermes prioriza aprendizado acumulativo — quanto mais tempo rodando, mais eficiente se torna. A escolha depende do que a sua organização precisa que o agente faça.
+      </div>
+    </section>
+
+    <!-- 02 — Arquitetura -->
+    <section class="presentation-section" id="arquitetura">
+      <span class="section-label">02 — Arquitetura</span>
+      <h2>Node.js vs Python: a escolha de stack define o público-alvo</h2>
+      <p>A diferença de linguagem não é cosmética. Ela determina o tipo de comunidade que contribui, a facilidade de integração com ecossistemas existentes e o perfil técnico de quem opera a plataforma.</p>
+      <div class="grid-2">
+        <div class="card-block">
+          <h4>OpenClaw — Node.js</h4>
+          <ul>
+            <li>Runtime leve, inicialização rápida</li>
+            <li>Natural para equipes JavaScript/TypeScript</li>
+            <li>Gateway daemon persistente como orquestrador central</li>
+            <li>Docker e Podman suportados (rootless)</li>
+            <li>Multi-agent routing com sessões isoladas por workspace</li>
+          </ul>
+        </div>
+        <div class="card-block">
+          <h4>Hermes Agent — Python</h4>
+          <ul>
+            <li>Setup automatizado via uv e Python 3.11 (sem sudo)</li>
+            <li>Natural para equipes de ML e ciência de dados</li>
+            <li>Integração direta com numpy, pandas e ferramentas ML</li>
+            <li>Instala como serviço systemd</li>
+            <li>Execução de tarefas com aprendizado estruturado entre sessões</li>
+          </ul>
+        </div>
+      </div>
+      <h3>Modelos suportados</h3>
+      <p>Ambos suportam Claude, GPT-4o e a maioria dos modelos principais via endpoints compatíveis com a API da OpenAI. OpenClaw conecta-se a mais de 35 provedores de modelos, incluindo Anthropic, OpenAI e Google, além de instâncias self-hosted como vLLM, Ollama e SGLang. Hermes se conecta a 400+ modelos via OpenRouter ou diretamente, e a família de modelos Hermes (da Nous Research) é afinada especificamente para chamadas de ferramentas, o que melhora a performance em tarefas estruturadas de agente.</p>
+    </section>
+
+    <!-- 03 — Memória e Aprendizado -->
+    <section class="presentation-section" id="memoria">
+      <span class="section-label">03 — Memória e Aprendizado</span>
+      <h2>Arquivar conversas vs. construir conhecimento acumulativo</h2>
+      <p>Esta é a divergência arquitetural mais significativa entre as duas plataformas. Enquanto OpenClaw mantém histórico de conversas, Hermes implementa um sistema de três camadas de memória que evolui com o tempo.</p>
+      <div class="grid-3">
+        <div class="card-block">
+          <h4>OpenClaw</h4>
+          <p>Memória baseada em logs e histórico de conversas. O contexto é preservado entre sessões, mas sem sistema de extração e recuperação estruturada. Abordagem: cada tarefa é um problema novo usando as mesmas ferramentas.</p>
+        </div>
+        <div class="card-block">
+          <h4>Hermes — Modelo do Usuário</h4>
+          <p>Registro estruturado de quem você é: preferências de comunicação, contexto técnico, padrões operacionais. Persiste entre sessões e guia a forma como o agente interage.</p>
+        </div>
+        <div class="card-block">
+          <h4>Hermes — Skill Documents</h4>
+          <p>Memória procedimental no formato agentskills.io (markdown pesquisável). Documenta como abordar categorias de problema: quais ferramentas usar, onde travou, o que funcionou. Um usuário reportou tarefas de pesquisa 40% mais rápidas após duas horas de uso.</p>
+        </div>
+      </div>
+      <div class="highlight">
+        <strong>Trade-off concreto:</strong> OpenClaw é mais simples de operar e oferece menor sobrecarga inicial. Hermes demanda mais configuração, mas produz retornos crescentes para tarefas repetitivas e estruturadas. Para tarefas irregulares e inovadoras, a diferença é menor.
+      </div>
+    </section>
+
+    <!-- 04 — Canais e Ecossistema -->
+    <section class="presentation-section" id="canais">
+      <span class="section-label">04 — Canais e Ecossistema</span>
+      <h2>Conectividade: quantos canais você realmente precisa?</h2>
+      <p>Ambos suportam Telegram, Discord, Slack e WhatsApp via gateways. A diferença está na profundidade da integração e no ecossistema ao redor.</p>
+      <div class="grid-2">
+        <div class="card-block">
+          <h4>OpenClaw — Ecossistema mais amplo</h4>
+          <ul>
+            <li>Canais integrados: Discord, iMessage, Signal, Slack, Telegram, WhatsApp, IRC, WebChat</li>
+            <li>Plugins adicionais: Feishu, LINE, Matrix, Mattermost, Microsoft Teams, Nextcloud Talk, Nostr, QQ, Twitch, Zalo</li>
+            <li>Clientes nativos: iOS, Android, macOS (menu bar)</li>
+            <li>WebUI com browser automation integrada</li>
+            <li>Marketplace de skills (AgentSkills) com 700+ contribuições</li>
+          </ul>
+        </div>
+        <div class="card-block">
+          <h4>Hermes Agent — Foco em estabilidade</h4>
+          <ul>
+            <li>15 plataformas: Telegram, Discord, Slack, WhatsApp, Signal, e-mail e mais</li>
+            <li>Gateway como serviço systemd, instalação automatizada</li>
+            <li>Ferramentas core (40+) mantidas e auditadas pela equipe Nous Research</li>
+            <li>Compatível com o padrão agentskills.io (skills do Clawhub podem ser usadas)</li>
+            <li>Ecossistema de clientes externos menor</li>
+          </ul>
+        </div>
+      </div>
+      <p>Se a sua operação vive em WhatsApp e precisa de clientes mobile nativos, OpenClaw tem vantagem concreta. Se a prioridade é um conjunto menor de integrações bem auditadas e estáveis, Hermes entrega com menos superfície de ataque.</p>
+    </section>
+
+    <!-- 05 — Segurança -->
+    <section class="presentation-section" id="seguranca">
+      <span class="section-label">05 — Segurança</span>
+      <h2>Incidente ClawHavoc: lições para qualquer implantação de agente</h2>
+      <p>Em fevereiro de 2026, pesquisadores da Bitsight identificaram mais de 30.000 instâncias do OpenClaw expostas à internet sem autenticação, muitas devido a proxies reversos mal configurados. O CVE-2026-25253 documentou uma vulnerabilidade de execução remota de código com um clique. Paralelamente, pesquisadores da Immersive Labs e MITRE documentaram um ataque de supply chain chamado ClawHavoc, no qual centenas de skills maliciosas (info-stealers) foram publicadas no Clawhub antes da implementação de revisão sistemática de segurança.</p>
+      <div class="grid-2">
+        <div class="card-block">
+          <h4>Implicações para OpenClaw</h4>
+          <p>A comunidade grande é vantagem e risco. A revisão de skills no Clawhub foi reforçada após o incidente, mas a lição é clara: skills comunitários precisam de sandboxes, revisão de código e limitação de permissões antes de uso em produção.</p>
+        </div>
+        <div class="card-block">
+          <h4>Postura do Hermes Agent</h4>
+          <p>Não afetado pelo CVE-2026-25253. As 40+ ferramentas core são mantidas e auditadas pela Nous Research. Ao importar skills do Clawhub, a mesma disciplina de revisão se aplica: ler o código, verificar permissões e rodar em ambiente sandboxed.</p>
+        </div>
+      </div>
+      <div class="highlight">
+        <strong>Recomendação:</strong> independente da plataforma, adote uma política de revisão de skills como política organizacional. Nunca instale skills comunitários em produção sem inspeção de código e isolamento.
+      </div>
+    </section>
+
+    <!-- 06 — Casos de Uso -->
+    <section class="presentation-section" id="casos-de-uso">
+      <span class="section-label">06 — Casos de Uso</span>
+      <h2>Quando cada plataforma se destaca</h2>
+      <p>A decisão não é binária. O melhor cenário depende do tipo de tarefa, da maturidade da equipe e da importância da memória acumulativa.</p>
+      <div class="grid-2" style="grid-template-columns: 1fr;">
+        <div class="card-block">
+          <h4>Escolha OpenClaw quando…</h4>
+          <ul>
+            <li>Sua equipe precisa conectar 5+ canais de mensageria simultaneamente (Telegram, WhatsApp, Slack, Discord…)</li>
+            <li>Você já opera stack JavaScript/TypeScript e quer integração sem contexto-switch</li>
+            <li>O agente precisa de clientes mobile nativos (iOS/Android) para usuários finais</li>
+            <li>As tarefas são diversificadas e não se repetem com frequência (chatbot de suporte, automação de múltiplos canais)</li>
+            <li>Velocidade de implantação e baixo overhead operacional são prioridade máxima</li>
+          </ul>
+        </div>
+        <div class="card-block">
+          <h4>Escolha Hermes Agent quando…</h4>
+          <ul>
+            <li>Seu fluxo de trabalho tem tarefas repetitivas e estruturadas (pesquisas periódicas, debugging recorrente, análise de dados)</li>
+            <li>A memória acumulativa importa: o agente precisa aprender com o tempo e se tornar mais eficiente</li>
+            <li>Sua equipe opera no ecossistema Python/ML e precisa de integração com ferramentas de dados</li>
+            <li>A segurança e auditoria de ferramentas são requisitos não-negociáveis</li>
+            <li>Você valoriza a família de modelos Hermes, afinada para chamadas de ferramentas de agente</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 — Comparação Lado a Lado -->
+    <section class="presentation-section" id="comparacao">
+      <span class="section-label">07 — Comparação Lado a Lado</span>
+      <h2>Tabela de decisão: aspectos-chave em perspectiva</h2>
+      <div class="card-block">
+        <table style="width:100%;border-collapse:collapse;font-size:15px;">
+          <thead>
+            <tr style="border-bottom:2px solid var(--border);text-align:left;">
+              <th style="padding:10px 8px;">Aspecto</th>
+              <th style="padding:10px 8px;">OpenClaw</th>
+              <th style="padding:10px 8px;">Hermes Agent</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 8px;font-weight:600;">Linguagem</td>
+              <td style="padding:10px 8px;">Node.js</td>
+              <td style="padding:10px 8px;">Python 3.11+</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 8px;font-weight:600;">Licença</td>
+              <td style="padding:10px 8px;">MIT</td>
+              <td style="padding:10px 8px;">MIT</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 8px;font-weight:600;">Canais suportados</td>
+              <td style="padding:10px 8px;">20+ (incluindo plugins)</td>
+              <td style="padding:10px 8px;">15+</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 8px;font-weight:600;">Clientes mobile</td>
+              <td style="padding:10px 8px;">iOS, Android, macOS</td>
+              <td style="padding:10px 8px;">Limitado</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 8px;font-weight:600;">Memória de longo prazo</td>
+              <td style="padding:10px 8px;">Histórico de conversas (logs)</td>
+              <td style="padding:10px 8px;">3 camadas: modelo do usuário, Skill Documents, eventos</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 8px;font-weight:600;">Aprendizado acumulativo</td>
+              <td style="padding:10px 8px;">Não (cada tarefa é independente)</td>
+              <td style="padding:10px 8px;">Sim (Skill Documents evoluem)</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 8px;font-weight:600;">Marketplace de skills</td>
+              <td style="padding:10px 8px;">700+ (AgentSkills / Clawhub)</td>
+              <td style="padding:10px 8px;">40+ core tools + compatível com Clawhub</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 8px;font-weight:600;">Provedores de modelo</td>
+              <td style="padding:10px 8px;">35+ provedores</td>
+              <td style="padding:10px 8px;">400+ via OpenRouter + Nous Portal</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 8px;font-weight:600;">GitHub stars (abr/2026)</td>
+              <td style="padding:10px 8px;">~214.000+</td>
+              <td style="padding:10px 8px;">~15.000+</td>
+            </tr>
+            <tr>
+              <td style="padding:10px 8px;font-weight:600;">Melhor para…</td>
+              <td style="padding:10px 8px;">Conectividade multi-canal, velocidade, ecossistema JS</td>
+              <td style="padding:10px 8px;">Memória acumulativa, tarefas estruturadas, ecossistema ML/Python</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 08 — Recomendação -->
+    <section class="presentation-section" id="recomendacao">
+      <span class="section-label">08 — Recomendação</span>
+      <h2>Nem concorrência substitutiva, nem escolha binária</h2>
+      <p>OpenClaw e Hermes Agent resolvem problemas relacionados, mas com prioridades diferentes. A organização que precisa de um agente multicanal com baixo tempo de implantação está melhor servida pelo OpenClaw. A equipe que precisa de um agente que melhore com o tempo em tarefas repetitivas, com memória estruturada e auditabilidade, tem vantagem com o Hermes.</p>
+      <div class="grid-2">
+        <div class="card-block">
+          <h4>Arquitetura de referência: uso combinado</h4>
+          <p>Em cenários de maior maturidade, ambas as plataformas podem coexistir: OpenClaw como gateway de canais e face do agente para o usuário final; Hermes como motor de execução para tarefas que se beneficiam de Skill Documents e memória acumulativa. O padrão agentskills.io permite interoperabilidade técnica entre as duas plataformas.</p>
+        </div>
+        <div class="card-block">
+          <h4>Fatores de decisão rápidos</h4>
+          <ul>
+            <li><strong>Precisa de WhatsApp/Telegram/iOS?</strong> → OpenClaw</li>
+            <li><strong>Precisa de aprendizado progressivo?</strong> → Hermes</li>
+            <li><strong>Equipe é JS/TS?</strong> → OpenClaw</li>
+            <li><strong>Equipe é Python/ML?</strong> → Hermes</li>
+            <li><strong>Tarefas são variadas?</strong> → OpenClaw</li>
+            <li><strong>Tarefas são repetitivas/estruturadas?</strong> → Hermes</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 — Fontes -->
+    <section class="presentation-section" id="fontes">
+      <span class="section-label">09 — Fontes</span>
+      <h2>Referências</h2>
+      <ul>
+        <li><a href="https://docs.openclaw.ai/concepts/features">OpenClaw — Features (docs oficiais)</a></li>
+        <li><a href="https://github.com/openclaw/openclaw">OpenClaw — Repositório GitHub</a></li>
+        <li><a href="https://hermesos.cloud/blog/hermes-vs-openclaw">Hermes Agent vs OpenClaw — Comparação honesta (hermesos.cloud)</a></li>
+        <li><a href="https://thenewstack.io/persistent-ai-agents-compared/">OpenClaw vs. Hermes Agent: The race to build AI assistants that never forget (The New Stack)</a></li>
+        <li><a href="https://flowtivity.ai/blog/openclaw-vs-hermes-agent-comparison/">OpenClaw vs Hermes Agent: The Complete 2026 Comparison (Flowtivity)</a></li>
+        <li><a href="https://getclaw.sh/blog/openclaw-vs-hermes-agent-feature-comparison-founders-2026">OpenClaw vs Hermes Agent: Every Feature That Matters for Founders (GetClaw)</a></li>
+        <li><a href="https://trilogyai.substack.com/p/technical-deep-dive-hermes-vs-openclaw">[Technical Deep Dive] Hermes vs. OpenClaw (Trilogy AI — Substack)</a></li>
+        <li><a href="https://dev.to/leowss/i-built-a-team-of-36-ai-agents-heres-exactly-how-openclaw-works-2eab">OpenClaw Deep Dive: The Architecture Behind Multi-Agent AI Systems (dev.to)</a></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
