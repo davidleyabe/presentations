@@ -8,3 +8,5 @@
 - Página inicial: `index.html`
 - CSS base: `css/style.css`
 - Apresentações: `presentations/<slug>/index.html`
+- Template premium reutilizável: `templates/premium-landing-page.html`
+- Guia do template: `templates/README.md`

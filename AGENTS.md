@@ -11,6 +11,8 @@ Transformar pedidos em apresentações prontas para uso, cada uma com sua própr
 - Home do portal: `index.html`
 - Estilo base: `css/style.css`
 - Apresentações individuais: `presentations/<slug>/index.html`
+- Template premium reutilizável: `templates/premium-landing-page.html`
+- Guia de uso do template: `templates/README.md`
 
 ## Regras operacionais
 - Cada nova apresentação deve ganhar uma URL própria.
@@ -22,9 +24,12 @@ Transformar pedidos em apresentações prontas para uso, cada uma com sua própr
 
 ## Padrão de formato (landing page)
 **A partir de 2026-04-09, todas as apresentações devem seguir este padrão por padrão:**
-- **Formato:** Landing page com fundo branco, leitura contínua vertical (scroll), visual limpo e minimalista.
-- **Não usar:** formato de slides HTML, carrosséis, transições entre slides, navegação por teclado.
-- **Objetivo:** o conteúdo deve ser lido como uma página web contínua, não como uma apresentação em slides.
+- **Formato:** Landing page com fundo branco, leitura contínua vertical (scroll), construída em Tailwind CSS.
+- **Direção visual padrão:** editorial premium, com acabamento mais sofisticado do que o template antigo minimalista.
+- **Objetivo visual:** parecer um briefing executivo de alto nível ou landing page premium, não apenas uma página simples com blocos repetidos.
+- **Princípios de design:** hierarquia tipográfica forte, melhor ritmo visual entre seções, cards menos genéricos, composição mais refinada, bom uso de whitespace, sombras sutis, acentos de cor moderados e melhor escaneabilidade.
+- **Não usar:** formato de slides HTML, carrosséis, transições entre slides, navegação por teclado, ou layouts com aparência de template pobre/genérico.
+- **Objetivo de leitura:** o conteúdo deve ser lido como uma página web contínua, não como uma apresentação em slides.
 
 ## Cuidados
 - Não quebrar links existentes.

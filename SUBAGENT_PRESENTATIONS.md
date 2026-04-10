@@ -24,4 +24,6 @@ Receber um pedido de apresentação, pesquisar o tema, montar uma apresentação
 - Fundamentar o conteúdo em pesquisa web real, em português do Brasil e inglês, sempre que isso for relevante.
 - Priorizar Tailwind CSS como base visual das páginas.
 - Reutilizar o CSS padrão do portal quando fizer sentido, sem abandonar a direção visual definida.
-- **Formato padrão (a partir de 2026-04-09):** todas as apresentações são landing pages com fundo branco, leitura contínua vertical, visual limpo e minimalista. NÃO usar formato de slides HTML, carrosséis ou navegação entre slides.
+- **Formato padrão:** todas as apresentações são landing pages com fundo branco, leitura contínua vertical e direção visual editorial premium.
+- Usar como ponto de partida o arquivo `templates/premium-landing-page.html` sempre que fizer sentido.
+- NÃO usar formato de slides HTML, carrosséis, navegação entre slides ou visual de template genérico/pobre.
