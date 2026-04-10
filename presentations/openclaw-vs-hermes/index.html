@@ -12,7 +12,7 @@
 
     <header class="presentation-header">
       <h1>OpenClaw vs Hermes Agent</h1>
-      <p class="subtitle">Arquitetura, memória, ecossistema e casos de uso — quando usar cada um (e por quê)</p>
+      <p class="subtitle">Arquitetura, memória, frontend, ecossistema e casos de uso — quando usar cada um (e por quê)</p>
       <p class="meta">Abril 2026 · Comparação executiva e técnica para decisores e desenvolvedores</p>
     </header>
 
@@ -20,7 +20,7 @@
     <section class="presentation-section" id="panorama">
       <span class="section-label">01 — Panorama</span>
       <h2>Dois agentes de IA de código aberto, duas filosofias distintas</h2>
-      <p>OpenClaw e Hermes Agent surgiram no final de 2025 e início de 2026 como duas das plataformas de agentes autônomos de código abixo mais relevantes do mercado. Ambos são self-hosted, suportam múltiplos canais de mensageria e rodam com modelos de linguagem de última geração. A partir daí, os caminhos divergem.</p>
+      <p>OpenClaw e Hermes Agent surgiram no final de 2025 e início de 2026 como duas das plataformas de agentes autônomos de código aberto mais relevantes do mercado. Ambos são self-hosted, suportam múltiplos canais de mensageria e rodam com modelos de linguagem de última geração. A partir daí, os caminhos divergem.</p>
       <div class="grid-2">
         <div class="card-block">
           <h4>OpenClaw</h4>
@@ -121,9 +121,44 @@
       <p>Se a sua operação vive em WhatsApp e precisa de clientes mobile nativos, OpenClaw tem vantagem concreta. Se a prioridade é um conjunto menor de integrações bem auditadas e estáveis, Hermes entrega com menos superfície de ataque.</p>
     </section>
 
-    <!-- 05 — Segurança -->
+    <!-- 05 — Frontend e Interface -->
+    <section class="presentation-section" id="frontend">
+      <span class="section-label">05 — Frontend e Interface</span>
+      <h2>WebUI, clientes nativos e a experiência real de uso</h2>
+      <p>Além de conectar canais de mensageria, a experiência do usuário e do operador depende criticamente de como cada plataforma apresenta sua interface. Esta dimensão frequentemente ignorada nas comparações define o que é possível ver, configurar e operar no dia a dia.</p>
+      <div class="grid-2">
+        <div class="card-block">
+          <h4>OpenClaw — Interface rica e multi-superfície</h4>
+          <ul>
+            <li><strong>WebUI completa:</strong> painel web com gerenciamento de sessões, upload de arquivos, instalação de skills, visualização de contexto e logs em tempo real. Acessível via browser em qualquer dispositivo.</li>
+            <li><strong>Clientes nativos:</strong> apps para iOS, Android e macOS (menu bar) com notificações push, suporte a voz e experiência integrada ao sistema operacional.</li>
+            <li><strong>Browser automation:</strong> modo de navegador com visão assistida por IA — o agente pode navegar sites, capturar telas e interagir com páginas como um humano.</li>
+            <li><strong>Portal do operador:</strong> administração visual de agents, nodes e sessions. Interface para configurar permissões, revisar histórico e gerenciar implantações.</li>
+            <li><strong>Múltiplas superfícies:</strong> Telegram, WhatsApp, Discord, Slack, WebChat e clientes nativos — o mesmo agente acessível por qualquer uma delas, com contexto compartilhado.</li>
+          </ul>
+        </div>
+        <div class="card-block">
+          <h4>Hermes Agent — Interface minimalista</h4>
+          <ul>
+            <li><strong>Gateway lean:</strong> process daemon otimizado para execução de tarefas. Sem WebUI comparável ao do OpenClaw — a interface principal é a conversa no canal de mensageria escolhido.</li>
+            <li><strong>Integração em plataformas existentes:</strong> a experiência do usuário final acontece dentro do Telegram, Discord ou WhatsApp que ele já usa. Não há app nativo próprio.</li>
+            <li><strong>Clawhub WebUI:</strong> interface pública no clawhub.com para navegar e instalar Skill Documents. Funcional, mas é um portal de descoberta, não um painel de operação.</li>
+            <li><strong>CLI como interface do operador:</strong> a maior parte da administração acontece via terminal e configuração de arquivos. Adequado para engenheiros, menos intuitivo para não-técnicos.</li>
+            <li><strong>Interface de dados:</strong> o sistema de Skill Documents e memória estruturada é acessível e editável via markdown, com possibilidade de importar/exportar — poderoso para quem domina a estrutura, menos visual que um dashboard.</li>
+          </ul>
+        </div>
+      </div>
+      <h3>O que isso significa na prática</h3>
+      <p>OpenClaw investe pesado em <strong>maximum surface area</strong>: o agente precisa ser acessível e visível em qualquer lugar onde o usuário esteja. O resultado é uma experiência mais rica e multifacetada, com mais pontos de entrada e mais formas de interagir — mas também mais complexidade de configuração e mais superfície a manter.</p>
+      <p>Hermes adota uma abordagem <strong>lean and focused</strong>: menos interfaces, cada uma mais estável e auditada. O usuário interage com o agente dentro da plataforma que já domina. O operador usa CLI e arquivos de configuração. Menos visuais, menos pontos de entrada, mas superfície de ataque menor e menos componentes a quebrar.</p>
+      <div class="highlight">
+        <strong>Ponto-chave:</strong> se a sua equipe inclui product managers, designers ou stakeholders não-técnicos que precisam visualizar e interagir com o agente, a WebUI do OpenClaw é uma vantagem concreta. Se todos são engenheiros confortáveis com terminal, a simplicidade do Hermes é uma vantagem operacional, não uma limitação.
+      </div>
+    </section>
+
+    <!-- 06 — Segurança -->
     <section class="presentation-section" id="seguranca">
-      <span class="section-label">05 — Segurança</span>
+      <span class="section-label">06 — Segurança</span>
       <h2>Incidente ClawHavoc: lições para qualquer implantação de agente</h2>
       <p>Em fevereiro de 2026, pesquisadores da Bitsight identificaram mais de 30.000 instâncias do OpenClaw expostas à internet sem autenticação, muitas devido a proxies reversos mal configurados. O CVE-2026-25253 documentou uma vulnerabilidade de execução remota de código com um clique. Paralelamente, pesquisadores da Immersive Labs e MITRE documentaram um ataque de supply chain chamado ClawHavoc, no qual centenas de skills maliciosas (info-stealers) foram publicadas no Clawhub antes da implementação de revisão sistemática de segurança.</p>
       <div class="grid-2">
@@ -141,9 +176,9 @@
       </div>
     </section>
 
-    <!-- 06 — Casos de Uso -->
+    <!-- 07 — Casos de Uso -->
     <section class="presentation-section" id="casos-de-uso">
-      <span class="section-label">06 — Casos de Uso</span>
+      <span class="section-label">07 — Casos de Uso</span>
       <h2>Quando cada plataforma se destaca</h2>
       <p>A decisão não é binária. O melhor cenário depende do tipo de tarefa, da maturidade da equipe e da importância da memória acumulativa.</p>
       <div class="grid-2" style="grid-template-columns: 1fr;">
@@ -155,6 +190,7 @@
             <li>O agente precisa de clientes mobile nativos (iOS/Android) para usuários finais</li>
             <li>As tarefas são diversificadas e não se repetem com frequência (chatbot de suporte, automação de múltiplos canais)</li>
             <li>Velocidade de implantação e baixo overhead operacional são prioridade máxima</li>
+            <li>Você precisa de uma WebUI completa para gerenciamento visual do agente</li>
           </ul>
         </div>
         <div class="card-block">
@@ -165,14 +201,15 @@
             <li>Sua equipe opera no ecossistema Python/ML e precisa de integração com ferramentas de dados</li>
             <li>A segurança e auditoria de ferramentas são requisitos não-negociáveis</li>
             <li>Você valoriza a família de modelos Hermes, afinada para chamadas de ferramentas de agente</li>
+            <li>Sua equipe é técnica e confortável com CLI — interface visual não é prioridade</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- 07 — Comparação Lado a Lado -->
+    <!-- 08 — Comparação Lado a Lado -->
     <section class="presentation-section" id="comparacao">
-      <span class="section-label">07 — Comparação Lado a Lado</span>
+      <span class="section-label">08 — Comparação Lado a Lado</span>
       <h2>Tabela de decisão: aspectos-chave em perspectiva</h2>
       <div class="card-block">
         <table style="width:100%;border-collapse:collapse;font-size:15px;">
@@ -205,6 +242,26 @@
               <td style="padding:10px 8px;">Limitado</td>
             </tr>
             <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 8px;font-weight:600;">WebUI / Portal</td>
+              <td style="padding:10px 8px;">Completo: sessões, arquivos, skills, logs, browser automation</td>
+              <td style="padding:10px 8px;">Sem WebUI de operação; gateway lean via CLI</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 8px;font-weight:600;">Interface do operador</td>
+              <td style="padding:10px 8px;">Portal web + CLI + Node Manager</td>
+              <td style="padding:10px 8px;">CLI + config files + Clawhub (descoberta de skills)</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 8px;font-weight:600;">Experiência usuário final</td>
+              <td style="padding:10px 8px;">App nativo + múltiplos canais + WebChat</td>
+              <td style="padding:10px 8px;">Canal existente do usuário (Telegram, WhatsApp, etc.)</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 8px;font-weight:600;">Browser automation</td>
+              <td style="padding:10px 8px;">Sim — visão assistida por IA, navegação web</td>
+              <td style="padding:10px 8px;">Não (ferramentas de scraping disponíveis)</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
               <td style="padding:10px 8px;font-weight:600;">Memória de longo prazo</td>
               <td style="padding:10px 8px;">Histórico de conversas (logs)</td>
               <td style="padding:10px 8px;">3 camadas: modelo do usuário, Skill Documents, eventos</td>
@@ -231,41 +288,43 @@
             </tr>
             <tr>
               <td style="padding:10px 8px;font-weight:600;">Melhor para…</td>
-              <td style="padding:10px 8px;">Conectividade multi-canal, velocidade, ecossistema JS</td>
-              <td style="padding:10px 8px;">Memória acumulativa, tarefas estruturadas, ecossistema ML/Python</td>
+              <td style="padding:10px 8px;">Conectividade multi-canal, velocidade, ecossistema JS, interface rica</td>
+              <td style="padding:10px 8px;">Memória acumulativa, tarefas estruturadas, ecossistema ML/Python, simplicidade</td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <!-- 08 — Recomendação -->
+    <!-- 09 — Recomendação -->
     <section class="presentation-section" id="recomendacao">
-      <span class="section-label">08 — Recomendação</span>
+      <span class="section-label">09 — Recomendação</span>
       <h2>Nem concorrência substitutiva, nem escolha binária</h2>
-      <p>OpenClaw e Hermes Agent resolvem problemas relacionados, mas com prioridades diferentes. A organização que precisa de um agente multicanal com baixo tempo de implantação está melhor servida pelo OpenClaw. A equipe que precisa de um agente que melhore com o tempo em tarefas repetitivas, com memória estruturada e auditabilidade, tem vantagem com o Hermes.</p>
+      <p>OpenClaw e Hermes Agent resolvem problemas relacionados, mas com prioridades diferentes. A organização que precisa de um agente multicanal com baixo tempo de implantação e interface visual completa está melhor servida pelo OpenClaw. A equipe que precisa de um agente que melhore com o tempo em tarefas repetitivas, com memória estruturada e auditabilidade, tem vantagem com o Hermes.</p>
       <div class="grid-2">
         <div class="card-block">
           <h4>Arquitetura de referência: uso combinado</h4>
-          <p>Em cenários de maior maturidade, ambas as plataformas podem coexistir: OpenClaw como gateway de canais e face do agente para o usuário final; Hermes como motor de execução para tarefas que se beneficiam de Skill Documents e memória acumulativa. O padrão agentskills.io permite interoperabilidade técnica entre as duas plataformas.</p>
+          <p>Em cenários de maior maturidade, ambas as plataformas podem coexistir: OpenClaw como gateway de canais e face do agente para o usuário final (com sua WebUI e clientes nativos); Hermes como motor de execução para tarefas que se beneficiam de Skill Documents e memória acumulativa. O padrão agentskills.io permite interoperabilidade técnica entre as duas plataformas.</p>
         </div>
         <div class="card-block">
           <h4>Fatores de decisão rápidos</h4>
           <ul>
             <li><strong>Precisa de WhatsApp/Telegram/iOS?</strong> → OpenClaw</li>
             <li><strong>Precisa de aprendizado progressivo?</strong> → Hermes</li>
+            <li><strong>Precisa de WebUI para operadores?</strong> → OpenClaw</li>
             <li><strong>Equipe é JS/TS?</strong> → OpenClaw</li>
             <li><strong>Equipe é Python/ML?</strong> → Hermes</li>
             <li><strong>Tarefas são variadas?</strong> → OpenClaw</li>
             <li><strong>Tarefas são repetitivas/estruturadas?</strong> → Hermes</li>
+            <li><strong>Stakeholders não-técnicos usam o portal?</strong> → OpenClaw</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- 09 — Fontes -->
+    <!-- 10 — Fontes -->
     <section class="presentation-section" id="fontes">
-      <span class="section-label">09 — Fontes</span>
+      <span class="section-label">10 — Fontes</span>
       <h2>Referências</h2>
       <ul>
         <li><a href="https://docs.openclaw.ai/concepts/features">OpenClaw — Features (docs oficiais)</a></li>
