@@ -3,248 +3,589 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Engenharia de Software: da Prática Informal à Disciplina Organizacional</title>
-  <link rel="stylesheet" href="../../css/style.css" />
+  <title>Engenharia de Software: disciplina antes que a IA escale a variância</title>
+  <meta name="description" content="Landing page executiva sobre como transformar engenharia de software em disciplina organizacional com governança leve, code review com IA e métricas claras." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0f172a;
+      --ink-soft: #334155;
+      --muted: #64748b;
+      --line: rgba(148, 163, 184, 0.24);
+      --line-strong: rgba(100, 116, 139, 0.28);
+      --surface: #f8fafc;
+      --surface-2: #f1f5f9;
+      --brand: #4f46e5;
+      --brand-soft: rgba(79, 70, 229, 0.08);
+      --emerald-soft: rgba(16, 185, 129, 0.10);
+      --amber-soft: rgba(245, 158, 11, 0.12);
+      --rose-soft: rgba(244, 63, 94, 0.10);
+      --shadow-premium: 0 22px 60px rgba(15, 23, 42, 0.08);
+      --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.06);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Source Sans 3', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(79,70,229,0.07), transparent 32%),
+        radial-gradient(circle at top right, rgba(14,165,233,0.06), transparent 28%),
+        #ffffff;
+    }
+
+    .eyebrow {
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .premium-card {
+      background: rgba(255,255,255,0.9);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-premium);
+      backdrop-filter: blur(10px);
+    }
+
+    .soft-card {
+      background: rgba(248, 250, 252, 0.84);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .section-divider {
+      border-top: 1px solid var(--line);
+    }
+
+    .timeline-line {
+      position: absolute;
+      left: 13px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, rgba(79,70,229,0.25), rgba(15,23,42,0.08));
+    }
+
+    .timeline-dot {
+      position: relative;
+      width: 26px;
+      height: 26px;
+      border-radius: 9999px;
+      border: 1px solid rgba(79,70,229,0.25);
+      background: rgba(255,255,255,0.95);
+      box-shadow: 0 0 0 8px rgba(79,70,229,0.05);
+      flex: 0 0 auto;
+    }
+
+    .timeline-dot::after {
+      content: '';
+      position: absolute;
+      inset: 6px;
+      border-radius: 9999px;
+      background: #4f46e5;
+    }
+
+    .reading-width { max-width: 47rem; }
+  </style>
 </head>
-<body>
-  <main class="container">
-    <a href="../../index.html" class="nav-back">← voltar</a>
+<body class="text-slate-900 antialiased">
+  <main class="mx-auto max-w-7xl px-6 pb-20 pt-8 md:px-8 lg:px-10 lg:pb-28">
+    <div class="mx-auto max-w-6xl">
+      <div class="flex items-center justify-between gap-4 text-sm text-slate-500">
+        <a href="../../index.html" class="inline-flex items-center gap-2 transition hover:text-slate-900 hover:underline">
+          <span>&larr;</span>
+          <span>voltar para a lista</span>
+        </a>
+        <div class="hidden md:block">Landing page executiva · Tailwind CSS · fundo branco</div>
+      </div>
 
-    <header class="presentation-header">
-      <h1>Engenharia de Software: da Prática Informal à Disciplina Organizacional</h1>
-      <p class="subtitle">Como estruturar desenvolvimento como capacidade corporativa — com IA, métricas e governança leve</p>
-      <p class="meta">Abril 2026 · Proposta para liderança técnica e executiva</p>
-    </header>
+      <header class="pt-8 md:pt-12">
+        <div class="grid gap-8 lg:grid-cols-[minmax(0,1.28fr)_minmax(320px,0.72fr)] lg:items-end">
+          <div>
+            <div class="inline-flex items-center gap-3 rounded-full border border-indigo-200/70 bg-white/80 px-4 py-2 text-[12px] font-semibold uppercase tracking-[0.18em] text-indigo-700 shadow-[0_8px_24px_rgba(79,70,229,0.08)]">
+              <span>Engenharia de software</span>
+              <span class="h-1 w-1 rounded-full bg-indigo-400"></span>
+              <span>Briefing executivo</span>
+            </div>
+            <h1 class="mt-6 max-w-5xl text-5xl font-[700] tracking-[-0.045em] text-slate-950 md:text-7xl md:leading-[0.94]">
+              Disciplina de engenharia antes que a IA escale a variância
+            </h1>
+            <p class="mt-6 reading-width text-xl font-[300] leading-8 text-slate-600 md:text-2xl md:leading-9">
+              A recomendação é direta: institucionalizar um baseline leve de engenharia, tornar o code review com IA a primeira camada obrigatória de qualidade e criar um chapter transversal para sustentar padrões, aprendizado e governança sem burocracia excessiva.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3 text-sm">
+              <span class="rounded-full border border-slate-200 bg-white px-4 py-2 text-slate-700">Abril 2026</span>
+              <span class="rounded-full border border-slate-200 bg-white px-4 py-2 text-slate-700">Narrativa executiva reorganizada</span>
+              <span class="rounded-full border border-slate-200 bg-white px-4 py-2 text-slate-700">Foco: decisão, operação e implantação em 90 dias</span>
+            </div>
+          </div>
 
-    <section class="presentation-section" id="contexto">
-      <span class="section-label">01 — Contexto</span>
-      <h2>O problema de escalar software sem engenharia estruturada</h2>
-      <p>Muitas organizações tratam desenvolvimento de software como uma coleção de boas práticas dispersas entre squads. Cada time decide seus próprios padrões de review, teste, deploy e qualidade. Quando a IA entra nessa equação, o volume de código gerado sobe — mas a inconsistência sobe junto.</p>
-      <div class="highlight">
-        <strong>Hipótese central:</strong> sem disciplina de engenharia organizacional, a IA torna os problemas de qualidade mais rápidos e mais difíceis de detectar. Ela é catalisadora, não solucionadora.
-      </div>
-      <div class="grid-2">
-        <div class="card-block">
-          <h4>Sintomas da ausência de engenharia formal</h4>
-          <p>PRs com qualidade variável, deploys que dependem do herói da semana, incidentes recorrentes por mesmo tipo de causa, ferramentas de IA adotadas de forma desorganizada e zero comparabilidade entre squads.</p>
+          <aside class="premium-card rounded-[28px] p-6 md:p-8">
+            <p class="eyebrow text-indigo-700">Executive snapshot</p>
+            <h2 class="mt-3 text-3xl font-[600] tracking-[-0.03em] text-slate-950">A leitura em 30 segundos</h2>
+            <p class="mt-4 text-lg leading-8 text-slate-600">A IA aumentou a velocidade de geração de código, mas não resolveu consistência, qualidade nem governança. Sem uma disciplina organizacional explícita, a empresa acelera a produção do débito técnico em vez da produção de software confiável.</p>
+            <div class="mt-6 space-y-3">
+              <div class="flex items-start justify-between gap-4 rounded-2xl border border-slate-200/80 bg-white/90 px-4 py-3">
+                <div>
+                  <p class="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">Decisão recomendada</p>
+                  <p class="mt-1 text-lg font-semibold text-slate-900">Aprovar um piloto de 90 dias</p>
+                </div>
+                <span class="mt-1 rounded-full bg-emerald-100 px-2.5 py-1 text-xs font-semibold text-emerald-800">ação agora</span>
+              </div>
+              <div class="flex items-start justify-between gap-4 rounded-2xl border border-slate-200/80 bg-white/90 px-4 py-3">
+                <div>
+                  <p class="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">Gate prioritário</p>
+                  <p class="mt-1 text-lg font-semibold text-slate-900">Review com IA em 100% dos PRs piloto</p>
+                </div>
+                <span class="mt-1 rounded-full bg-indigo-50 px-2.5 py-1 text-xs font-semibold text-indigo-700">qualidade escalável</span>
+              </div>
+              <div class="flex items-start justify-between gap-4 rounded-2xl border border-slate-200/80 bg-white/90 px-4 py-3">
+                <div>
+                  <p class="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">Estrutura mínima</p>
+                  <p class="mt-1 text-lg font-semibold text-slate-900">3 KPIs + chapter + baseline comum</p>
+                </div>
+                <span class="mt-1 rounded-full bg-amber-100 px-2.5 py-1 text-xs font-semibold text-amber-800">governança leve</span>
+              </div>
+            </div>
+          </aside>
         </div>
-        <div class="card-block">
-          <h4>Estado desejado</h4>
-          <p>Práticas padronizadas e leves, revisão automatizada como primeira camada, indicadores que mostram realidade e um chapter técnico que sustenta evolução contínua — sem burocracia que atrapalhe.</p>
-        </div>
-      </div>
-    </section>
 
-    <section class="presentation-section" id="por-que-agora">
-      <span class="section-label">02 — Por que agora</span>
-      <h2>A IA mudou o jogo — mas não simplificou</h2>
-      <p>Até 2024, o gargalo principal era gerar código suficiente. Em 2026, com assistentes de IA integrados ao fluxo diário, o gargalo mudou: agora é controlar qualidade, manter consistência arquitetural e evitar que débito técnico entre em produção em velocidade de entrega. Segundo a DORA, elite performers de software fazem 976x mais deploys que low performers — mas a diferença real está na estabilidade desses deploys, não apenas na frequência.</p>
-      <div class="grid-3">
-        <div class="card-block metric">
-          <div class="number">976×</div>
-          <div class="label">mais deploys entre elite e low performers (DORA 2024)</div>
+        <div class="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <div class="soft-card rounded-[24px] p-5">
+            <p class="eyebrow text-slate-500">Conclusão primeiro</p>
+            <p class="mt-3 text-xl font-semibold tracking-[-0.02em] text-slate-950">Engenharia estruturada deixou de ser opcional.</p>
+          </div>
+          <div class="soft-card rounded-[24px] p-5">
+            <p class="eyebrow text-slate-500">Risco real</p>
+            <p class="mt-3 text-xl font-semibold tracking-[-0.02em] text-slate-950">A IA acelera inconsistência quando não existe padrão organizacional.</p>
+          </div>
+          <div class="soft-card rounded-[24px] p-5">
+            <p class="eyebrow text-slate-500">Alavanca principal</p>
+            <p class="mt-3 text-xl font-semibold tracking-[-0.02em] text-slate-950">Review automatizado antes do review humano.</p>
+          </div>
+          <div class="soft-card rounded-[24px] p-5">
+            <p class="eyebrow text-slate-500">Resultado esperado</p>
+            <p class="mt-3 text-xl font-semibold tracking-[-0.02em] text-slate-950">Mais velocidade com menos retrabalho e menor variância entre squads.</p>
+          </div>
         </div>
-        <div class="card-block metric">
-          <div class="number">~2×</div>
-          <div class="label">aumento estimado no volume de código assistido por IA em 2025 vs. 2024 (GitHub)</div>
-        </div>
-        <div class="card-block metric">
-          <div class="number">61%</div>
-          <div class="label">dos devs já usam ferramentas de IA para revisão e geração (Stack Overflow Survey 2024)</div>
-        </div>
-      </div>
-      <p>O risco não é a IA em si — é a ausência de governança sobre como ela entra no pipeline. Sem padrões, a empresa troca um gargalo de produção por um gargalo de qualidade invisível.</p>
-    </section>
+      </header>
 
-    <section class="presentation-section" id="objetivos">
-      <span class="section-label">03 — Objetivos</span>
-      <h2>Cinco objetivos para implantar a disciplina</h2>
-      <p>Objetivos claros, acionáveis e alinhados ao impacto executivo. Cada um se conecta a um resultado mensurável e a uma responsabilidade definida.</p>
-      <div class="grid-2" style="grid-template-columns: 1fr;">
-        <div class="card-block">
-          <h4>1. Estabelecer linha de base e medir impacto real da IA no ciclo de desenvolvimento</h4>
-          <p>Quantificar se a IA está, de fato, reduzindo lead time, esforço de revisão e retrabalho — ou apenas aumentando volume sem qualidade proporcional.</p>
-        </div>
-        <div class="card-block">
-          <h4>2. Implementar code review automatizado com IA como gate obrigatório em 100% dos PRs</h4>
-          <p>IA revisa todo código antes da análise humana, identificando bugs, violações de padrão, riscos de segurança e inconsistências — e bloqueando merges com issues críticas.</p>
-        </div>
-        <div class="card-block">
-          <h4>3. Constituir e ativar o chapter de engenharia de software</h4>
-          <p>Criar comunidade transversal responsável por padrões, playbooks, capacitação, onboarding técnico e evolução das práticas entre squads — sem adicionar burocracia.</p>
-        </div>
-        <div class="card-block">
-          <h4>4. Padronizar práticas mínimas de engenharia entre todos os squads</h4>
-          <p>Definir um baseline comum para branching, definição de qualidade, cobertura de testes, observabilidade e critérios de release — comparável e auditável.</p>
-        </div>
-        <div class="card-block">
-          <h4>5. Criar ciclo contínuo de melhoria baseado em evidência operacional</h4>
-          <p>Sair de decisões por feeling e passar a priorizar melhorias com base em dados recorrentes, reviews regulares e feedback loop entre chapter e squads.</p>
-        </div>
-      </div>
-    </section>
+      <section class="section-divider mt-16 pt-16 md:mt-20 md:pt-20">
+        <div class="grid gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)] lg:items-start">
+          <div class="premium-card rounded-[32px] p-8 md:p-10">
+            <p class="eyebrow text-indigo-700">Recomendação executiva</p>
+            <h2 class="mt-4 max-w-3xl text-4xl font-[600] tracking-[-0.035em] text-slate-950 md:text-5xl">A decisão não é sobre adotar IA. É sobre controlar como ela entra no sistema.</h2>
+            <p class="mt-5 reading-width text-xl font-[300] leading-8 text-slate-600">A mensagem central desta apresentação permanece a mesma, mas agora em formato conclusivo: a organização deve formalizar engenharia de software como capacidade corporativa, com padrões mínimos comparáveis, automação como primeira barreira de qualidade e um chapter que mantenha evolução contínua sem criar burocracia de processo.</p>
+            <div class="mt-8 grid gap-4 md:grid-cols-3">
+              <div class="rounded-2xl bg-slate-950 p-5 text-white">
+                <p class="eyebrow text-indigo-300">Decidir agora</p>
+                <p class="mt-2 text-lg font-semibold">Evitar que ganho de velocidade vire acúmulo silencioso de risco técnico.</p>
+              </div>
+              <div class="rounded-2xl border border-slate-200 bg-white p-5">
+                <p class="eyebrow text-slate-500">Implantar leve</p>
+                <p class="mt-2 text-lg font-semibold text-slate-900">Poucos rituais, poucos KPIs e clareza operacional.</p>
+              </div>
+              <div class="rounded-2xl border border-slate-200 bg-white p-5">
+                <p class="eyebrow text-slate-500">Medir de verdade</p>
+                <p class="mt-2 text-lg font-semibold text-slate-900">Lead time, retrabalho e cobertura de review com IA.</p>
+              </div>
+            </div>
+          </div>
 
-    <section class="presentation-section" id="kpis">
-      <span class="section-label">04 — KPIs</span>
-      <h2>Três KPIs para governar a transformação</h2>
-      <p>Três indicadores suficientes para medir se a implantação funciona. Leves, claros e diretamente ligados ao resultado operacional.</p>
-      <div class="grid-3">
-        <div class="card-block">
-          <h4>1. Change Lead Time</h4>
-          <p><strong>Definição:</strong> tempo entre commit em código-fonte e deploy em produção. Baseado nas métricas DORA.</p>
-          <p><strong>Por que importa:</strong> mostra se o fluxo de entrega está ficando mais rápido de forma sustentável.</p>
-          <p><strong>Acompanhar:</strong> por squad, por tipo de demanda e tendência mensal.</p>
+          <aside class="space-y-5">
+            <div class="soft-card rounded-[28px] p-6">
+              <p class="eyebrow text-slate-500">Tese principal</p>
+              <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">A IA é catalisadora, não solucionadora.</h3>
+              <p class="mt-3 text-lg leading-8 text-slate-600">Ela aumenta throughput de código. Se a empresa já opera com variabilidade alta, ela também aumenta a velocidade de propagação dessa variabilidade.</p>
+            </div>
+            <div class="soft-card rounded-[28px] p-6">
+              <p class="eyebrow text-slate-500">Princípio de desenho</p>
+              <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Governança suficiente, não governança pesada.</h3>
+              <p class="mt-3 text-lg leading-8 text-slate-600">O objetivo não é centralizar todas as decisões. É reduzir variância desnecessária, tornar qualidade visível e acelerar aprendizado coletivo.</p>
+            </div>
+          </aside>
         </div>
-        <div class="card-block">
-          <h4>2. Taxa de Retrabalho Pós-Deploy</h4>
-          <p><strong>Definição:</strong> percentual de releases que exigem correção significativa em até 7 dias (hotfix, rollback ou patch corretivo).</p>
-          <p><strong>Por que importa:</strong> mede se velocidade de entrega veio acompanhada de degradação de qualidade.</p>
-          <p><strong>Acompanhar:</strong> por release, criticidade do bug e causa raiz.</p>
-        </div>
-        <div class="card-block">
-          <h4>3. Cobertura de Review Automatizado com IA</h4>
-          <p><strong>Definição:</strong> percentual de pull requests que passaram por análise automática com IA antes de aprovação humana.</p>
-          <p><strong>Por que importa:</strong> indica se a nova camada de qualidade foi efetivamente adotada e está protegendo o pipeline.</p>
-          <p><strong>Acompanhar:</strong> por squad, por repositório e por tipo de finding gerado.</p>
-        </div>
-      </div>
-      <div class="highlight">
-        <strong>Leitura executiva integrada:</strong> se o Lead Time cai consistentemente, a Taxa de Retrabalho se mantém estável ou diminui, e a Cobertura de Review por IA se aproxima de 100% — a organização está entregando mais rápido, com melhor qualidade e com governança adequada sobre IA.
-      </div>
-    </section>
+      </section>
 
-    <section class="presentation-section" id="review-ia">
-      <span class="section-label">05 — Code Review com IA</span>
-      <h2>Revisão 100% automatizada como primeira camada — não substituição humana</h2>
-      <p>A abordagem recomendada é simples: toda mudança de código passa primeiro por revisão automatizada com IA antes da análise humana. Isso não elimina a revisão humana — torna o processo mais produtivo ao entregar o PR já filtrado, com achados categorizados e bloqueios aplicados.</p>
-      <div class="grid-2">
-        <div>
-          <h3>O que a IA deve cobrir</h3>
-          <ul>
-            <li>Vulnerabilidades de segurança comuns (injection, XSS, secrets expostos)</li>
-            <li>Violações de padrões e convenções definidas pelo chapter</li>
-            <li>Code smells, complexidade ciclomática alta, duplicação</li>
-            <li>Inconsistências com a arquitetura definida para o módulo</li>
-            <li>Falta de testes em áreas críticas mapeadas</li>
-          </ul>
+      <section class="section-divider mt-16 pt-16 md:mt-20 md:pt-20">
+        <div class="max-w-3xl">
+          <p class="eyebrow text-indigo-700">Por que isso virou urgente</p>
+          <h2 class="mt-4 text-4xl font-[600] tracking-[-0.035em] text-slate-950 md:text-5xl">O gargalo saiu da geração de código e migrou para controle de qualidade, consistência e débito técnico.</h2>
+          <p class="mt-5 reading-width text-xl font-[300] leading-8 text-slate-600">Até pouco tempo, produzir software suficiente era o principal desafio. Em 2026, com assistentes integrados ao fluxo diário, o novo gargalo é garantir que mais código signifique mais capacidade e não apenas mais superfície de falha.</p>
         </div>
-        <div>
-          <h3>Guardrails obrigatórios</h3>
-          <ul>
-            <li>Findings críticos bloqueiam merge automaticamente</li>
-            <li>Aprovação humana obrigatória para mudanças em domínios sensíveis</li>
-            <li>Feedback loop para ajuste de falso positivo e falso negativo</li>
-            <li>Auditoria trimestral de efetividade do review automatizado</li>
-            <li>Prompts e regras versionados no repositório do chapter</li>
-          </ul>
+        <div class="mt-10 grid gap-4 md:grid-cols-3">
+          <article class="premium-card rounded-[28px] p-6">
+            <p class="text-4xl font-[700] tracking-[-0.04em] text-slate-950">976×</p>
+            <p class="mt-3 text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">DORA 2024</p>
+            <p class="mt-4 text-lg leading-8 text-slate-600">Elite performers fazem muito mais deploys que low performers, mas a diferença relevante é estabilidade com velocidade, não volume bruto de entregas.</p>
+          </article>
+          <article class="premium-card rounded-[28px] p-6">
+            <p class="text-4xl font-[700] tracking-[-0.04em] text-slate-950">~2×</p>
+            <p class="mt-3 text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">GitHub</p>
+            <p class="mt-4 text-lg leading-8 text-slate-600">O volume estimado de código assistido por IA cresce rapidamente. Sem guardrails, o aumento de produção vem acompanhado de maior heterogeneidade técnica.</p>
+          </article>
+          <article class="premium-card rounded-[28px] p-6">
+            <p class="text-4xl font-[700] tracking-[-0.04em] text-slate-950">61%</p>
+            <p class="mt-3 text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">Stack Overflow 2024</p>
+            <p class="mt-4 text-lg leading-8 text-slate-600">Ferramentas de IA já estão no cotidiano do desenvolvimento. O risco, portanto, não é adoção futura — é adoção desorganizada no presente.</p>
+          </article>
         </div>
-      </div>
-      <div class="card-block">
-        <h4>Fluxo operacional recomendado</h4>
-        <p><strong>1.</strong> Desenvolvedor abre PR → <strong>2.</strong> IA revisa automaticamente e publica achados → <strong>3.</strong> Problemas críticos bloqueiam o merge → <strong>4.</strong> Revisor humano recebe o PR categorizado e decide → <strong>5.</strong> O chapter analisa padrões recorrentes e ajusta regras e prompts.</p>
-      </div>
-      <p>Ferramentas maduras como SonarQube (com AI CodeFix), CodeRabbit, Codacy e GitHub Copilot Fixes já cobrem esse fluxo. A escolha depende do stack, mas o princípio é o mesmo: gate de qualidade automatizado antes do gate humano.</p>
-    </section>
+      </section>
 
-    <section class="presentation-section" id="chapter">
-      <span class="section-label">06 — Chapter</span>
-      <h2>O chapter como motor de sustentação e evolução</h2>
-      <p>Implantar práticas sem chapter é como lançar uma feature sem dono. O chapter garante que padrões não morram, que melhorias não fiquem apenas na intenção e que o time aprenda coletivamente — e não isoladamente.</p>
-      <div class="grid-2">
-        <div class="card-block">
-          <h4>Responsabilidades do chapter</h4>
-          <ul>
-            <li>Manter e evoluir o playbook de engenharia</li>
-            <li>Definir e atualizar padrões de código, review e qualidade</li>
-            <li>Monitorar os 3 KPIs e propor ações corretivas</li>
-            <li>Apoiar onboarding técnico de novos desenvolvedores</li>
-            <li>Avaliar e integrar ferramentas de IA no fluxo</li>
-            <li>Documentar decisões técnicas relevantes</li>
-          </ul>
+      <section class="section-divider mt-16 pt-16 md:mt-20 md:pt-20">
+        <div class="grid gap-6 lg:grid-cols-[minmax(0,1.08fr)_minmax(320px,0.92fr)] lg:items-start">
+          <div>
+            <p class="eyebrow text-indigo-700">Quadro atual</p>
+            <h2 class="mt-4 text-4xl font-[600] tracking-[-0.035em] text-slate-950 md:text-5xl">O que acontece quando engenharia é tratada como coleção de boas práticas locais</h2>
+            <div class="mt-8 grid gap-4 md:grid-cols-2">
+              <article class="premium-card rounded-[26px] p-6">
+                <p class="eyebrow text-slate-500">Sintoma 1</p>
+                <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Qualidade imprevisível entre squads</h3>
+                <p class="mt-3 text-lg leading-8 text-slate-600">Cada time decide seus próprios critérios de review, teste, branching e release. O resultado é variância alta e baixa comparabilidade operacional.</p>
+              </article>
+              <article class="premium-card rounded-[26px] p-6">
+                <p class="eyebrow text-slate-500">Sintoma 2</p>
+                <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Dependência do herói da semana</h3>
+                <p class="mt-3 text-lg leading-8 text-slate-600">Deploys críticos, incidentes recorrentes e correções urgentes continuam dependendo de pessoas específicas, não de um sistema de engenharia robusto.</p>
+              </article>
+              <article class="premium-card rounded-[26px] p-6">
+                <p class="eyebrow text-slate-500">Sintoma 3</p>
+                <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Adoção difusa de IA</h3>
+                <p class="mt-3 text-lg leading-8 text-slate-600">Ferramentas entram no pipeline por iniciativa local, sem critérios claros de cobertura, logging, ajuste de falso positivo ou proteção para mudanças sensíveis.</p>
+              </article>
+              <article class="premium-card rounded-[26px] p-6">
+                <p class="eyebrow text-slate-500">Sintoma 4</p>
+                <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Decisão por percepção</h3>
+                <p class="mt-3 text-lg leading-8 text-slate-600">Sem uma linha de base comum e poucos indicadores confiáveis, a organização discute velocidade e qualidade mais por opinião do que por evidência operacional.</p>
+              </article>
+            </div>
+          </div>
+          <aside class="premium-card rounded-[32px] p-8 lg:sticky lg:top-6">
+            <p class="eyebrow text-slate-500">Estado desejado</p>
+            <h3 class="mt-4 text-3xl font-semibold tracking-[-0.03em] text-slate-950">Disciplina organizacional com fricção mínima</h3>
+            <p class="mt-5 text-xl font-[300] leading-8 text-slate-600">O desenho proposto é simples: práticas mínimas padronizadas, primeira camada automática de qualidade, indicadores suficientes para gestão e uma comunidade técnica responsável por manter o sistema evoluindo.</p>
+            <div class="mt-6 space-y-4">
+              <div class="rounded-2xl border border-slate-200 bg-white p-4">
+                <p class="text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">Resultado prático</p>
+                <p class="mt-2 text-lg font-semibold text-slate-900">Menor variância entre squads</p>
+              </div>
+              <div class="rounded-2xl border border-slate-200 bg-white p-4">
+                <p class="text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">Resultado prático</p>
+                <p class="mt-2 text-lg font-semibold text-slate-900">Review humano mais qualificado e menos mecânico</p>
+              </div>
+              <div class="rounded-2xl border border-slate-200 bg-white p-4">
+                <p class="text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">Resultado prático</p>
+                <p class="mt-2 text-lg font-semibold text-slate-900">Melhoria contínua sustentada por evidência</p>
+              </div>
+            </div>
+          </aside>
         </div>
-        <div class="card-block">
-          <h4>Cadência operacional</h4>
-          <ul>
-            <li><strong>Quinzenal:</strong> encontro do chapter (45 min) — revisão de incidentes, padrões e bloqueios</li>
-            <li><strong>Mensal:</strong> review de KPIs e relatório para liderança</li>
-            <li><strong>Trimestral:</strong> auditoria de review automatizado e recalibragem de regras</li>
-            <li><strong>Contínuo:</strong> canal assíncrono para dúvidas, RFCs e decisões</li>
-          </ul>
-        </div>
-      </div>
-      <div class="highlight">
-        <strong>Princípio:</strong> o chapter é leve, voluntário e orientado a resultado. Ele não governa — ele facilita. Ele não restringe — ele padroniza. Seu sucesso se mede pela redução de variância entre squads e pela aceleração de aprendizado coletivo.
-      </div>
-    </section>
+      </section>
 
-    <section class="presentation-section" id="roadmap">
-      <span class="section-label">07 — Roadmap</span>
-      <h2>Implantação em 90 dias — do diagnóstico à institucionalização</h2>
-      <div class="grid-2">
-        <div class="phase-block">
-          <div class="timeline">Semanas 1–2</div>
-          <h4>Diagnóstico rápido</h4>
-          <ul>
-            <li>Mapear fluxo atual de PR, review, deploy e incidentes por squad</li>
-            <li>Medir baseline dos 3 KPIs com dados existentes</li>
-            <li>Identificar ferramentas de IA já em uso (formais ou shadow IT)</li>
-            <li>Selecionar 2–3 squads para piloto</li>
-          </ul>
+      <section class="section-divider mt-16 pt-16 md:mt-20 md:pt-20">
+        <div class="max-w-3xl">
+          <p class="eyebrow text-indigo-700">Arquitetura da solução</p>
+          <h2 class="mt-4 text-4xl font-[600] tracking-[-0.035em] text-slate-950 md:text-5xl">Três alavancas, um sistema coerente</h2>
+          <p class="mt-5 reading-width text-xl font-[300] leading-8 text-slate-600">A proposta se organiza em três componentes complementares. Separados, ajudam. Juntos, criam o mínimo sistema operacional de engenharia que hoje falta na maioria das organizações.</p>
         </div>
-        <div class="phase-block">
-          <div class="timeline">Semanas 3–6</div>
-          <h4>Desenho e piloto</h4>
-          <ul>
-            <li>Configurar review automatizado com IA nos repos piloto</li>
-            <li>Publicar primeira versão do playbook mínimo do chapter</li>
-            <li>Realizar primeira reunião quinzenal do chapter</li>
-            <li>Criar dashboard com os 3 KPIs visíveis</li>
-          </ul>
+        <div class="mt-10 grid gap-5 lg:grid-cols-3">
+          <article class="rounded-[32px] border border-indigo-200 bg-[linear-gradient(180deg,rgba(238,242,255,0.9)_0%,rgba(255,255,255,1)_100%)] p-8 shadow-[0_20px_60px_rgba(79,70,229,0.08)]">
+            <p class="eyebrow text-indigo-700">Alavanca 1</p>
+            <h3 class="mt-3 text-3xl font-semibold tracking-[-0.03em] text-slate-950">Baseline comum</h3>
+            <p class="mt-4 text-xl font-[300] leading-8 text-slate-700">Definir práticas mínimas para branching, qualidade, cobertura de testes, observabilidade e critérios de release. Não é padronização total; é comparabilidade operacional.</p>
+          </article>
+          <article class="rounded-[32px] border border-emerald-200 bg-[linear-gradient(180deg,rgba(236,253,245,0.92)_0%,rgba(255,255,255,1)_100%)] p-8 shadow-[0_20px_60px_rgba(16,185,129,0.08)]">
+            <p class="eyebrow text-emerald-700">Alavanca 2</p>
+            <h3 class="mt-3 text-3xl font-semibold tracking-[-0.03em] text-slate-950">Review com IA</h3>
+            <p class="mt-4 text-xl font-[300] leading-8 text-slate-700">Toda mudança passa primeiro por revisão automatizada com IA. O objetivo é capturar bug, smell, desvio de padrão e risco de segurança antes do esforço humano.</p>
+          </article>
+          <article class="rounded-[32px] border border-amber-200 bg-[linear-gradient(180deg,rgba(255,251,235,0.96)_0%,rgba(255,255,255,1)_100%)] p-8 shadow-[0_20px_60px_rgba(245,158,11,0.08)]">
+            <p class="eyebrow text-amber-700">Alavanca 3</p>
+            <h3 class="mt-3 text-3xl font-semibold tracking-[-0.03em] text-slate-950">Chapter de engenharia</h3>
+            <p class="mt-4 text-xl font-[300] leading-8 text-slate-700">Uma estrutura leve e transversal para manter playbooks, calibrar ferramentas, revisar dados e sustentar aprendizado coletivo em vez de reinventar regras time a time.</p>
+          </article>
         </div>
-        <div class="phase-block">
-          <div class="timeline">Semanas 7–10</div>
-          <h4>Expansão controlada</h4>
-          <ul>
-            <li>Expandir review automatizado para novos repos</li>
-            <li>Ajustar regras com base nos achados do piloto</li>
-            <li>Publicar segunda versão do playbook com lições aprendidas</li>
-            <li>Levar primeiros resultados para liderança com recomendações</li>
-          </ul>
-        </div>
-        <div class="phase-block">
-          <div class="timeline">Semanas 11–12</div>
-          <h4>Institucionalização</h4>
-          <ul>
-            <li>Formalizar chapter com charter, membros e cadência estável</li>
-            <li>Tornar review com IA gate padrão para todo o portfólio</li>
-            <li>Publicar relatório executivo com evolução dos 3 KPIs</li>
-            <li>Definir próximos passos para arquitetura, testes e confiabilidade</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="presentation-section" id="mensagem-final">
-      <span class="section-label">08 — Fechamento</span>
-      <h2>Decisão: disciplina agora, antes que a IA escale os problemas</h2>
-      <p>Engenharia de software estruturada não é overhead — é o mecanismo que permite que a IA entregue valor real em vez de velocidade sem qualidade. A empresa não precisa de burocracia; precisa de padrão leve, métricas claras e uma comunidade técnica que sustente a melhoria.</p>
-      <div class="highlight">
-        <strong>Proposta de ação:</strong> aprovar piloto de 90 dias com 3 KPIs, review automatizado com IA em 100% dos PRs dos times piloto e lançamento formal do chapter de engenharia de software. Retorno para liderança com resultados concretos em 90 dias.
-      </div>
-    </section>
+      <section class="section-divider mt-16 pt-16 md:mt-20 md:pt-20">
+        <div class="grid gap-8 lg:grid-cols-[minmax(0,1.08fr)_minmax(320px,0.92fr)] lg:items-start">
+          <div>
+            <p class="eyebrow text-indigo-700">Objetivos da implantação</p>
+            <h2 class="mt-4 text-4xl font-[600] tracking-[-0.035em] text-slate-950 md:text-5xl">Cinco objetivos para transformar prática informal em disciplina mensurável</h2>
+            <div class="mt-8 space-y-4">
+              <div class="premium-card rounded-[24px] p-5">
+                <p class="text-lg leading-8 text-slate-700"><strong class="text-slate-950">1.</strong> Estabelecer uma linha de base para medir o impacto real da IA no ciclo de desenvolvimento, separando ganho verdadeiro de simples aumento de volume.</p>
+              </div>
+              <div class="premium-card rounded-[24px] p-5">
+                <p class="text-lg leading-8 text-slate-700"><strong class="text-slate-950">2.</strong> Implementar review automatizado com IA como gate obrigatório em 100% dos PRs dos times piloto, com bloqueio para achados críticos.</p>
+              </div>
+              <div class="premium-card rounded-[24px] p-5">
+                <p class="text-lg leading-8 text-slate-700"><strong class="text-slate-950">3.</strong> Constituir o chapter de engenharia de software para sustentar padrões, onboarding técnico, playbooks e evolução contínua entre squads.</p>
+              </div>
+              <div class="premium-card rounded-[24px] p-5">
+                <p class="text-lg leading-8 text-slate-700"><strong class="text-slate-950">4.</strong> Padronizar o mínimo necessário de engenharia em todos os squads para tornar qualidade, release e observabilidade comparáveis e auditáveis.</p>
+              </div>
+              <div class="premium-card rounded-[24px] p-5">
+                <p class="text-lg leading-8 text-slate-700"><strong class="text-slate-950">5.</strong> Criar um ciclo contínuo de melhoria baseado em evidência operacional, substituindo decisões por feeling por revisões regulares de dados e causas recorrentes.</p>
+              </div>
+            </div>
+          </div>
+          <aside class="soft-card rounded-[32px] p-8">
+            <p class="eyebrow text-slate-500">Leitura executiva</p>
+            <h3 class="mt-4 text-3xl font-semibold tracking-[-0.03em] text-slate-950">Os objetivos são operacionais, não conceituais.</h3>
+            <p class="mt-5 text-xl font-[300] leading-8 text-slate-600">Cada objetivo foi preservado do material original, mas agora aparece ancorado em responsabilidade, governança e resultado mensurável. O framing mudou: menos lista, mais decisão.</p>
+            <div class="mt-6 rounded-2xl bg-slate-950 p-5 text-white">
+              <p class="eyebrow text-indigo-300">Síntese</p>
+              <p class="mt-3 text-lg leading-8 text-slate-200">A implantação precisa mostrar rapidamente três coisas para a liderança: se a IA reduz tempo, se a qualidade aguenta o ganho de velocidade e se a disciplina consegue escalar sem travar times.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
 
-    <section class="presentation-section" id="fontes">
-      <span class="section-label">09 — Fontes</span>
-      <h2>Referências</h2>
-      <ul>
-        <li><a href="https://dora.dev/guides/dora-metrics/">DORA — Software Delivery Performance Metrics (Google)</a></li>
-        <li><a href="https://github.blog/ai-and-ml/github-copilot/developers-survey-ai-statistics/">GitHub Developer Survey 2024 — AI adoption statistics</a></li>
-        <li><a href="https://survey.stackoverflow.co/2024/">Stack Overflow Developer Survey 2024 — Uso de ferramentas de IA por desenvolvedores</a></li>
-        <li><a href="https://www.digitalocean.com/resources/articles/ai-code-review-tools">DigitalOcean — AI Code Review Tools Comparison (2025)</a></li>
-        <li><a href="https://martinfowler.com/articles/agile-xai.html">Martin Fowler — Agile AI Practices and Engineering Discipline</a></li>
-        <li><a href="https://cloud.google.com/blog/products/devops-sre/using-the-four-keys-to-measure-your-devops-performance">Google Cloud — Four Keys to Measure DevOps Performance</a></li>
-      </ul>
-    </section>
+      <section class="section-divider mt-16 pt-16 md:mt-20 md:pt-20">
+        <div class="max-w-3xl">
+          <p class="eyebrow text-indigo-700">Métricas de governança</p>
+          <h2 class="mt-4 text-4xl font-[600] tracking-[-0.035em] text-slate-950 md:text-5xl">Três KPIs são suficientes para saber se a transformação está funcionando</h2>
+          <p class="mt-5 reading-width text-xl font-[300] leading-8 text-slate-600">Em vez de criar um dashboard excessivo, a proposta concentra a gestão em três indicadores diretamente ligados à velocidade, à qualidade e à adoção real da nova camada de controle.</p>
+        </div>
+        <div class="mt-10 grid gap-5 lg:grid-cols-3">
+          <article class="premium-card rounded-[28px] p-6 md:p-7">
+            <p class="eyebrow text-indigo-700">KPI 1</p>
+            <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Change Lead Time</h3>
+            <p class="mt-4 text-lg leading-8 text-slate-600">Tempo entre commit e deploy em produção. Mostra se a organização está acelerando entrega de forma sustentável, não apenas apertando mais o time.</p>
+            <p class="mt-4 text-base leading-7 text-slate-500">Leitura: por squad, por tipo de demanda e por tendência mensal.</p>
+          </article>
+          <article class="premium-card rounded-[28px] p-6 md:p-7">
+            <p class="eyebrow text-rose-700">KPI 2</p>
+            <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Taxa de retrabalho pós-deploy</h3>
+            <p class="mt-4 text-lg leading-8 text-slate-600">Percentual de releases que exigem hotfix, rollback ou patch corretivo relevante em até sete dias. É o indicador mais direto de degradação de qualidade.</p>
+            <p class="mt-4 text-base leading-7 text-slate-500">Leitura: por release, criticidade e causa raiz.</p>
+          </article>
+          <article class="premium-card rounded-[28px] p-6 md:p-7">
+            <p class="eyebrow text-emerald-700">KPI 3</p>
+            <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Cobertura de review automatizado com IA</h3>
+            <p class="mt-4 text-lg leading-8 text-slate-600">Percentual de pull requests que passam por análise automática antes da aprovação humana. Mede adoção real da nova camada de qualidade.</p>
+            <p class="mt-4 text-base leading-7 text-slate-500">Leitura: por squad, por repositório e por tipo de finding.</p>
+          </article>
+        </div>
+        <div class="mt-6 rounded-[28px] border border-slate-200 bg-slate-50 px-6 py-5 shadow-[0_10px_30px_rgba(15,23,42,0.04)]">
+          <p class="text-lg leading-8 text-slate-700"><strong class="text-slate-950">Leitura integrada:</strong> se o lead time cai, a taxa de retrabalho se mantém estável ou melhora, e a cobertura de review com IA se aproxima de 100%, a organização está entregando mais rápido sem perder controle de qualidade.</p>
+        </div>
+      </section>
+
+      <section class="section-divider mt-16 pt-16 md:mt-20 md:pt-20">
+        <div class="grid gap-6 lg:grid-cols-[minmax(0,1.06fr)_minmax(320px,0.94fr)] lg:items-start">
+          <div>
+            <p class="eyebrow text-indigo-700">Operating model</p>
+            <h2 class="mt-4 text-4xl font-[600] tracking-[-0.035em] text-slate-950 md:text-5xl">Como o code review com IA deve funcionar na prática</h2>
+            <p class="mt-5 reading-width text-xl font-[300] leading-8 text-slate-600">A recomendação operacional é objetiva: IA primeiro, revisão humana depois. A automação não substitui julgamento humano; ela limpa o fluxo, concentra atenção e cria um gate reprodutível para toda mudança.</p>
+            <div class="mt-8 grid gap-4 md:grid-cols-2">
+              <article class="soft-card rounded-[24px] p-5">
+                <p class="eyebrow text-slate-500">Cobertura da IA</p>
+                <ul class="mt-4 space-y-2 text-lg leading-8 text-slate-700">
+                  <li>Vulnerabilidades comuns e segredos expostos</li>
+                  <li>Violações de padrão e convenção</li>
+                  <li>Code smells, duplicação e complexidade excessiva</li>
+                  <li>Inconsistências com a arquitetura definida</li>
+                  <li>Falta de testes em áreas críticas</li>
+                </ul>
+              </article>
+              <article class="soft-card rounded-[24px] p-5">
+                <p class="eyebrow text-slate-500">Guardrails obrigatórios</p>
+                <ul class="mt-4 space-y-2 text-lg leading-8 text-slate-700">
+                  <li>Achados críticos bloqueiam merge</li>
+                  <li>Aprovação humana segue mandatória em domínios sensíveis</li>
+                  <li>Regras e prompts precisam ser versionados</li>
+                  <li>Falso positivo e falso negativo entram em feedback loop</li>
+                  <li>Efetividade do gate é auditada trimestralmente</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+          <aside class="premium-card rounded-[32px] p-8">
+            <p class="eyebrow text-slate-500">Fluxo recomendado</p>
+            <div class="mt-5 space-y-4">
+              <div class="rounded-2xl border border-slate-200 bg-white p-4">
+                <p class="text-sm font-semibold uppercase tracking-[0.16em] text-indigo-700">Etapa 1</p>
+                <p class="mt-2 text-lg font-semibold text-slate-900">Desenvolvedor abre o PR</p>
+              </div>
+              <div class="rounded-2xl border border-slate-200 bg-white p-4">
+                <p class="text-sm font-semibold uppercase tracking-[0.16em] text-indigo-700">Etapa 2</p>
+                <p class="mt-2 text-lg font-semibold text-slate-900">IA revisa, categoriza achados e aplica bloqueios</p>
+              </div>
+              <div class="rounded-2xl border border-slate-200 bg-white p-4">
+                <p class="text-sm font-semibold uppercase tracking-[0.16em] text-indigo-700">Etapa 3</p>
+                <p class="mt-2 text-lg font-semibold text-slate-900">Revisor humano decide sobre um PR já filtrado</p>
+              </div>
+              <div class="rounded-2xl border border-slate-200 bg-white p-4">
+                <p class="text-sm font-semibold uppercase tracking-[0.16em] text-indigo-700">Etapa 4</p>
+                <p class="mt-2 text-lg font-semibold text-slate-900">Chapter analisa padrões recorrentes e recalibra regras</p>
+              </div>
+            </div>
+            <p class="mt-6 text-lg leading-8 text-slate-600">Ferramentas podem variar conforme stack, mas o princípio não muda: gate automatizado de qualidade antes do gate humano.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section-divider mt-16 pt-16 md:mt-20 md:pt-20">
+        <div class="grid gap-8 lg:grid-cols-[minmax(0,1.06fr)_minmax(320px,0.94fr)] lg:items-start">
+          <div>
+            <p class="eyebrow text-indigo-700">Sustentação organizacional</p>
+            <h2 class="mt-4 text-4xl font-[600] tracking-[-0.035em] text-slate-950 md:text-5xl">O chapter existe para impedir que a disciplina morra depois do piloto</h2>
+            <p class="mt-5 reading-width text-xl font-[300] leading-8 text-slate-600">Implantar padrões sem ownership transversal é equivalente a lançar uma feature sem equipe responsável. O chapter dá continuidade, coerência e mecanismo de evolução para as práticas acordadas.</p>
+            <div class="mt-8 grid gap-4 md:grid-cols-2">
+              <article class="premium-card rounded-[24px] p-5">
+                <p class="eyebrow text-slate-500">Responsabilidades</p>
+                <ul class="mt-4 space-y-2 text-lg leading-8 text-slate-700">
+                  <li>Manter e evoluir o playbook de engenharia</li>
+                  <li>Atualizar padrões de código, review e qualidade</li>
+                  <li>Monitorar os três KPIs e propor ações corretivas</li>
+                  <li>Apoiar onboarding técnico</li>
+                  <li>Avaliar ferramentas de IA no fluxo</li>
+                  <li>Documentar decisões técnicas relevantes</li>
+                </ul>
+              </article>
+              <article class="premium-card rounded-[24px] p-5">
+                <p class="eyebrow text-slate-500">Cadência operacional</p>
+                <ul class="mt-4 space-y-2 text-lg leading-8 text-slate-700">
+                  <li>Quinzenal: encontro de 45 minutos</li>
+                  <li>Mensal: review dos KPIs para liderança</li>
+                  <li>Trimestral: auditoria do review automatizado</li>
+                  <li>Contínuo: canal assíncrono para dúvidas e RFCs</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+          <aside class="soft-card rounded-[32px] p-8">
+            <p class="eyebrow text-slate-500">Princípio de desenho</p>
+            <h3 class="mt-4 text-3xl font-semibold tracking-[-0.03em] text-slate-950">Leve, voluntário e orientado a resultado</h3>
+            <p class="mt-5 text-xl font-[300] leading-8 text-slate-600">O chapter não existe para centralizar decisão de produto nem criar fila de aprovação. Ele existe para reduzir variância, acelerar aprendizado e preservar coerência técnica ao longo do tempo.</p>
+            <div class="mt-6 rounded-2xl border border-slate-200 bg-white p-5">
+              <p class="eyebrow text-slate-500">Como medir sucesso</p>
+              <p class="mt-3 text-lg leading-8 text-slate-700">Menos diferença injustificada entre squads, menos recorrência dos mesmos erros e maior previsibilidade de entrega com qualidade.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section-divider mt-16 pt-16 md:mt-20 md:pt-20">
+        <div class="max-w-3xl">
+          <p class="eyebrow text-indigo-700">Roadmap de implantação</p>
+          <h2 class="mt-4 text-4xl font-[600] tracking-[-0.035em] text-slate-950 md:text-5xl">90 dias do diagnóstico à institucionalização</h2>
+          <p class="mt-5 reading-width text-xl font-[300] leading-8 text-slate-600">A narrativa executiva fecha com um plano enxuto e verificável. O objetivo do piloto não é concluir toda a transformação em três meses, mas provar o modelo, calibrar o sistema e decidir a expansão com base em fatos.</p>
+        </div>
+
+        <div class="relative mt-12 pl-0 md:pl-2">
+          <div class="timeline-line hidden md:block"></div>
+          <div class="space-y-8">
+            <div class="grid gap-4 md:grid-cols-[40px_minmax(0,1fr)] md:items-start">
+              <div class="hidden justify-center md:flex"><span class="timeline-dot"></span></div>
+              <article class="premium-card rounded-[28px] p-6 md:p-7">
+                <p class="eyebrow text-indigo-700">Semanas 1–2</p>
+                <h3 class="mt-2 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Diagnóstico rápido</h3>
+                <p class="mt-3 text-lg leading-8 text-slate-600">Mapear PR, review, deploy e incidentes por squad; medir baseline dos três KPIs; identificar IA formal e shadow IT; escolher de dois a três squads para o piloto.</p>
+              </article>
+            </div>
+
+            <div class="grid gap-4 md:grid-cols-[40px_minmax(0,1fr)] md:items-start">
+              <div class="hidden justify-center md:flex"><span class="timeline-dot"></span></div>
+              <article class="premium-card rounded-[28px] p-6 md:p-7">
+                <p class="eyebrow text-indigo-700">Semanas 3–6</p>
+                <h3 class="mt-2 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Desenho e piloto</h3>
+                <p class="mt-3 text-lg leading-8 text-slate-600">Configurar review automatizado com IA nos repositórios piloto, publicar a primeira versão do playbook mínimo, realizar a primeira reunião do chapter e disponibilizar um dashboard simples com os três KPIs.</p>
+              </article>
+            </div>
+
+            <div class="grid gap-4 md:grid-cols-[40px_minmax(0,1fr)] md:items-start">
+              <div class="hidden justify-center md:flex"><span class="timeline-dot"></span></div>
+              <article class="premium-card rounded-[28px] p-6 md:p-7">
+                <p class="eyebrow text-indigo-700">Semanas 7–10</p>
+                <h3 class="mt-2 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Expansão controlada</h3>
+                <p class="mt-3 text-lg leading-8 text-slate-600">Levar o gate automatizado para novos repositórios, recalibrar regras a partir dos achados do piloto, publicar a segunda versão do playbook e apresentar resultados parciais para a liderança.</p>
+              </article>
+            </div>
+
+            <div class="grid gap-4 md:grid-cols-[40px_minmax(0,1fr)] md:items-start">
+              <div class="hidden justify-center md:flex"><span class="timeline-dot"></span></div>
+              <article class="premium-card rounded-[28px] border border-indigo-200 bg-white p-6 shadow-[0_24px_60px_rgba(79,70,229,0.10)] md:p-7">
+                <p class="eyebrow text-indigo-700">Semanas 11–12</p>
+                <h3 class="mt-2 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Institucionalização</h3>
+                <p class="mt-3 text-lg leading-8 text-slate-600">Formalizar o chapter com charter e cadência estável, tornar o review com IA o gate padrão do escopo aprovado, publicar relatório executivo com evolução dos KPIs e definir a agenda seguinte para arquitetura, testes e confiabilidade.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-divider mt-16 pt-16 md:mt-20 md:pt-20">
+        <div class="rounded-[36px] bg-slate-950 p-8 text-white shadow-[0_24px_70px_rgba(15,23,42,0.22)] md:p-12">
+          <div class="max-w-3xl">
+            <p class="eyebrow text-indigo-300">Fechamento executivo</p>
+            <h2 class="mt-4 text-4xl font-[600] tracking-[-0.035em] text-white md:text-5xl">A empresa não precisa de mais discurso sobre qualidade. Precisa de um sistema leve que a torne inevitável.</h2>
+            <p class="mt-5 text-xl font-[300] leading-8 text-slate-300">A proposta preserva a mensagem original: engenharia estruturada não é overhead. É a condição para que IA, velocidade e escala se convertam em valor real. Sem isso, a organização apenas move o gargalo para um lugar menos visível e mais caro.</p>
+          </div>
+          <div class="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            <div class="rounded-[24px] border border-white/10 bg-white/5 p-5">
+              <p class="eyebrow text-slate-400">Decisão</p>
+              <h3 class="mt-3 text-xl font-semibold text-white">Aprovar piloto</h3>
+              <p class="mt-3 text-base leading-7 text-slate-300">Escopo inicial de 90 dias com dois ou três squads.</p>
+            </div>
+            <div class="rounded-[24px] border border-white/10 bg-white/5 p-5">
+              <p class="eyebrow text-slate-400">Mandato</p>
+              <h3 class="mt-3 text-xl font-semibold text-white">Review com IA</h3>
+              <p class="mt-3 text-base leading-7 text-slate-300">Cobertura obrigatória em 100% dos PRs do piloto.</p>
+            </div>
+            <div class="rounded-[24px] border border-white/10 bg-white/5 p-5">
+              <p class="eyebrow text-slate-400">Governança</p>
+              <h3 class="mt-3 text-xl font-semibold text-white">3 KPIs</h3>
+              <p class="mt-3 text-base leading-7 text-slate-300">Velocidade, retrabalho e adoção real do gate automatizado.</p>
+            </div>
+            <div class="rounded-[24px] border border-white/10 bg-white/5 p-5">
+              <p class="eyebrow text-slate-400">Sustentação</p>
+              <h3 class="mt-3 text-xl font-semibold text-white">Chapter formalizado</h3>
+              <p class="mt-3 text-base leading-7 text-slate-300">Playbook, cadência e evolução contínua após o piloto.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-divider mt-16 pt-16 md:mt-20 md:pt-20">
+        <div class="grid gap-8 lg:grid-cols-2">
+          <div>
+            <p class="eyebrow text-indigo-700">Referências</p>
+            <h2 class="mt-4 text-4xl font-[600] tracking-[-0.035em] text-slate-950 md:text-5xl">Base conceitual preservada</h2>
+            <p class="mt-5 reading-width text-xl font-[300] leading-8 text-slate-600">As fontes abaixo foram mantidas como apoio à narrativa original. O foco deste trabalho foi redesign, reorganização executiva e tradução para o padrão premium editorial.</p>
+          </div>
+          <div class="premium-card rounded-[28px] p-6 md:p-7">
+            <p class="eyebrow text-slate-500">Nota editorial</p>
+            <p class="mt-4 text-lg leading-8 text-slate-600">A estrutura foi redesenhada para abrir com conclusão, reforçar a decisão recomendada e organizar o conteúdo em uma leitura contínua de briefing executivo, em vez de uma sequência linear de blocos equivalentes.</p>
+          </div>
+        </div>
+
+        <div class="mt-10 grid gap-5 lg:grid-cols-2">
+          <article class="soft-card rounded-[28px] p-6 md:p-7">
+            <p class="eyebrow text-slate-500">Indicadores e engenharia</p>
+            <ul class="mt-5 space-y-3 text-lg leading-8 text-slate-600">
+              <li><a class="hover:underline" href="https://dora.dev/guides/dora-metrics/">DORA — Software Delivery Performance Metrics (Google)</a></li>
+              <li><a class="hover:underline" href="https://cloud.google.com/blog/products/devops-sre/using-the-four-keys-to-measure-your-devops-performance">Google Cloud — Four Keys to Measure DevOps Performance</a></li>
+              <li><a class="hover:underline" href="https://martinfowler.com/articles/agile-xai.html">Martin Fowler — Agile AI Practices and Engineering Discipline</a></li>
+            </ul>
+          </article>
+          <article class="soft-card rounded-[28px] p-6 md:p-7">
+            <p class="eyebrow text-slate-500">IA e ferramentas</p>
+            <ul class="mt-5 space-y-3 text-lg leading-8 text-slate-600">
+              <li><a class="hover:underline" href="https://github.blog/ai-and-ml/github-copilot/developers-survey-ai-statistics/">GitHub Developer Survey 2024 — AI adoption statistics</a></li>
+              <li><a class="hover:underline" href="https://survey.stackoverflow.co/2024/">Stack Overflow Developer Survey 2024 — Uso de ferramentas de IA por desenvolvedores</a></li>
+              <li><a class="hover:underline" href="https://www.digitalocean.com/resources/articles/ai-code-review-tools">DigitalOcean — AI Code Review Tools Comparison (2025)</a></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </div>
   </main>
 </body>
 </html>
