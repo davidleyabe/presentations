@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>5 agentes estratégicos para um diretor de dados, IA, integração e arquitetura</title>
+  <meta name="description" content="Uma apresentação executiva sobre os 5 agentes mais valiosos para um diretor de dados, IA, integração e arquitetura acelerar decisões, priorização, governança e arquitetura." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0f172a;
+      --muted: #64748b;
+      --line: rgba(148, 163, 184, 0.2);
+      --surface: rgba(255,255,255,0.92);
+      --surface-soft: rgba(248,250,252,0.86);
+      --shadow-premium: 0 24px 70px rgba(15, 23, 42, 0.08);
+      --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.05);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Source Sans 3', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(79,70,229,0.08), transparent 28%),
+        radial-gradient(circle at top right, rgba(14,165,233,0.07), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+    }
+    .eyebrow {
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      font-size: .75rem;
+      font-weight: 700;
+    }
+    .premium-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-premium);
+      backdrop-filter: blur(10px);
+    }
+    .soft-card {
+      background: var(--surface-soft);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-soft);
+    }
+    .section-divider { border-top: 1px solid var(--line); }
+    .reading-width { max-width: 48rem; }
+    .metric-chip {
+      border: 1px solid rgba(148,163,184,.24);
+      background: rgba(255,255,255,.94);
+    }
+    .sticky-mini-nav {
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.82);
+      border: 1px solid rgba(148,163,184,.18);
+      box-shadow: 0 10px 30px rgba(15,23,42,.05);
+    }
+    .text-slate-600 { color: #334155 !important; }
+    .text-slate-500 { color: #475569 !important; }
+    .soft-card .text-base, .premium-card .text-base { font-size: 1.05rem; line-height: 1.75rem; }
+  </style>
+</head>
+<body class="text-slate-900 antialiased">
+  <main class="mx-auto max-w-7xl px-6 pb-20 pt-8 md:px-8 lg:px-10 lg:pb-28">
+    <div class="mx-auto max-w-6xl">
+      <div class="flex items-center justify-between gap-4 text-sm text-slate-500">
+        <a href="../../index.html" class="inline-flex items-center gap-2 transition hover:text-slate-900 hover:underline">
+          <span>&larr;</span>
+          <span>voltar para a lista</span>
+        </a>
+        <div class="hidden md:block">Landing page executiva · pesquisa em PT-BR + inglês · publicada em 11/04/2026</div>
+      </div>
+
+      <div class="sticky top-4 z-20 mt-6 hidden lg:block">
+        <div class="sticky-mini-nav inline-flex flex-wrap items-center gap-2 rounded-full px-3 py-3 text-sm text-slate-600">
+          <a class="rounded-full px-3 py-1.5 transition hover:bg-slate-100 hover:text-slate-900" href="#tese">Tese</a>
+          <a class="rounded-full px-3 py-1.5 transition hover:bg-slate-100 hover:text-slate-900" href="#agentes">5 agentes</a>
+          <a class="rounded-full px-3 py-1.5 transition hover:bg-slate-100 hover:text-slate-900" href="#ordem">Ordem</a>
+          <a class="rounded-full px-3 py-1.5 transition hover:bg-slate-100 hover:text-slate-900" href="#operating-model">Operating model</a>
+          <a class="rounded-full px-3 py-1.5 transition hover:bg-slate-100 hover:text-slate-900" href="#fontes">Fontes</a>
+        </div>
+      </div>
+
+      <header class="pt-8 md:pt-10">
+        <div class="grid gap-8 lg:grid-cols-[minmax(0,1.18fr)_minmax(320px,0.82fr)] lg:items-end">
+          <div>
+            <div class="inline-flex items-center gap-3 rounded-full border border-indigo-200/70 bg-white/90 px-4 py-2 text-[12px] font-semibold uppercase tracking-[0.18em] text-slate-700 shadow-[0_10px_28px_rgba(15,23,42,0.06)]">
+              <span>Sistema operacional de liderança</span>
+              <span class="h-1 w-1 rounded-full bg-indigo-400"></span>
+              <span>Diretor de dados, IA, integração e arquitetura</span>
+            </div>
+            <h1 class="mt-6 max-w-5xl text-5xl font-[700] tracking-[-0.04em] text-slate-950 md:text-7xl md:leading-[0.94]">
+              Os 5 agentes que valem mais do que automações operacionais
+            </h1>
+            <p class="mt-6 reading-width text-2xl font-[300] leading-9 text-slate-600">
+              Se o seu papel é decidir rumo, arbitrar trade-offs e proteger a capacidade futura da companhia, os agentes mais úteis não são os de comunicado, help desk ou observabilidade. São os que comprimem o ciclo entre sinal, análise, decisão e direção executiva.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3 text-sm">
+              <span class="metric-chip rounded-full px-4 py-2 text-slate-700">5 agentes recomendados</span>
+              <span class="metric-chip rounded-full px-4 py-2 text-slate-700">Pesquisa em inglês + português</span>
+              <span class="metric-chip rounded-full px-4 py-2 text-slate-700">Foco estratégico e tático-executivo</span>
+            </div>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="#agentes" class="inline-flex items-center justify-center rounded-full bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800">Ver os 5 agentes</a>
+              <a href="#operating-model" class="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:text-slate-950">Ver operating model</a>
+            </div>
+          </div>
+
+          <aside class="premium-card rounded-[28px] p-6 md:p-8">
+            <p class="eyebrow text-indigo-700">Executive snapshot</p>
+            <h2 class="mt-3 text-3xl font-[600] tracking-[-0.03em] text-slate-950">A prioridade correta é construir um cockpit decisório — não apenas um conjunto de automações.</h2>
+            <div class="mt-6 space-y-3">
+              <div class="rounded-2xl border border-slate-200/80 bg-white/90 px-4 py-4">
+                <p class="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">Moeda real do cargo</p>
+                <p class="mt-1 text-lg font-semibold text-slate-900">Velocidade e qualidade de decisão</p>
+              </div>
+              <div class="rounded-2xl border border-slate-200/80 bg-white/90 px-4 py-4">
+                <p class="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">Erro mais comum</p>
+                <p class="mt-1 text-lg font-semibold text-slate-900">Otimizar tarefas locais e não o sistema de decisão</p>
+              </div>
+              <div class="rounded-2xl border border-slate-200/80 bg-white/90 px-4 py-4">
+                <p class="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">Recomendação central</p>
+                <p class="mt-1 text-lg font-semibold text-slate-900">Unificar contexto e acoplar 5 agentes especializados sobre a mesma base</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <div class="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <div class="soft-card rounded-[24px] p-5">
+            <p class="eyebrow text-slate-500">Agente #1</p>
+            <p class="mt-3 text-2xl font-semibold tracking-[-0.02em] text-slate-950">Decisão e cenários</p>
+          </div>
+          <div class="soft-card rounded-[24px] p-5">
+            <p class="eyebrow text-slate-500">Agente #2</p>
+            <p class="mt-3 text-2xl font-semibold tracking-[-0.02em] text-slate-950">Portfólio executivo</p>
+          </div>
+          <div class="soft-card rounded-[24px] p-5">
+            <p class="eyebrow text-slate-500">Agente #3</p>
+            <p class="mt-3 text-2xl font-semibold tracking-[-0.02em] text-slate-950">Arquitetura e trade-offs</p>
+          </div>
+          <div class="soft-card rounded-[24px] p-5">
+            <p class="eyebrow text-slate-500">Agentes #4 e #5</p>
+            <p class="mt-3 text-2xl font-semibold tracking-[-0.02em] text-slate-950">Governança + radar tecnológico</p>
+          </div>
+        </div>
+      </header>
+
+      <section class="section-divider mt-16 pt-16 md:mt-20 md:pt-20">
+        <div class="grid gap-5 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
+          <div class="premium-card rounded-[32px] p-8 md:p-10">
+            <p class="eyebrow text-indigo-700">Por que agora</p>
+            <h2 class="mt-4 max-w-3xl text-4xl font-[600] tracking-[-0.035em] text-slate-950 md:text-5xl">O diretor moderno não sofre por falta de informação. Sofre por excesso de frentes, ruído e decisões acopladas.</h2>
+            <p class="mt-5 reading-width text-2xl font-[300] leading-9 text-slate-600">IA generativa, backlog estratégico, integrações, fornecedores, dívida arquitetural, governança, orçamento e pressão por resultado disputam a mesma agenda executiva. Agentes estratégicos reduzem esse atrito ao organizar a complexidade antes que ela chegue à liderança em estado bruto.</p>
+            <div class="mt-8 grid gap-4 md:grid-cols-3">
+              <div class="rounded-2xl bg-slate-950 p-5 text-white">
+                <p class="eyebrow text-indigo-300">Estratégico</p>
+                <p class="mt-2 text-lg leading-8 font-semibold">Define onde investir, o que acelerar, o que adiar e qual risco aceitar.</p>
+              </div>
+              <div class="rounded-2xl border border-slate-200 bg-white p-5">
+                <p class="eyebrow text-slate-500">Tático-executivo</p>
+                <p class="mt-2 text-lg leading-8 font-semibold text-slate-900">Prepara cenários, business cases, scorecards, ADRs e recomendações.</p>
+              </div>
+              <div class="rounded-2xl border border-slate-200 bg-white p-5">
+                <p class="eyebrow text-slate-500">Operacional</p>
+                <p class="mt-2 text-lg leading-8 font-semibold text-slate-900">Comunicados, observabilidade e runbooks ficam fora desta carteira.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-5" id="tese">
+            <div class="soft-card rounded-[28px] p-6">
+              <p class="eyebrow text-slate-500">Tese</p>
+              <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Os 5 agentes certos comprimem o ciclo entre sinal e decisão.</h3>
+              <p class="mt-3 text-lg leading-8 text-slate-600">A pesquisa consultada converge para cinco alavancas executivas: decision intelligence, portfolio management, enterprise architecture, governance e technology radar.</p>
+            </div>
+            <div class="soft-card rounded-[28px] p-6">
+              <p class="eyebrow text-slate-500">Regra prática</p>
+              <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Comece pelo que melhora a qualidade das decisões, não apenas a eficiência da agenda.</h3>
+              <p class="mt-3 text-lg leading-8 text-slate-600">O ganho relevante para esse cargo não é responder e-mails mais rápido. É priorizar melhor, arbitrar trade-offs com mais clareza e evitar decisões caras tomadas com contexto incompleto.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-divider mt-16 pt-16 md:mt-20 md:pt-20" id="agentes">
+        <div class="max-w-3xl">
+          <p class="eyebrow text-indigo-700">Os 5 agentes</p>
+          <h2 class="mt-4 text-4xl font-[600] tracking-[-0.035em] text-slate-950 md:text-5xl">Uma carteira de agentes para operar liderança, não operação</h2>
+          <p class="mt-5 reading-width text-2xl font-[300] leading-9 text-slate-600">Cada agente abaixo acelera um tipo de decisão de alto valor. Juntos, eles compõem um sistema operacional de liderança para dados, IA, integração e arquitetura.</p>
+        </div>
+
+        <div class="mt-10 space-y-6">
+          <article class="premium-card rounded-[32px] p-7 md:p-8">
+            <div class="grid gap-6 lg:grid-cols-[260px_minmax(0,1fr)]">
+              <div>
+                <p class="eyebrow text-indigo-700">Agente 01</p>
+                <h3 class="mt-3 text-3xl font-semibold tracking-[-0.03em] text-slate-950">Inteligência de decisão e cenários</h3>
+                <p class="mt-4 text-lg leading-8 text-slate-600">Missão: transformar sinais dispersos em briefs executivos com opções de decisão, cenários e impactos.</p>
+              </div>
+              <div class="space-y-4">
+                <div class="rounded-2xl border border-indigo-200 bg-indigo-50/60 p-5">
+                  <p class="text-sm font-semibold uppercase tracking-[0.16em] text-indigo-700">O que acelera</p>
+                  <ul class="mt-3 space-y-2 text-lg leading-8 text-slate-700">
+                    <li>• atenção semanal e trimestral da diretoria</li>
+                    <li>• decisões de acelerar, pausar, corrigir ou matar</li>
+                    <li>• leitura integrada de capacidade, risco e impacto</li>
+                  </ul>
+                </div>
+                <div class="rounded-2xl border border-slate-200 bg-white p-5">
+                  <p class="text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">Como opera</p>
+                  <ul class="mt-3 space-y-2 text-lg leading-8 text-slate-700">
+                    <li><strong>Inputs:</strong> KPIs, status, riscos, dependências e benchmark</li>
+                    <li><strong>Outputs:</strong> brief semanal, cenários e lista de exceções críticas</li>
+                    <li><strong>Cadência:</strong> daily scan + brief semanal + revisão mensal</li>
+                    <li><strong>Stack:</strong> warehouse, BI, camada semântica, RAG e scoring</li>
+                    <li><strong>Limite:</strong> sem métricas confiáveis, amplifica vieses</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="premium-card rounded-[32px] p-7 md:p-8">
+            <div class="grid gap-6 lg:grid-cols-[260px_minmax(0,1fr)]">
+              <div>
+                <p class="eyebrow text-emerald-700">Agente 02</p>
+                <h3 class="mt-3 text-3xl font-semibold tracking-[-0.03em] text-slate-950">Priorização e portfólio executivo</h3>
+                <p class="mt-4 text-lg leading-8 text-slate-600">Missão: converter demanda difusa em portfólio governável, priorizado e conectado à estratégia, capacidade, risco e retorno.</p>
+              </div>
+              <div class="space-y-4">
+                <div class="rounded-2xl border border-emerald-200 bg-emerald-50/70 p-5">
+                  <p class="text-sm font-semibold uppercase tracking-[0.16em] text-emerald-700">O que acelera</p>
+                  <ul class="mt-3 space-y-2 text-lg leading-8 text-slate-700">
+                    <li>• decisões de entrar, sair, esperar ou redimensionar</li>
+                    <li>• alocação de budget e liderança</li>
+                    <li>• arbitragem de conflitos de prioridade</li>
+                  </ul>
+                </div>
+                <div class="rounded-2xl border border-slate-200 bg-white p-5">
+                  <p class="text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">Como opera</p>
+                  <ul class="mt-3 space-y-2 text-lg leading-8 text-slate-700">
+                    <li><strong>Inputs:</strong> backlog, OKRs, capacidade, valor, risco e dependências</li>
+                    <li><strong>Outputs:</strong> ranking, heatmap, sequencing e dossiê para comitê</li>
+                    <li><strong>Cadência:</strong> semanal, mensal e trimestral</li>
+                    <li><strong>Stack:</strong> PPM/APM, roadmap tools, priorização e integração com finanças</li>
+                    <li><strong>Limite:</strong> sem critérios transparentes, vira caixa-preta</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="premium-card rounded-[32px] p-7 md:p-8">
+            <div class="grid gap-6 lg:grid-cols-[260px_minmax(0,1fr)]">
+              <div>
+                <p class="eyebrow text-cyan-700">Agente 03</p>
+                <h3 class="mt-3 text-3xl font-semibold tracking-[-0.03em] text-slate-950">Arquitetura e trade-offs</h3>
+                <p class="mt-4 text-lg leading-8 text-slate-600">Missão: preparar decisões arquiteturais com visão integrada de aplicações, dados, integrações, legado, custo e velocidade de mudança.</p>
+              </div>
+              <div class="space-y-4">
+                <div class="rounded-2xl border border-cyan-200 bg-cyan-50/70 p-5">
+                  <p class="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-700">O que acelera</p>
+                  <ul class="mt-3 space-y-2 text-lg leading-8 text-slate-700">
+                    <li>• build vs buy vs partner</li>
+                    <li>• modernizar, integrar, substituir ou conviver com legado</li>
+                    <li>• definição de arquitetura-alvo por domínio</li>
+                  </ul>
+                </div>
+                <div class="rounded-2xl border border-slate-200 bg-white p-5">
+                  <p class="text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">Como opera</p>
+                  <ul class="mt-3 space-y-2 text-lg leading-8 text-slate-700">
+                    <li><strong>Inputs:</strong> inventário, padrões, débito técnico, roadmaps e custos</li>
+                    <li><strong>Outputs:</strong> ADRs, memos, mapa de impacto e roadmap por ondas</li>
+                    <li><strong>Cadência:</strong> sob demanda, quinzenal e trimestral</li>
+                    <li><strong>Stack:</strong> repositório de arquitetura, catálogo, graph e RAG técnico</li>
+                    <li><strong>Limite:</strong> sem inventário atualizado, a recomendação degrada rápido</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="premium-card rounded-[32px] p-7 md:p-8">
+            <div class="grid gap-6 lg:grid-cols-[260px_minmax(0,1fr)]">
+              <div>
+                <p class="eyebrow text-amber-700">Agente 04</p>
+                <h3 class="mt-3 text-3xl font-semibold tracking-[-0.03em] text-slate-950">Governança de dados e IA</h3>
+                <p class="mt-4 text-lg leading-8 text-slate-600">Missão: antecipar riscos, exceções e requisitos de governança para escalar dados e IA com confiança, sem virar gargalo burocrático.</p>
+              </div>
+              <div class="space-y-4">
+                <div class="rounded-2xl border border-amber-200 bg-amber-50/70 p-5">
+                  <p class="text-sm font-semibold uppercase tracking-[0.16em] text-amber-700">O que acelera</p>
+                  <ul class="mt-3 space-y-2 text-lg leading-8 text-slate-700">
+                    <li>• avanço de casos de uso com guardrails adequados</li>
+                    <li>• triagem de datasets, modelos e integrações sensíveis</li>
+                    <li>• escalonamento de risco regulatório, ético e reputacional</li>
+                  </ul>
+                </div>
+                <div class="rounded-2xl border border-slate-200 bg-white p-5">
+                  <p class="text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">Como opera</p>
+                  <ul class="mt-3 space-y-2 text-lg leading-8 text-slate-700">
+                    <li><strong>Inputs:</strong> políticas, catálogo, lineage, vendors e requisitos legais</li>
+                    <li><strong>Outputs:</strong> parecer executivo, checklist, controles e fila de exceções</li>
+                    <li><strong>Cadência:</strong> contínua, semanal e mensal</li>
+                    <li><strong>Stack:</strong> catálogo/lineage, model registry, workflow de exceção</li>
+                    <li><strong>Limite:</strong> se mal desenhado, vira barreira em vez de acelerador</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="premium-card rounded-[32px] p-7 md:p-8">
+            <div class="grid gap-6 lg:grid-cols-[260px_minmax(0,1fr)]">
+              <div>
+                <p class="eyebrow text-fuchsia-700">Agente 05</p>
+                <h3 class="mt-3 text-3xl font-semibold tracking-[-0.03em] text-slate-950">Radar tecnológico e avaliação de fornecedores</h3>
+                <p class="mt-4 text-lg leading-8 text-slate-600">Missão: transformar ruído de mercado em recomendações objetivas sobre tecnologias, plataformas, fornecedores e apostas emergentes.</p>
+              </div>
+              <div class="space-y-4">
+                <div class="rounded-2xl border border-fuchsia-200 bg-fuchsia-50/70 p-5">
+                  <p class="text-sm font-semibold uppercase tracking-[0.16em] text-fuchsia-700">O que acelera</p>
+                  <ul class="mt-3 space-y-2 text-lg leading-8 text-slate-700">
+                    <li>• decisões de observar, testar, adotar ou evitar</li>
+                    <li>• shortlist de fornecedores e leitura de lock-in</li>
+                    <li>• build vs buy vs partner com base comparável</li>
+                  </ul>
+                </div>
+                <div class="rounded-2xl border border-slate-200 bg-white p-5">
+                  <p class="text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">Como opera</p>
+                  <ul class="mt-3 space-y-2 text-lg leading-8 text-slate-700">
+                    <li><strong>Inputs:</strong> radar de mercado, benchmarks, RFPs, TCO e histórico de vendors</li>
+                    <li><strong>Outputs:</strong> shortlist, radar adotar/testar/avaliar/evitar e nota executiva</li>
+                    <li><strong>Cadência:</strong> mensal, sob demanda e trimestral</li>
+                    <li><strong>Stack:</strong> base de vendors, scorecard técnico-econômico e fontes curadas</li>
+                    <li><strong>Limite:</strong> não substitui PoC nem negociação comercial</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-divider mt-16 pt-16 md:mt-20 md:pt-20" id="ordem">
+        <div class="max-w-3xl">
+          <p class="eyebrow text-indigo-700">Ordem recomendada de implementação</p>
+          <h2 class="mt-4 text-4xl font-[600] tracking-[-0.035em] text-slate-950 md:text-5xl">A sequência certa importa mais do que a lista completa</h2>
+          <p class="mt-5 reading-width text-2xl font-[300] leading-9 text-slate-600">O melhor caminho é começar pelo que cria inteligência executiva imediata e, depois, acoplar priorização, arquitetura, governança e radar de mercado sobre o mesmo contexto compartilhado.</p>
+        </div>
+
+        <div class="mt-10 grid gap-5 lg:grid-cols-5">
+          <div class="premium-card rounded-[28px] p-6">
+            <p class="eyebrow text-indigo-700">#1</p>
+            <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Decisão e cenários</h3>
+            <p class="mt-3 text-lg leading-8 text-slate-600">Entrega ganho executivo imediato e organiza a agenda da liderança.</p>
+          </div>
+          <div class="premium-card rounded-[28px] p-6">
+            <p class="eyebrow text-indigo-700">#2</p>
+            <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Portfólio executivo</h3>
+            <p class="mt-3 text-lg leading-8 text-slate-600">Transforma visibilidade em funding, sequencing e escolha.</p>
+          </div>
+          <div class="premium-card rounded-[28px] p-6">
+            <p class="eyebrow text-indigo-700">#3</p>
+            <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Arquitetura e trade-offs</h3>
+            <p class="mt-3 text-lg leading-8 text-slate-600">Evita que decisões de portfólio criem dívida invisível.</p>
+          </div>
+          <div class="premium-card rounded-[28px] p-6">
+            <p class="eyebrow text-indigo-700">#4</p>
+            <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Governança de dados e IA</h3>
+            <p class="mt-3 text-lg leading-8 text-slate-600">Escala com segurança sem burocratizar a transformação.</p>
+          </div>
+          <div class="premium-card rounded-[28px] p-6">
+            <p class="eyebrow text-indigo-700">#5</p>
+            <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Radar e vendors</h3>
+            <p class="mt-3 text-lg leading-8 text-slate-600">Consolida disciplina contínua de stack e apostas tecnológicas.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-divider mt-16 pt-16 md:mt-20 md:pt-20" id="operating-model">
+        <div class="rounded-[36px] bg-slate-950 p-8 text-white shadow-[0_24px_70px_rgba(15,23,42,0.22)] md:p-12">
+          <div class="max-w-3xl">
+            <p class="eyebrow text-indigo-300">Operating model recomendado</p>
+            <h2 class="mt-4 text-4xl font-[600] tracking-[-0.035em] text-white md:text-5xl">Um hub de inteligência executiva, com especialistas humanos no loop</h2>
+            <p class="mt-5 text-2xl font-[300] leading-9 text-slate-300">A recomendação não é criar cinco silos de automação. É operar um núcleo comum de contexto — portfólio, indicadores, arquitetura, políticas, atas e decisões históricas — sobre o qual agentes especializados produzem recomendações consistentes e auditáveis.</p>
+          </div>
+          <div class="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            <div class="rounded-[24px] border border-white/10 bg-white/5 p-5">
+              <p class="eyebrow text-slate-400">Contexto comum</p>
+              <h3 class="mt-3 text-xl font-semibold text-white">Uma base única de conhecimento</h3>
+              <p class="mt-3 text-base leading-7 text-slate-300">Portfólio, atas, políticas, inventário, lineage, contratos, scorecards e histórico decisório.</p>
+            </div>
+            <div class="rounded-[24px] border border-white/10 bg-white/5 p-5">
+              <p class="eyebrow text-slate-400">Guardrails</p>
+              <h3 class="mt-3 text-xl font-semibold text-white">Human-in-the-loop obrigatório</h3>
+              <p class="mt-3 text-base leading-7 text-slate-300">Funding, arquitetura-alvo, exceções de governança e seleção final de vendor seguem com decisão humana.</p>
+            </div>
+            <div class="rounded-[24px] border border-white/10 bg-white/5 p-5">
+              <p class="eyebrow text-slate-400">Ritos</p>
+              <h3 class="mt-3 text-xl font-semibold text-white">Cadência de liderança assistida</h3>
+              <p class="mt-3 text-base leading-7 text-slate-300">Daily scan, brief semanal, comitê quinzenal, fórum mensal de risco/stack e revisão trimestral de portfólio.</p>
+            </div>
+            <div class="rounded-[24px] border border-white/10 bg-white/5 p-5">
+              <p class="eyebrow text-slate-400">Métrica real</p>
+              <h3 class="mt-3 text-xl font-semibold text-white">Qualidade de decisão</h3>
+              <p class="mt-3 text-base leading-7 text-slate-300">Tempo até decisão, redução de retrabalho executivo, clareza de trade-off e consistência de priorização.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-divider mt-16 pt-16 md:mt-20 md:pt-20">
+        <div class="grid gap-5 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]">
+          <div class="premium-card rounded-[32px] p-8 md:p-10">
+            <p class="eyebrow text-indigo-700">O que não construir agora</p>
+            <h2 class="mt-4 max-w-3xl text-4xl font-[600] tracking-[-0.035em] text-slate-950 md:text-5xl">Evite começar por agentes que parecem úteis, mas têm baixa alavancagem estratégica.</h2>
+            <p class="mt-5 reading-width text-2xl font-[300] leading-9 text-slate-600">Agente de comunicados, help desk, observabilidade, runbooks operacionais, atendimento interno e automações periféricas podem ter valor local. Mas não atacam o principal gargalo do cargo: decidir melhor, arbitrar melhor e governar a transformação com mais precisão.</p>
+          </div>
+          <div class="space-y-5">
+            <div class="soft-card rounded-[28px] p-6">
+              <p class="eyebrow text-rose-700">Baixa prioridade</p>
+              <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Automação administrativa isolada</h3>
+              <p class="mt-3 text-lg leading-8 text-slate-600">Economiza tempo de agenda, mas raramente muda decisões de capital, arquitetura ou risco.</p>
+            </div>
+            <div class="soft-card rounded-[28px] p-6">
+              <p class="eyebrow text-amber-700">Risco típico</p>
+              <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Confundir produtividade local com alavancagem executiva</h3>
+              <p class="mt-3 text-lg leading-8 text-slate-600">O portfólio certo para a diretoria deve melhorar o sistema de decisão, não apenas o throughput operacional.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-divider mt-16 pt-16 md:mt-20 md:pt-20">
+        <div class="grid gap-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
+          <div>
+            <p class="eyebrow text-indigo-700">Fechamento executivo</p>
+            <h2 class="mt-4 text-4xl font-[600] tracking-[-0.035em] text-slate-950 md:text-5xl">O portfólio ideal de agentes para esse cargo parece menos com uma equipe de apoio e mais com um cockpit decisório.</h2>
+            <p class="mt-5 reading-width text-2xl font-[300] leading-9 text-slate-600">A combinação recomendada cria exatamente isso: inteligência para decidir, método para priorizar, rigor para arquitetar, confiança para governar e disciplina para apostar em tecnologia. Seu agente de apresentação continua valioso — mas passa a ser a camada final de comunicação de um sistema muito mais poderoso de preparação executiva.</p>
+          </div>
+          <div class="premium-card rounded-[28px] p-6 md:p-7">
+            <p class="eyebrow text-slate-500">Recomendação final</p>
+            <p class="mt-4 text-lg leading-8 text-slate-600">Se fosse para começar amanhã, eu construiria primeiro o agente de inteligência de decisão e cenários, acoplado em seguida ao agente de priorização e portfólio executivo. Os demais entram como módulos de sustentação para que cada decisão já nasça mais coerente, governável e sustentável arquiteturalmente.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-divider mt-16 pt-16 md:mt-20 md:pt-20" id="fontes">
+        <div class="grid gap-8 lg:grid-cols-2">
+          <div>
+            <p class="eyebrow text-indigo-700">Fontes</p>
+            <h2 class="mt-4 text-4xl font-[600] tracking-[-0.035em] text-slate-950 md:text-5xl">Pesquisa pública usada como base para a recomendação</h2>
+            <p class="mt-5 reading-width text-2xl font-[300] leading-9 text-slate-600">A literatura específica sobre “agentes para diretores” ainda é limitada. Por isso, a tese foi construída por síntese de sinais consistentes sobre AI agents/copilots, decision intelligence, portfolio management, enterprise architecture, data/AI governance e technology radar.</p>
+          </div>
+          <div class="premium-card rounded-[28px] p-6 md:p-7">
+            <p class="eyebrow text-slate-500">Nota metodológica</p>
+            <p class="mt-4 text-lg leading-8 text-slate-600">Foram combinadas fontes em inglês e português, priorizando materiais públicos acessíveis, documentação explicativa e referências de mercado que ajudam a estruturar um operating model executivo, em vez de uma lista superficial de automações.</p>
+          </div>
+        </div>
+
+        <div class="mt-10 grid gap-5 lg:grid-cols-2">
+          <article class="soft-card rounded-[28px] p-6 md:p-7">
+            <p class="eyebrow text-slate-500">Trilha em inglês</p>
+            <div class="mt-5 space-y-3 text-base leading-7 text-slate-600 break-words">
+              <div class="rounded-2xl border border-slate-200 bg-white/80 p-4"><strong>Microsoft WorkLab</strong><br />2025: The year the Frontier Firm is born<br /><span class="text-slate-500">microsoft.com/en-us/worklab/work-trend-index/2025-the-year-the-frontier-firm-is-born</span></div>
+              <div class="rounded-2xl border border-slate-200 bg-white/80 p-4"><strong>IBM</strong><br />Data Governance<br /><span class="text-slate-500">ibm.com/topics/data-governance</span></div>
+              <div class="rounded-2xl border border-slate-200 bg-white/80 p-4"><strong>Lucidchart + BMC</strong><br />Enterprise architecture e frameworks<br /><span class="text-slate-500">lucidchart.com/blog/what-is-enterprise-architecture · bmc.com/blogs/enterprise-architecture/</span></div>
+              <div class="rounded-2xl border border-slate-200 bg-white/80 p-4"><strong>monday.com + Pyramid Analytics + Thoughtworks</strong><br />Portfolio management, decision intelligence e Technology Radar<br /><span class="text-slate-500">monday.com/blog/project-management/portfolio-management/ · pyramidanalytics.com/blog/decision-intelligence/ · thoughtworks.com/radar</span></div>
+            </div>
+          </article>
+          <article class="soft-card rounded-[28px] p-6 md:p-7">
+            <p class="eyebrow text-slate-500">Trilha em português</p>
+            <div class="mt-5 space-y-3 text-base leading-7 text-slate-600 break-words">
+              <div class="rounded-2xl border border-slate-200 bg-white/80 p-4"><strong>Microsoft Learn</strong><br />Agentes para Microsoft 365 Copilot<br /><span class="text-slate-500">learn.microsoft.com/pt-br/microsoft-365-copilot/extensibility/agents-overview</span></div>
+              <div class="rounded-2xl border border-slate-200 bg-white/80 p-4"><strong>IBM Brasil</strong><br />Governança de dados e governança por IA<br /><span class="text-slate-500">ibm.com/br-pt/topics/data-governance · ibm.com/br-pt/think/topics/ai-governance</span></div>
+              <div class="rounded-2xl border border-slate-200 bg-white/80 p-4"><strong>AWS</strong><br />O que é governança de dados?<br /><span class="text-slate-500">aws.amazon.com/pt/what-is/data-governance/</span></div>
+              <div class="rounded-2xl border border-slate-200 bg-white/80 p-4"><strong>monday.com + Thoughtworks Brasil</strong><br />Gestão de portfólio e Technology Radar<br /><span class="text-slate-500">monday.com/blog/pt/project-management/portfolio-management/ · thoughtworks.com/pt-br/radar</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
