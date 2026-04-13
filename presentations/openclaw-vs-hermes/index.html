@@ -3,23 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>OpenClaw vs Hermes Agent — Comparação Executiva Atualizada</title>
-  <meta name="description" content="Comparação executiva atualizada entre OpenClaw e Hermes Agent, com foco em arquitetura, memória, superfícies, segurança, automação e decisão de adoção." />
+  <title>Hermes vs OpenClaw — Subagentes, Hierarquia e Orquestração</title>
+  <meta name="description" content="Apresentação executiva em PT-BR comparando Hermes Agent e OpenClaw com foco em subagentes, hierarquia, isolamento de contexto, delegação, governança e implicações práticas." />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
       --ink: #0f172a;
       --muted: #64748b;
       --line: rgba(148, 163, 184, 0.22);
       --surface: rgba(255,255,255,0.88);
-      --surface-soft: rgba(248, 250, 252, 0.8);
+      --surface-soft: rgba(248, 250, 252, 0.84);
       --shadow-premium: 0 24px 70px rgba(15, 23, 42, 0.08);
-      --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.05);
-      --openclaw: #f97316;
-      --hermes: #0f766e;
+      --shadow-soft: 0 10px 28px rgba(15, 23, 42, 0.05);
+      --orange: #f97316;
+      --teal: #0f766e;
+      --violet: #4f46e5;
     }
     html { scroll-behavior: smooth; }
     body {
@@ -34,7 +35,7 @@
       letter-spacing: .18em;
       text-transform: uppercase;
       font-size: .75rem;
-      font-weight: 700;
+      font-weight: 800;
     }
     .premium-card {
       background: var(--surface);
@@ -55,10 +56,21 @@
       border: 1px solid rgba(148,163,184,.24);
       background: rgba(255,255,255,.92);
     }
+    .compare-table th, .compare-table td {
+      padding: 14px 16px;
+      vertical-align: top;
+    }
+    .compare-table tr {
+      border-bottom: 1px solid rgba(148,163,184,.18);
+    }
+    .compare-table th {
+      text-align: left;
+      font-size: 12px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #64748b;
+    }
     .table-wrap { overflow-x: auto; }
-    .compare-table th, .compare-table td { padding: 14px 16px; vertical-align: top; }
-    .compare-table tr { border-bottom: 1px solid rgba(148,163,184,.2); }
-    .compare-table th { text-align: left; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: #64748b; }
   </style>
 </head>
 <body class="text-slate-900 antialiased">
@@ -69,55 +81,55 @@
           <span>&larr;</span>
           <span>voltar para a lista</span>
         </a>
-        <div class="hidden md:block">Landing page executiva · atualização factual · mesma URL</div>
+        <div class="hidden md:block">Landing page executiva · PT-BR · formato premium</div>
       </div>
 
       <header class="pt-8 md:pt-12">
         <div class="grid gap-8 lg:grid-cols-[minmax(0,1.18fr)_minmax(320px,0.82fr)] lg:items-end">
           <div>
             <div class="inline-flex items-center gap-3 rounded-full border border-orange-200/70 bg-white/90 px-4 py-2 text-[12px] font-semibold uppercase tracking-[0.18em] text-slate-700 shadow-[0_10px_28px_rgba(15,23,42,0.06)]">
-              <span>Comparação atualizada</span>
+              <span>Comparação estrutural</span>
               <span class="h-1 w-1 rounded-full bg-orange-400"></span>
-              <span>Dados coletados em 10/04/2026</span>
+              <span>Subagentes, hierarquia e orquestração</span>
             </div>
-            <h1 class="mt-6 max-w-5xl text-5xl font-[700] tracking-[-0.04em] text-slate-950 md:text-7xl md:leading-[0.94]">
-              OpenClaw vs Hermes Agent
+            <h1 class="mt-6 max-w-5xl text-5xl font-[800] tracking-[-0.04em] text-slate-950 md:text-7xl md:leading-[0.94]">
+              Hermes vs OpenClaw
             </h1>
             <p class="mt-6 reading-width text-xl font-[300] leading-8 text-slate-600 md:text-2xl md:leading-9">
-              Duas plataformas abertas de agentes, dois centros de gravidade muito diferentes: OpenClaw continua mais forte em superfície, presença e operação visual; Hermes continua mais forte em memória curada, automação recorrente e aprendizagem operacional.
+              A diferença mais importante entre as duas plataformas não é apenas “ter subagentes”. A diferença real é onde a hierarquia vive: no Hermes, subagente é mecanismo de delegação; no OpenClaw, subagente é parte da arquitetura operacional do sistema.
             </p>
             <div class="mt-8 flex flex-wrap gap-3 text-sm">
               <span class="metric-chip rounded-full px-4 py-2 text-slate-700">Pesquisa pública em inglês + português</span>
-              <span class="metric-chip rounded-full px-4 py-2 text-slate-700">Mesma URL mantida</span>
-              <span class="metric-chip rounded-full px-4 py-2 text-slate-700">Layout premium em Tailwind</span>
+              <span class="metric-chip rounded-full px-4 py-2 text-slate-700">Foco em arquitetura e governança</span>
+              <span class="metric-chip rounded-full px-4 py-2 text-slate-700">Leitura executiva para decisão</span>
             </div>
           </div>
 
           <aside class="premium-card rounded-[28px] p-6 md:p-8">
-            <p class="eyebrow text-orange-600">Executive snapshot</p>
-            <h2 class="mt-3 text-3xl font-[600] tracking-[-0.03em] text-slate-950">A decisão correta depende mais do centro de gravidade da operação do que de features isoladas.</h2>
-            <p class="mt-4 text-lg leading-8 text-slate-600">A leitura executiva correta em 2026 já não é “OpenClaw sem memória vs Hermes com memória”. Os dois evoluíram. A diferença útil para decisão agora é outra: presença multissuperfície e control plane versus trabalho cumulativo, tooling e aprendizado operacional.</p>
+            <p class="eyebrow text-violet-700">Executive snapshot</p>
+            <h2 class="mt-3 text-3xl font-[700] tracking-[-0.03em] text-slate-950">Sua leitura está correta: a diferença é estrutural, não cosmética.</h2>
+            <p class="mt-4 text-lg leading-8 text-slate-600">Hermes foi desenhado para um agente principal que sabe delegar. OpenClaw foi desenhado para um ambiente onde múltiplos agentes coexistem, se roteiam e podem formar hierarquias mais profundas com controle explícito.</p>
             <div class="mt-6 space-y-3">
               <div class="flex items-start justify-between gap-4 rounded-2xl border border-slate-200/80 bg-white/90 px-4 py-3">
                 <div>
-                  <p class="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">Vantagem mais clara do OpenClaw</p>
-                  <p class="mt-1 text-lg font-semibold text-slate-900">Superfícies, dashboard, demonstração e presença em múltiplos pontos de contato</p>
+                  <p class="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">Diferença central</p>
+                  <p class="mt-1 text-lg font-semibold text-slate-900">Ferramenta de delegação vs plataforma multiagente</p>
                 </div>
-                <span class="mt-1 rounded-full bg-orange-100 px-2.5 py-1 text-xs font-semibold text-orange-800">Surface-first</span>
+                <span class="mt-1 rounded-full bg-amber-100 px-2.5 py-1 text-xs font-semibold text-amber-800">Arquitetura</span>
               </div>
               <div class="flex items-start justify-between gap-4 rounded-2xl border border-slate-200/80 bg-white/90 px-4 py-3">
                 <div>
-                  <p class="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">Vantagem mais clara do Hermes</p>
-                  <p class="mt-1 text-lg font-semibold text-slate-900">Memória curada, skill loop, automação recorrente, subagentes e fit com stack Python/ML</p>
+                  <p class="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">Leitura prática</p>
+                  <p class="mt-1 text-lg font-semibold text-slate-900">Hermes concentra inteligência no pai; OpenClaw distribui coordenação no runtime</p>
                 </div>
-                <span class="mt-1 rounded-full bg-teal-50 px-2.5 py-1 text-xs font-semibold text-teal-700">Workflow-first</span>
+                <span class="mt-1 rounded-full bg-teal-50 px-2.5 py-1 text-xs font-semibold text-teal-700">Operação</span>
               </div>
               <div class="flex items-start justify-between gap-4 rounded-2xl border border-slate-200/80 bg-white/90 px-4 py-3">
                 <div>
-                  <p class="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">Leitura de risco</p>
-                  <p class="mt-1 text-lg font-semibold text-slate-900">OpenClaw exige mais governança operacional; Hermes é mais fácil de encaixar em guardrails, mas continua exigindo sandbox e revisão de ferramentas</p>
+                  <p class="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">Implicação</p>
+                  <p class="mt-1 text-lg font-semibold text-slate-900">Hermes simplifica execução; OpenClaw amplia governança, profundidade e roteamento</p>
                 </div>
-                <span class="mt-1 rounded-full bg-amber-100 px-2.5 py-1 text-xs font-semibold text-amber-800">Governança</span>
+                <span class="mt-1 rounded-full bg-orange-100 px-2.5 py-1 text-xs font-semibold text-orange-800">Decisão</span>
               </div>
             </div>
           </aside>
@@ -125,86 +137,56 @@
 
         <div class="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           <div class="soft-card rounded-[24px] p-5">
-            <p class="eyebrow text-slate-500">Tração pública</p>
-            <p class="mt-3 text-xl font-semibold tracking-[-0.02em] text-slate-950">OpenClaw: 354.123 estrelas · Hermes: 51.527 estrelas</p>
+            <p class="eyebrow text-slate-500">Modelo Hermes</p>
+            <p class="mt-3 text-xl font-semibold tracking-[-0.02em] text-slate-950">Pai delega tarefas específicas via tool call</p>
           </div>
           <div class="soft-card rounded-[24px] p-5">
-            <p class="eyebrow text-slate-500">Principal atualização factual</p>
-            <p class="mt-3 text-xl font-semibold tracking-[-0.02em] text-slate-950">OpenClaw já não pode ser descrito como mero histórico conversacional</p>
+            <p class="eyebrow text-slate-500">Modelo OpenClaw</p>
+            <p class="mt-3 text-xl font-semibold tracking-[-0.02em] text-slate-950">Agentes e subagentes existem como sessões e entidades operacionais próprias</p>
           </div>
           <div class="soft-card rounded-[24px] p-5">
-            <p class="eyebrow text-slate-500">Principal correção sobre Hermes</p>
-            <p class="mt-3 text-xl font-semibold tracking-[-0.02em] text-slate-950">Hermes não é só CLI: há TUI, gateway, API server e Open WebUI</p>
+            <p class="eyebrow text-slate-500">Diferença de contexto</p>
+            <p class="mt-3 text-xl font-semibold tracking-[-0.02em] text-slate-950">Hermes usa fresh conversation; OpenClaw usa sessões isoladas rastreáveis</p>
           </div>
           <div class="soft-card rounded-[24px] p-5">
             <p class="eyebrow text-slate-500">Regra prática</p>
-            <p class="mt-3 text-xl font-semibold tracking-[-0.02em] text-slate-950">OpenClaw vence em presença; Hermes vence em aprendizagem operacional</p>
+            <p class="mt-3 text-xl font-semibold tracking-[-0.02em] text-slate-950">Hermes otimiza produtividade individual; OpenClaw otimiza topologia multiagente</p>
           </div>
         </div>
       </header>
 
       <section class="section-divider mt-16 pt-16 md:mt-20 md:pt-20">
-        <div class="max-w-3xl">
-          <p class="eyebrow text-orange-600">O que mudou em relação à leitura anterior</p>
-          <h2 class="mt-4 text-4xl font-[600] tracking-[-0.035em] text-slate-950 md:text-5xl">A comparação ficou mais sofisticada — e mais justa</h2>
-          <p class="mt-5 reading-width text-xl font-[300] leading-8 text-slate-600">A pesquisa refeita corrigiu simplificações que já não representam bem o estado atual das duas plataformas. Abaixo estão os três ajustes mais importantes para evitar uma decisão baseada em retratos antigos.</p>
-        </div>
-        <div class="mt-10 grid gap-5 lg:grid-cols-3">
-          <article class="premium-card rounded-[28px] p-7">
-            <p class="eyebrow text-orange-600">Correção 01</p>
-            <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">OpenClaw agora tem camada de memória muito mais séria</h3>
-            <p class="mt-4 text-lg leading-8 text-slate-600">As fontes oficiais descrevem MEMORY.md, notas diárias, hybrid retrieval, active memory e memory-wiki. A diferença correta deixou de ser existência de memória e passou a ser profundidade, filosofia e forma de uso dessa memória.</p>
-          </article>
-          <article class="premium-card rounded-[28px] p-7">
-            <p class="eyebrow text-teal-700">Correção 02</p>
-            <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Hermes não deve mais ser descrito como experiência apenas minimalista</h3>
-            <p class="mt-4 text-lg leading-8 text-slate-600">Hoje a leitura mais precisa é: Hermes não possui um painel nativo first-party equivalente ao Control UI do OpenClaw, mas já oferece TUI forte, gateway multicanal, API server e integração com Open WebUI.</p>
-          </article>
-          <article class="premium-card rounded-[28px] p-7">
-            <p class="eyebrow text-amber-700">Correção 03</p>
-            <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Segurança precisa ser comparada por superfície e governança</h3>
-            <p class="mt-4 text-lg leading-8 text-slate-600">OpenClaw tem histórico público de advisories e exige mais hardening por causa da superfície operacional. Hermes documenta defesa em camadas de forma mais coesa. Em ambos os casos, o tema real é governança, não slogan.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section-divider mt-16 pt-16 md:mt-20 md:pt-20">
-        <div class="grid gap-5 lg:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)]">
+        <div class="grid gap-5 lg:grid-cols-[minmax(0,1.12fr)_minmax(0,0.88fr)]">
           <div class="premium-card rounded-[32px] p-8 md:p-10">
-            <p class="eyebrow text-orange-600">Decisão em 30 segundos</p>
-            <h2 class="mt-4 max-w-2xl text-4xl font-[600] tracking-[-0.035em] text-slate-950 md:text-5xl">Se a sua pergunta é “qual plataforma se adapta melhor ao nosso contexto?”, a resposta já pode ser simplificada.</h2>
-            <p class="mt-5 reading-width text-xl font-[300] leading-8 text-slate-600">A melhor escolha não depende de quem tem mais features em lista, e sim de qual plataforma está mais alinhada com a maneira como sua organização realmente opera agentes no dia a dia.</p>
+            <p class="eyebrow text-violet-700">A diferença fundamental</p>
+            <h2 class="mt-4 max-w-2xl text-4xl font-[700] tracking-[-0.035em] text-slate-950 md:text-5xl">Os dois resolvem coordenação, mas partem de filosofias de arquitetura diferentes.</h2>
+            <p class="mt-5 reading-width text-xl font-[300] leading-8 text-slate-600">Hermes trata subagente como extensão tática do agente principal. OpenClaw trata multiagente como parte do desenho nativo do sistema. Isso muda como contexto, permissões, rastreabilidade e profundidade hierárquica são organizados.</p>
             <div class="mt-8 grid gap-4 md:grid-cols-3">
               <div class="rounded-2xl bg-slate-950 p-5 text-white">
-                <p class="eyebrow text-orange-300">Se você precisa</p>
-                <p class="mt-2 text-lg font-semibold">assistente sempre acessível, múltiplas interfaces e operação visual</p>
+                <p class="eyebrow text-orange-300">Hermes</p>
+                <p class="mt-2 text-lg font-semibold">Agente central com delegação sob demanda</p>
               </div>
               <div class="rounded-2xl border border-slate-200 bg-white p-5">
-                <p class="eyebrow text-slate-500">Se você precisa</p>
-                <p class="mt-2 text-lg font-semibold text-slate-900">aprendizado cumulativo, automação recorrente e captura de conhecimento</p>
+                <p class="eyebrow text-slate-500">OpenClaw</p>
+                <p class="mt-2 text-lg font-semibold text-slate-900">Ambiente com agentes, sessões e roteamento estruturados</p>
               </div>
               <div class="rounded-2xl border border-slate-200 bg-white p-5">
-                <p class="eyebrow text-slate-500">Se você precisa</p>
-                <p class="mt-2 text-lg font-semibold text-slate-900">um agente open-source self-hosted com tools e multicanal básico bem coberto</p>
+                <p class="eyebrow text-slate-500">Resultado</p>
+                <p class="mt-2 text-lg font-semibold text-slate-900">A hierarquia em OpenClaw é mais nativa; em Hermes, mais pragmática</p>
               </div>
             </div>
           </div>
 
           <div class="space-y-5">
             <div class="soft-card rounded-[28px] p-6">
-              <p class="eyebrow text-orange-600">Escolha OpenClaw</p>
-              <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Quando presença e superfície são o produto</h3>
-              <p class="mt-3 text-lg leading-8 text-slate-600">Faz mais sentido quando UX multissuperfície, dashboard, WebChat, browser/control plane, clientes e demonstrabilidade para stakeholders são parte central da proposta de valor.</p>
+              <p class="eyebrow text-orange-600">Leitura de 30 segundos</p>
+              <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Hermes = agente autônomo que sabe delegar</h3>
+              <p class="mt-3 text-lg leading-8 text-slate-600">Ideal quando você quer foco, isolamento de contexto, toolsets bem definidos e uma operação mais leve.</p>
             </div>
             <div class="soft-card rounded-[28px] p-6">
-              <p class="eyebrow text-teal-700">Escolha Hermes</p>
-              <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Quando o agente precisa melhorar com o tempo</h3>
-              <p class="mt-3 text-lg leading-8 text-slate-600">Faz mais sentido quando tarefas recorrentes, memória curada, criação de skills, subagentes, cron e integração com stack Python/ML têm impacto operacional contínuo.</p>
-            </div>
-            <div class="soft-card rounded-[28px] p-6">
-              <p class="eyebrow text-slate-500">Empate técnico</p>
-              <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Ambos já são plataformas de agentes completas</h3>
-              <p class="mt-3 text-lg leading-8 text-slate-600">Os dois atendem bem self-hosting, multicanal e uso intensivo de ferramentas. O desempate real está no centro gravitacional: control plane e presença versus trabalho cumulativo e orquestração técnica.</p>
+              <p class="eyebrow text-teal-700">Leitura de 30 segundos</p>
+              <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">OpenClaw = sistema onde vários agentes podem conviver e se encadear</h3>
+              <p class="mt-3 text-lg leading-8 text-slate-600">Ideal quando a organização precisa de roteamento, níveis de profundidade, identidade por agente e governança mais granular.</p>
             </div>
           </div>
         </div>
@@ -212,85 +194,141 @@
 
       <section class="section-divider mt-16 pt-16 md:mt-20 md:pt-20">
         <div class="max-w-3xl">
-          <p class="eyebrow text-orange-600">Comparação por dimensão</p>
-          <h2 class="mt-4 text-4xl font-[600] tracking-[-0.035em] text-slate-950 md:text-5xl">A diferença útil para decisão aparece quando se olha arquitetura, memória, superfície e governança em conjunto</h2>
+          <p class="eyebrow text-violet-700">Arquitetura visual</p>
+          <h2 class="mt-4 text-4xl font-[700] tracking-[-0.035em] text-slate-950 md:text-5xl">O desenho da árvore operacional deixa a diferença óbvia</h2>
+          <p class="mt-5 reading-width text-xl font-[300] leading-8 text-slate-600">Abaixo, a diferença de topologia: Hermes tende a uma árvore curta centrada no agente pai; OpenClaw suporta uma malha mais explícita de agentes, subagentes e níveis de profundidade.</p>
         </div>
 
-        <div class="mt-10 space-y-5">
+        <div class="mt-10 grid gap-5 lg:grid-cols-2">
           <article class="premium-card rounded-[30px] p-7 md:p-8">
-            <div class="grid gap-6 lg:grid-cols-[220px_minmax(0,1fr)]">
-              <div>
-                <p class="eyebrow text-slate-500">Arquitetura</p>
-                <h3 class="mt-3 text-3xl font-semibold tracking-[-0.03em] text-slate-950">Onde cada plataforma concentra o seu valor</h3>
+            <p class="eyebrow text-orange-600">Hermes</p>
+            <h3 class="mt-3 text-3xl font-semibold tracking-[-0.03em] text-slate-950">Hierarquia curta, orientada por task</h3>
+            <div class="mt-6 space-y-4">
+              <div class="rounded-2xl bg-slate-950 px-5 py-4 text-white">
+                <div class="text-sm uppercase tracking-[0.14em] text-orange-300">Agente pai</div>
+                <div class="mt-1 text-xl font-semibold">Decide, delega, consolida</div>
               </div>
-              <div class="grid gap-4 md:grid-cols-2">
-                <div class="rounded-2xl border border-orange-200 bg-orange-50/60 p-5">
-                  <p class="text-sm font-semibold uppercase tracking-[0.16em] text-orange-700">OpenClaw</p>
-                  <p class="mt-3 text-lg leading-8 text-slate-700">Núcleo em Node/TypeScript com forte ênfase em gateway unificado, control plane, superfícies, browser, nodes e operação visual mais explícita.</p>
+              <div class="grid gap-3 md:grid-cols-3">
+                <div class="rounded-2xl border border-orange-200 bg-orange-50/70 p-4">
+                  <div class="text-xs font-semibold uppercase tracking-[0.14em] text-orange-700">Filho 1</div>
+                  <p class="mt-2 text-base leading-7 text-slate-700">Pesquisa focada</p>
                 </div>
-                <div class="rounded-2xl border border-teal-200 bg-teal-50/60 p-5">
-                  <p class="text-sm font-semibold uppercase tracking-[0.16em] text-teal-700">Hermes Agent</p>
-                  <p class="mt-3 text-lg leading-8 text-slate-700">Núcleo em Python com múltiplos entry points e valor concentrado em tooling, automação, memória curada, subagentes e integração natural com ecossistema de ML.</p>
+                <div class="rounded-2xl border border-orange-200 bg-orange-50/70 p-4">
+                  <div class="text-xs font-semibold uppercase tracking-[0.14em] text-orange-700">Filho 2</div>
+                  <p class="mt-2 text-base leading-7 text-slate-700">Depuração ou análise</p>
+                </div>
+                <div class="rounded-2xl border border-orange-200 bg-orange-50/70 p-4">
+                  <div class="text-xs font-semibold uppercase tracking-[0.14em] text-orange-700">Filho 3</div>
+                  <p class="mt-2 text-base leading-7 text-slate-700">Execução paralela limitada</p>
                 </div>
               </div>
+              <p class="text-lg leading-8 text-slate-600">O padrão dominante é pai → filhos. O filho começa zerado, recebe goal/context e devolve um resumo final para o pai.</p>
             </div>
           </article>
 
           <article class="premium-card rounded-[30px] p-7 md:p-8">
-            <div class="grid gap-6 lg:grid-cols-[220px_minmax(0,1fr)]">
-              <div>
-                <p class="eyebrow text-slate-500">Memória</p>
-                <h3 class="mt-3 text-3xl font-semibold tracking-[-0.03em] text-slate-950">Os dois têm memória persistente; a diferença está no loop de aprendizagem</h3>
+            <p class="eyebrow text-teal-700">OpenClaw</p>
+            <h3 class="mt-3 text-3xl font-semibold tracking-[-0.03em] text-slate-950">Hierarquia mais nativa, com profundidade configurável</h3>
+            <div class="mt-6 space-y-4">
+              <div class="rounded-2xl bg-slate-950 px-5 py-4 text-white">
+                <div class="text-sm uppercase tracking-[0.14em] text-teal-300">Agente / runtime</div>
+                <div class="mt-1 text-xl font-semibold">Roteia, controla sessões e governa profundidade</div>
               </div>
-              <div class="grid gap-4 md:grid-cols-2">
-                <div class="rounded-2xl border border-orange-200 bg-white p-5">
-                  <p class="text-sm font-semibold uppercase tracking-[0.16em] text-orange-700">OpenClaw</p>
-                  <p class="mt-3 text-lg leading-8 text-slate-700">MEMORY.md, notas diárias, hybrid search, active memory e memory-wiki reforçam uma memória operacional cada vez mais real e útil.</p>
+              <div class="grid gap-3 md:grid-cols-2">
+                <div class="rounded-2xl border border-teal-200 bg-teal-50/70 p-4">
+                  <div class="text-xs font-semibold uppercase tracking-[0.14em] text-teal-700">Filhos</div>
+                  <p class="mt-2 text-base leading-7 text-slate-700">Runs em background com sessão própria</p>
                 </div>
-                <div class="rounded-2xl border border-teal-200 bg-white p-5">
-                  <p class="text-sm font-semibold uppercase tracking-[0.16em] text-teal-700">Hermes Agent</p>
-                  <p class="mt-3 text-lg leading-8 text-slate-700">MEMORY.md, USER.md, session search, skill creation/improvement e fluxo bounded favorecem captura de conhecimento mais curada e reutilizável.</p>
+                <div class="rounded-2xl border border-teal-200 bg-teal-50/70 p-4">
+                  <div class="text-xs font-semibold uppercase tracking-[0.14em] text-teal-700">Netos</div>
+                  <p class="mt-2 text-base leading-7 text-slate-700">Nested sub-agents via depth levels</p>
                 </div>
               </div>
+              <p class="text-lg leading-8 text-slate-600">O desenho aceita pai → filhos → netos, com announce chain, tool policy por profundidade e limites de spawn por agente.</p>
             </div>
           </article>
+        </div>
+      </section>
 
-          <article class="premium-card rounded-[30px] p-7 md:p-8">
-            <div class="grid gap-6 lg:grid-cols-[220px_minmax(0,1fr)]">
-              <div>
-                <p class="eyebrow text-slate-500">Superfícies e ecossistema</p>
-                <h3 class="mt-3 text-3xl font-semibold tracking-[-0.03em] text-slate-950">Amplitude não é o mesmo que profundidade operacional</h3>
-              </div>
-              <div class="grid gap-4 md:grid-cols-2">
-                <div class="rounded-2xl border border-orange-200 bg-white p-5">
-                  <p class="text-sm font-semibold uppercase tracking-[0.16em] text-orange-700">OpenClaw</p>
-                  <p class="mt-3 text-lg leading-8 text-slate-700">A narrativa oficial continua mais forte em surface area: canais, WebChat, dashboard, browser/control UI, providers e experiência mais demonstrável para públicos não técnicos.</p>
-                </div>
-                <div class="rounded-2xl border border-teal-200 bg-white p-5">
-                  <p class="text-sm font-semibold uppercase tracking-[0.16em] text-teal-700">Hermes Agent</p>
-                  <p class="mt-3 text-lg leading-8 text-slate-700">Também é claramente multicanal, mas o diferencial prático aparece mais em backends de execução, MCP, cron, subagentes e composição de workflows técnicos.</p>
-                </div>
-              </div>
-            </div>
+      <section class="section-divider mt-16 pt-16 md:mt-20 md:pt-20">
+        <div class="max-w-3xl">
+          <p class="eyebrow text-violet-700">Comparação objetiva</p>
+          <h2 class="mt-4 text-4xl font-[700] tracking-[-0.035em] text-slate-950 md:text-5xl">A diferença fica clara quando se olha oito dimensões ao mesmo tempo</h2>
+        </div>
+
+        <div class="premium-card mt-10 rounded-[30px] p-3 md:p-5">
+          <div class="table-wrap">
+            <table class="compare-table min-w-full text-lg leading-8 text-slate-700">
+              <thead>
+                <tr>
+                  <th>Dimensão</th>
+                  <th>Hermes</th>
+                  <th>OpenClaw</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="font-semibold text-slate-900">Modelo de orquestração</td>
+                  <td>Delegação via ferramenta delegate_task</td>
+                  <td>Roteamento multiagente e subagentes como parte do runtime</td>
+                </tr>
+                <tr>
+                  <td class="font-semibold text-slate-900">Papel do agente pai</td>
+                  <td>Centro da inteligência, passa contexto e consolida resultado</td>
+                  <td>Parte de uma topologia mais ampla, com coordenação mais distribuída</td>
+                </tr>
+                <tr>
+                  <td class="font-semibold text-slate-900">Subagentes</td>
+                  <td>Fresh conversation, isolados e orientados a tarefa</td>
+                  <td>Runs com sessão própria, rastreáveis e anunciáveis</td>
+                </tr>
+                <tr>
+                  <td class="font-semibold text-slate-900">Sub-subagentes</td>
+                  <td>Não são o padrão documentado</td>
+                  <td>Nested sub-agents documentados com depth levels</td>
+                </tr>
+                <tr>
+                  <td class="font-semibold text-slate-900">Contexto e memória</td>
+                  <td>Filho recebe apenas goal/context; resumo final volta ao pai</td>
+                  <td>Sessões isoladas por agente/subagente com governança de contexto</td>
+                </tr>
+                <tr>
+                  <td class="font-semibold text-slate-900">Permissões</td>
+                  <td>Toolsets simples por subagente</td>
+                  <td>Tool policy por depth, spawn limit, cascade stop, auth por agente</td>
+                </tr>
+                <tr>
+                  <td class="font-semibold text-slate-900">Paralelismo</td>
+                  <td>Pragmático e limitado</td>
+                  <td>Mais configurável no desenho da plataforma</td>
+                </tr>
+                <tr>
+                  <td class="font-semibold text-slate-900">Melhor encaixe</td>
+                  <td>Produtividade individual e automação focada</td>
+                  <td>Organizações, múltiplos papéis e coordenação mais profunda</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-divider mt-16 pt-16 md:mt-20 md:pt-20">
+        <div class="grid gap-5 lg:grid-cols-3">
+          <article class="premium-card rounded-[28px] p-7">
+            <p class="eyebrow text-orange-600">Contexto</p>
+            <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Hermes protege melhor contra contexto inchado</h3>
+            <p class="mt-4 text-lg leading-8 text-slate-600">Como o filho começa sem histórico e só sabe o que o pai passar, a delegação tende a ser mais limpa, previsível e barata em contexto. Isso favorece qualidade de execução para subtarefas bem definidas.</p>
           </article>
-
-          <article class="premium-card rounded-[30px] p-7 md:p-8">
-            <div class="grid gap-6 lg:grid-cols-[220px_minmax(0,1fr)]">
-              <div>
-                <p class="eyebrow text-slate-500">Interface</p>
-                <h3 class="mt-3 text-3xl font-semibold tracking-[-0.03em] text-slate-950">OpenClaw parece mais produto pronto; Hermes parece mais sistema composable</h3>
-              </div>
-              <div class="grid gap-4 md:grid-cols-2">
-                <div class="rounded-2xl border border-orange-200 bg-white p-5">
-                  <p class="text-sm font-semibold uppercase tracking-[0.16em] text-orange-700">OpenClaw</p>
-                  <p class="mt-3 text-lg leading-8 text-slate-700">Control UI e dashboard first-party seguem sendo um ativo forte para demos, gestão visual e adoção em times com stakeholders menos técnicos.</p>
-                </div>
-                <div class="rounded-2xl border border-teal-200 bg-white p-5">
-                  <p class="text-sm font-semibold uppercase tracking-[0.16em] text-teal-700">Hermes Agent</p>
-                  <p class="mt-3 text-lg leading-8 text-slate-700">A experiência é sólida para times técnicos via TUI, gateway e Open WebUI, mas sem a mesma centralidade de um painel visual nativo first-party.</p>
-                </div>
-              </div>
-            </div>
+          <article class="premium-card rounded-[28px] p-7">
+            <p class="eyebrow text-teal-700">Coordenação</p>
+            <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">OpenClaw oferece mais governança sobre a árvore</h3>
+            <p class="mt-4 text-lg leading-8 text-slate-600">Depth levels, announce chain, políticas por nível e identidade por agente tornam a estrutura mais adequada para ambientes em que a coordenação vira requisito de produto e não apenas detalhe técnico.</p>
+          </article>
+          <article class="premium-card rounded-[28px] p-7">
+            <p class="eyebrow text-violet-700">Decisão</p>
+            <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">A escolha depende de como você quer organizar responsabilidade</h3>
+            <p class="mt-4 text-lg leading-8 text-slate-600">Se a responsabilidade fica concentrada no agente pai, Hermes faz mais sentido. Se a responsabilidade precisa ser distribuída entre múltiplos agentes e níveis, OpenClaw tende a encaixar melhor.</p>
           </article>
         </div>
       </section>
@@ -298,179 +336,102 @@
       <section class="section-divider mt-16 pt-16 md:mt-20 md:pt-20">
         <div class="rounded-[36px] bg-slate-950 p-8 text-white shadow-[0_24px_70px_rgba(15,23,42,0.22)] md:p-12">
           <div class="max-w-3xl">
-            <p class="eyebrow text-orange-300">Segurança e governança</p>
-            <h2 class="mt-4 text-4xl font-[600] tracking-[-0.035em] text-white md:text-5xl">A decisão madura não é “quem é mais seguro?”, e sim “quem demanda mais disciplina operacional?”</h2>
-            <p class="mt-5 text-xl font-[300] leading-8 text-slate-300">Na data desta revisão, a leitura executiva mais responsável é: OpenClaw tem disclosure público e superfície operacional maiores; Hermes tem uma narrativa de defense-in-depth mais coesa em documentação. Nenhum dos dois elimina a necessidade de sandbox, revisão de tools/skills e controles de permissão.</p>
+            <p class="eyebrow text-orange-300">Riscos e trade-offs</p>
+            <h2 class="mt-4 text-4xl font-[700] tracking-[-0.035em] text-white md:text-5xl">Nenhum dos dois é “melhor” no vazio; cada um embute um custo de operação diferente.</h2>
+            <p class="mt-5 text-xl font-[300] leading-8 text-slate-300">A diferença de arquitetura gera vantagens distintas, mas também impõe custos diferentes em aprendizado, governança, rastreabilidade e simplicidade operacional.</p>
           </div>
           <div class="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             <div class="rounded-[24px] border border-white/10 bg-white/5 p-5">
-              <p class="eyebrow text-slate-400">OpenClaw</p>
-              <h3 class="mt-3 text-xl font-semibold text-white">CVE confirmado</h3>
-              <p class="mt-3 text-base leading-7 text-slate-300">CVE-2026-25253 aparece em fonte primária do MITRE/CVE e reforça a necessidade de governança sobre exposição e configuração.</p>
+              <p class="eyebrow text-slate-400">Trade-off Hermes</p>
+              <h3 class="mt-3 text-xl font-semibold text-white">Simplicidade com menos profundidade hierárquica</h3>
+              <p class="mt-3 text-base leading-7 text-slate-300">Excelente para delegação tática, mas menos natural para árvores organizacionais complexas.</p>
             </div>
             <div class="rounded-[24px] border border-white/10 bg-white/5 p-5">
-              <p class="eyebrow text-slate-400">OpenClaw</p>
-              <h3 class="mt-3 text-xl font-semibold text-white">30 advisories públicos no repositório</h3>
-              <p class="mt-3 text-base leading-7 text-slate-300">A transparência ajuda o gestor a avaliar risco, mas também indica que a superfície e o ritmo de disclosure são mais visíveis.</p>
+              <p class="eyebrow text-slate-400">Trade-off Hermes</p>
+              <h3 class="mt-3 text-xl font-semibold text-white">Dependência forte do pai</h3>
+              <p class="mt-3 text-base leading-7 text-slate-300">Como o filho recebe pouco contexto e devolve resumo, o pai precisa ser muito bom em framing e consolidação.</p>
             </div>
             <div class="rounded-[24px] border border-white/10 bg-white/5 p-5">
-              <p class="eyebrow text-slate-400">Hermes</p>
-              <h3 class="mt-3 text-xl font-semibold text-white">Segurança em sete camadas na documentação</h3>
-              <p class="mt-3 text-base leading-7 text-slate-300">Autorização, aprovação de comandos perigosos, isolamento por container, filtragem de credenciais e separação entre sessões aparecem de forma clara e prescritiva.</p>
+              <p class="eyebrow text-slate-400">Trade-off OpenClaw</p>
+              <h3 class="mt-3 text-xl font-semibold text-white">Maior poder, maior governança</h3>
+              <p class="mt-3 text-base leading-7 text-slate-300">Depth, sessões, delegates e routing aumentam capacidade, mas também aumentam complexidade operacional.</p>
             </div>
             <div class="rounded-[24px] border border-white/10 bg-white/5 p-5">
-              <p class="eyebrow text-slate-400">Cautela</p>
-              <h3 class="mt-3 text-xl font-semibold text-white">Zero advisories públicos não significa risco zero</h3>
-              <p class="mt-3 text-base leading-7 text-slate-300">Significa apenas ausência de advisories públicos no repositório até a data da coleta. A recomendação segue sendo revisão, isolamento e escopo mínimo de permissões.</p>
+              <p class="eyebrow text-slate-400">Trade-off OpenClaw</p>
+              <h3 class="mt-3 text-xl font-semibold text-white">Mais estrutura para administrar</h3>
+              <p class="mt-3 text-base leading-7 text-slate-300">A plataforma faz mais sentido quando múltiplos agentes e múltiplos canais realmente existem como necessidade de negócio.</p>
             </div>
           </div>
         </div>
       </section>
 
       <section class="section-divider mt-16 pt-16 md:mt-20 md:pt-20">
-        <div class="max-w-3xl">
-          <p class="eyebrow text-orange-600">Tabela de decisão rápida</p>
-          <h2 class="mt-4 text-4xl font-[600] tracking-[-0.035em] text-slate-950 md:text-5xl">Visão comparativa lado a lado</h2>
-        </div>
-        <div class="premium-card table-wrap mt-10 rounded-[28px] p-3 md:p-4">
-          <table class="compare-table min-w-full text-base text-slate-700">
-            <thead>
-              <tr>
-                <th>Dimensão</th>
-                <th>OpenClaw</th>
-                <th>Hermes Agent</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="font-semibold text-slate-950">Nome / tração</td>
-                <td>Nome correto confirmado: OpenClaw. Exibe tração pública muito maior no GitHub na data da coleta.</td>
-                <td>Hermes Agent com tração menor, mas ainda muito relevante para uma plataforma recente e com forte aderência técnica.</td>
-              </tr>
-              <tr>
-                <td class="font-semibold text-slate-950">Stack principal</td>
-                <td>Node / TypeScript</td>
-                <td>Python</td>
-              </tr>
-              <tr>
-                <td class="font-semibold text-slate-950">Centro de gravidade</td>
-                <td>Superfícies, presença, control plane e operação visual</td>
-                <td>Memória curada, automação recorrente, tooling e workflows cumulativos</td>
-              </tr>
-              <tr>
-                <td class="font-semibold text-slate-950">Memória</td>
-                <td>MEMORY.md, notas diárias, hybrid search, active memory, memory-wiki</td>
-                <td>MEMORY.md, USER.md, session search, skills, Honcho opcional</td>
-              </tr>
-              <tr>
-                <td class="font-semibold text-slate-950">Interface</td>
-                <td>Control UI, dashboard, WebChat, browser/control plane mais visíveis</td>
-                <td>TUI forte, gateway, API e Open WebUI; menos operador visual nativo</td>
-              </tr>
-              <tr>
-                <td class="font-semibold text-slate-950">Multicanal</td>
-                <td>Amplo e muito visível na narrativa oficial</td>
-                <td>Também amplo; diferencial aparece mais em composição de ferramentas e execução</td>
-              </tr>
-              <tr>
-                <td class="font-semibold text-slate-950">Segurança</td>
-                <td>Maior superfície e histórico público mais visível de advisories</td>
-                <td>Defesa em camadas melhor articulada em docs; ainda exige sandbox e revisão</td>
-              </tr>
-              <tr>
-                <td class="font-semibold text-slate-950">Melhor fit</td>
-                <td>Assistente pessoal multissuperfície, demos, UX canal-first e operação visual</td>
-                <td>Trabalho recorrente, automação, times técnicos e integração com stack Python/ML</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section class="section-divider mt-16 pt-16 md:mt-20 md:pt-20">
-        <div class="grid gap-5 lg:grid-cols-3">
-          <div class="lg:col-span-2 premium-card rounded-[30px] p-8 md:p-10">
-            <p class="eyebrow text-orange-600">Recomendação executiva</p>
-            <h2 class="mt-4 text-4xl font-[600] tracking-[-0.035em] text-slate-950 md:text-5xl">A melhor recomendação é por cenário de uso, não por vencedor absoluto</h2>
-            <p class="mt-5 reading-width text-xl font-[300] leading-8 text-slate-600">Se o objetivo é operar um agente que pareça produto pronto, acessível em múltiplas superfícies e com forte componente visual, OpenClaw continua mais convincente. Se o objetivo é capturar conhecimento, iterar workflows, construir memória operacional e melhorar com o uso, Hermes é a aposta mais alinhada.</p>
-          </div>
-          <div class="soft-card rounded-[28px] p-6">
-            <p class="eyebrow text-slate-500">Resumo final</p>
-            <p class="mt-4 text-2xl font-semibold tracking-[-0.03em] text-slate-950">OpenClaw vence em presença.</p>
-            <p class="mt-2 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Hermes vence em aprendizagem operacional.</p>
-            <p class="mt-4 text-lg leading-8 text-slate-600">O empate técnico existe em multicanal e tools. O desempate vem do modo como sua organização aprende, governa e expõe o agente.</p>
-          </div>
-        </div>
-
-        <div class="mt-8 grid gap-4 md:grid-cols-3">
-          <article class="premium-card rounded-[26px] p-6">
-            <p class="eyebrow text-orange-600">Cenário A</p>
-            <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Escolha OpenClaw</h3>
-            <p class="mt-3 text-lg leading-8 text-slate-600">Quando a priorização é UX multissuperfície, painel, demonstração para stakeholders, presença em muitos touchpoints e sensação de produto pronto.</p>
-          </article>
-          <article class="premium-card rounded-[26px] p-6">
-            <p class="eyebrow text-teal-700">Cenário B</p>
-            <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Escolha Hermes</h3>
-            <p class="mt-3 text-lg leading-8 text-slate-600">Quando a priorização é automação recorrente, conhecimento acumulativo, agentes que melhoram com o tempo e integração técnica profunda com stack Python/ML.</p>
-          </article>
-          <article class="premium-card rounded-[26px] p-6">
-            <p class="eyebrow text-amber-700">Cenário C</p>
-            <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Teste comparativo controlado</h3>
-            <p class="mt-3 text-lg leading-8 text-slate-600">Se a sua operação tem dúvidas reais, compare os dois em um workflow recorrente com medição de setup, governança, throughput, qualidade e custo de operação ao longo de 2 a 4 semanas.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section-divider mt-16 pt-16 md:mt-20 md:pt-20">
-        <div class="grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.8fr)]">
-          <div class="premium-card rounded-[30px] p-8 md:p-10">
-            <p class="eyebrow text-orange-600">Metodologia e fontes</p>
-            <h2 class="mt-4 text-4xl font-[600] tracking-[-0.035em] text-slate-950 md:text-5xl">Pesquisa refeita com base em fontes primárias e revisão executiva</h2>
-            <p class="mt-5 text-xl font-[300] leading-8 text-slate-600">A atualização desta página foi construída a partir de pesquisa pública em inglês e português, com foco em docs oficiais, repositórios oficiais, APIs públicas do GitHub, site oficial, trust center e base CVE/MITRE.</p>
-            <div class="mt-8 grid gap-4 md:grid-cols-2">
-              <div class="rounded-2xl border border-slate-200 bg-white p-5">
-                <p class="text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">OpenClaw</p>
-                <ul class="mt-3 space-y-2 text-lg leading-8 text-slate-700">
-                  <li><a class="underline decoration-slate-300 underline-offset-4" href="https://github.com/openclaw/openclaw" target="_blank" rel="noreferrer">Repositório oficial</a></li>
-                  <li><a class="underline decoration-slate-300 underline-offset-4" href="https://openclaw.ai/" target="_blank" rel="noreferrer">Site oficial</a></li>
-                  <li><a class="underline decoration-slate-300 underline-offset-4" href="https://docs.openclaw.ai/pt-BR" target="_blank" rel="noreferrer">Documentação em português</a></li>
-                  <li><a class="underline decoration-slate-300 underline-offset-4" href="https://trust.openclaw.ai/" target="_blank" rel="noreferrer">Trust Center</a></li>
-                  <li><a class="underline decoration-slate-300 underline-offset-4" href="https://cveawg.mitre.org/api/cve/CVE-2026-25253" target="_blank" rel="noreferrer">MITRE / CVE-2026-25253</a></li>
-                </ul>
+        <div class="grid gap-5 lg:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)]">
+          <div class="premium-card rounded-[32px] p-8 md:p-10">
+            <p class="eyebrow text-violet-700">Recomendação executiva</p>
+            <h2 class="mt-4 max-w-2xl text-4xl font-[700] tracking-[-0.035em] text-slate-950 md:text-5xl">Use Hermes para produtividade individual intensa. Use OpenClaw quando a topologia multiagente virar o problema principal.</h2>
+            <p class="mt-5 reading-width text-xl font-[300] leading-8 text-slate-600">Em linguagem simples: Hermes é mais natural quando você quer um operador principal muito forte com capacidade de chamar especialistas temporários. OpenClaw é mais natural quando você quer um sistema em que múltiplos agentes possam coexistir, ser roteados e operar com regras próprias.</p>
+            <div class="mt-8 grid gap-4 md:grid-cols-3">
+              <div class="rounded-2xl bg-slate-950 p-5 text-white">
+                <p class="eyebrow text-orange-300">Escolha Hermes</p>
+                <p class="mt-2 text-lg font-semibold">Se a prioridade é execução, foco e delegação pragmática</p>
               </div>
               <div class="rounded-2xl border border-slate-200 bg-white p-5">
-                <p class="text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">Hermes Agent</p>
-                <ul class="mt-3 space-y-2 text-lg leading-8 text-slate-700">
-                  <li><a class="underline decoration-slate-300 underline-offset-4" href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noreferrer">Repositório oficial</a></li>
-                  <li><a class="underline decoration-slate-300 underline-offset-4" href="https://hermes-agent.nousresearch.com/" target="_blank" rel="noreferrer">Site oficial</a></li>
-                  <li><a class="underline decoration-slate-300 underline-offset-4" href="https://hermes-agent.nousresearch.com/docs/" target="_blank" rel="noreferrer">Documentação oficial</a></li>
-                  <li><a class="underline decoration-slate-300 underline-offset-4" href="https://hermes-agent.nousresearch.com/docs/user-guide/security/" target="_blank" rel="noreferrer">Guia de segurança</a></li>
-                  <li><a class="underline decoration-slate-300 underline-offset-4" href="https://hermes-agent.nousresearch.com/docs/user-guide/messaging/open-webui/" target="_blank" rel="noreferrer">Integração Open WebUI</a></li>
-                </ul>
+                <p class="eyebrow text-slate-500">Escolha OpenClaw</p>
+                <p class="mt-2 text-lg font-semibold text-slate-900">Se a prioridade é hierarquia, roteamento e governança de agentes</p>
+              </div>
+              <div class="rounded-2xl border border-slate-200 bg-white p-5">
+                <p class="eyebrow text-slate-500">Mensagem final</p>
+                <p class="mt-2 text-lg font-semibold text-slate-900">A sua percepção está certa: a diferença mora na organização da hierarquia</p>
               </div>
             </div>
           </div>
-          <aside class="soft-card rounded-[28px] p-6 md:p-7">
-            <p class="eyebrow text-slate-500">Nota de cautela</p>
-            <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">O que deliberadamente não foi repetido</h3>
-            <p class="mt-3 text-lg leading-8 text-slate-600">Alegações sem confirmação primária robusta ficaram de fora. Em especial, teses de incidentes de supply chain que apareceram em blogs e páginas secundárias, mas não alcançaram o nível de evidência desejado para uma leitura executiva responsável.</p>
-            <p class="mt-4 text-lg leading-8 text-slate-600">Também vale lembrar que estrelas, releases e advisories são números instantâneos e variam ao longo do tempo. Por isso esta página marca explicitamente a data da coleta.</p>
-          </aside>
+
+          <div class="space-y-5">
+            <div class="soft-card rounded-[28px] p-6">
+              <p class="eyebrow text-orange-600">Quando Hermes vence</p>
+              <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Agente pessoal, automação recorrente, contexto limpo</h3>
+              <p class="mt-3 text-lg leading-8 text-slate-600">Especialmente forte quando memória curada, skills, cron, tooling e subagentes focados trazem ganho acumulativo.</p>
+            </div>
+            <div class="soft-card rounded-[28px] p-6">
+              <p class="eyebrow text-teal-700">Quando OpenClaw vence</p>
+              <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">Ambiente multiagente, múltiplos canais, delegates e profundidade</h3>
+              <p class="mt-3 text-lg leading-8 text-slate-600">Especialmente forte quando identidade por agente, políticas por profundidade e runtime de coordenação são requisitos reais.</p>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="section-divider mt-16 pt-16 md:mt-20 md:pt-20">
-        <div class="max-w-3xl">
-          <p class="eyebrow text-orange-600">Última dobra</p>
-          <h2 class="mt-4 text-4xl font-[600] tracking-[-0.035em] text-slate-950 md:text-5xl">Diagrama Excalidraw da decisão</h2>
-          <p class="mt-5 reading-width text-xl font-[300] leading-8 text-slate-600">Quando a comparação fica densa demais em texto, a leitura visual ajuda a fixar a lógica correta: OpenClaw como plataforma orientada a superfícies e Hermes como plataforma orientada a trabalho cumulativo.</p>
-        </div>
-        <div class="premium-card mt-10 rounded-[32px] p-4 md:p-6">
-          <img src="./assets/openclaw-vs-hermes-decision-map.png" alt="Diagrama Excalidraw comparando OpenClaw e Hermes Agent" class="w-full rounded-[24px] border border-slate-200 bg-white object-contain" />
-          <div class="mt-5 flex flex-wrap gap-3 text-sm">
-            <a href="./assets/openclaw-vs-hermes-decision-map.excalidraw" class="metric-chip rounded-full px-4 py-2 text-slate-700 transition hover:text-slate-950 hover:underline">Baixar arquivo .excalidraw</a>
-            <a href="https://excalidraw.com/#json=xCrBhIJbdqq2F32wdHFGw,a4w8ZYO9We_Qt0vphPYMaQ" target="_blank" rel="noreferrer" class="metric-chip rounded-full px-4 py-2 text-slate-700 transition hover:text-slate-950 hover:underline">Abrir versão online no Excalidraw</a>
+        <div class="grid gap-8 lg:grid-cols-2">
+          <div>
+            <p class="eyebrow text-violet-700">Fontes e método</p>
+            <h2 class="mt-4 text-4xl font-[700] tracking-[-0.035em] text-slate-950 md:text-5xl">A apresentação foi construída sobre documentação pública e leitura comparativa direta</h2>
+            <p class="mt-5 reading-width text-xl font-[300] leading-8 text-slate-600">A síntese abaixo mistura fatos documentados e inferência arquitetural explícita. Onde a comparação depende de interpretação, a leitura foi feita a partir da forma como cada projeto descreve runtime, sessões, subagentes e governança.</p>
           </div>
+          <div class="premium-card rounded-[28px] p-6 md:p-7">
+            <p class="eyebrow text-slate-500">Nota de confiança</p>
+            <p class="mt-4 text-lg leading-8 text-slate-600">Alta confiança para fatos extraídos da documentação oficial. Confiança média para conclusões comparativas de arquitetura, porque elas dependem de leitura estrutural das features documentadas, não de um benchmark oficial entre as duas plataformas.</p>
+          </div>
+        </div>
+
+        <div class="mt-10 grid gap-5 lg:grid-cols-2">
+          <article class="soft-card rounded-[28px] p-6 md:p-7">
+            <p class="eyebrow text-slate-500">Fontes Hermes</p>
+            <ul class="mt-5 space-y-3 text-lg leading-8 text-slate-600">
+              <li>Hermes Agent Documentation — visão geral e arquitetura do produto</li>
+              <li>Hermes Subagent Delegation — delegate_task, fresh conversation e isolamento de contexto</li>
+              <li>Hermes Tools & Toolsets — modelo de permissões por toolset</li>
+            </ul>
+          </article>
+          <article class="soft-card rounded-[28px] p-6 md:p-7">
+            <p class="eyebrow text-slate-500">Fontes OpenClaw</p>
+            <ul class="mt-5 space-y-3 text-lg leading-8 text-slate-600">
+              <li>OpenClaw Overview — gateway, agentes e superfícies</li>
+              <li>OpenClaw Sub-Agents — nested sub-agents, depth levels, announce chain e concurrency</li>
+              <li>OpenClaw Multi-Agent Routing e Delegate Architecture — agentes isolados, delegates e governança</li>
+            </ul>
+          </article>
         </div>
       </section>
     </div>
