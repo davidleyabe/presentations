@@ -619,7 +619,7 @@
             <p class="eyebrow text-indigo-700">Comparativo do exemplo</p>
             <h3 class="mt-2 text-3xl font-semibold tracking-[-0.03em] text-slate-950">Como a conta muda por regime neste mesmo produto</h3>
             <p class="mt-3 text-lg leading-8 text-slate-600">
-              Aqui, o objetivo é didático: comparar a carga do regime sobre a mesma operação de venda. O Simples está calculado pela regra oficial. Lucro Presumido e Lucro Real abaixo são <strong>modelos gerenciais simplificados</strong> para mostrar a lógica e a sensibilidade da decisão.
+              Aqui eu abri mais a matemática. Primeiro mostramos a operação econômica igual para os três regimes. Depois mostramos <strong>como cada regime morde essa mesma margem</strong>. O Simples está em regra oficial; Presumido e Real continuam sendo <strong>modelos gerenciais simplificados</strong>, porque a camada estadual e o NCM podem alterar a foto final.
             </p>
           </div>
 
@@ -627,75 +627,154 @@
             <table class="comparison-table w-full text-left">
               <thead>
                 <tr>
-                  <th class="min-w-[220px]">Indicador</th>
-                  <th class="min-w-[220px]">Simples Nacional</th>
-                  <th class="min-w-[220px]">Lucro Presumido</th>
-                  <th class="min-w-[220px]">Lucro Real</th>
+                  <th class="min-w-[230px]">Indicador</th>
+                  <th class="min-w-[240px]">Simples Nacional</th>
+                  <th class="min-w-[240px]">Lucro Presumido</th>
+                  <th class="min-w-[240px]">Lucro Real</th>
                 </tr>
               </thead>
               <tbody class="text-base md:text-lg">
                 <tr>
+                  <td class="font-semibold text-slate-900">Unidades vendidas</td>
+                  <td>2.083</td>
+                  <td>2.083</td>
+                  <td>2.083</td>
+                </tr>
+                <tr class="highlight-row">
                   <td class="font-semibold text-slate-900">Receita mensal</td>
                   <td>R$ 249.960</td>
                   <td>R$ 249.960</td>
                   <td>R$ 249.960</td>
                 </tr>
+                <tr>
+                  <td class="font-semibold text-slate-900">Custo posto no Brasil</td>
+                  <td>R$ 105.192</td>
+                  <td>R$ 105.192</td>
+                  <td>R$ 105.192</td>
+                </tr>
                 <tr class="highlight-row">
-                  <td class="font-semibold text-slate-900">Margem de contribuição antes do regime</td>
-                  <td>R$ 69.780</td>
-                  <td>R$ 69.780</td>
-                  <td>R$ 69.780</td>
+                  <td class="font-semibold text-slate-900">Comissão marketplace</td>
+                  <td>R$ 37.494</td>
+                  <td>R$ 37.494</td>
+                  <td>R$ 37.494</td>
                 </tr>
                 <tr>
+                  <td class="font-semibold text-slate-900">Frete + embalagem</td>
+                  <td>R$ 37.494</td>
+                  <td>R$ 37.494</td>
+                  <td>R$ 37.494</td>
+                </tr>
+                <tr class="highlight-row">
+                  <td class="font-semibold text-slate-900">Margem de contribuição antes do regime</td>
+                  <td class="font-semibold text-slate-950">R$ 69.780</td>
+                  <td class="font-semibold text-slate-950">R$ 69.780</td>
+                  <td class="font-semibold text-slate-950">R$ 69.780</td>
+                </tr>
+                <tr>
+                  <td class="font-semibold text-slate-900">Base lógica do imposto</td>
+                  <td>Receita do mês via Anexo I</td>
+                  <td>Receita + presunção para IRPJ/CSLL</td>
+                  <td>Lucro efetivo + PIS/COFINS não cumulativos</td>
+                </tr>
+                <tr class="highlight-row">
                   <td class="font-semibold text-slate-900">Imposto/regime sobre a venda</td>
                   <td class="font-bold text-indigo-700">R$ 28.469</td>
                   <td class="font-bold text-amber-700">R$ 14.823</td>
                   <td class="font-bold text-slate-700">R$ 28.755</td>
                 </tr>
-                <tr class="highlight-row">
+                <tr>
                   <td class="font-semibold text-slate-900">Alíquota/efeito estimado</td>
                   <td>11,39% efetivos do Anexo I</td>
                   <td>5,93% federais básicos sobre a receita</td>
                   <td>~11,50% neste modelo com créditos elegíveis</td>
                 </tr>
-                <tr>
-                  <td class="font-semibold text-slate-900">Sobra após regime (antes de despesas fixas)</td>
+                <tr class="highlight-row">
+                  <td class="font-semibold text-slate-900">Sobra após regime<br/><span class="text-sm font-normal text-slate-500">antes de despesas fixas e pró-labore</span></td>
                   <td class="font-bold text-indigo-700">R$ 41.311</td>
                   <td class="font-bold text-emerald-700">R$ 54.958</td>
                   <td class="font-bold text-slate-900">R$ 41.026</td>
                 </tr>
-                <tr class="highlight-row">
+                <tr>
                   <td class="font-semibold text-slate-900">Leitura executiva</td>
-                  <td>Seguro e simples; ainda competitivo</td>
-                  <td>Pode parecer melhor no papel em cenários específicos</td>
-                  <td>Precisa crédito real e operação madura para fechar melhor</td>
+                  <td>Mais caro que o Presumido neste recorte, mas simples e previsível</td>
+                  <td>Parece melhor neste modelo porque a conta estadual não foi aberta até o fim</td>
+                  <td>Empata com o Simples se o crédito capturado ainda for modesto</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
           <div class="px-6 py-6 md:px-8 md:py-8">
-            <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            <div class="grid gap-5 xl:grid-cols-3">
+              <article class="rounded-[24px] border border-indigo-100 bg-indigo-50 p-6">
+                <p class="text-sm font-semibold uppercase tracking-[0.14em] text-indigo-700">Abertura do Simples</p>
+                <h4 class="mt-3 text-2xl font-semibold text-slate-950">Regra oficial do DAS</h4>
+                <div class="mt-4 space-y-3 text-base leading-7 text-slate-700">
+                  <p><strong>RBT12:</strong> R$ 2.999.520</p>
+                  <p><strong>Faixa:</strong> Anexo I faixa 5</p>
+                  <p><strong>Alíquota nominal:</strong> 14,3%</p>
+                  <p><strong>Parcela a deduzir:</strong> R$ 87.300</p>
+                  <p><strong>Alíquota efetiva:</strong> 11,39%</p>
+                  <p><strong>DAS do mês:</strong> <span class="font-bold text-indigo-700">R$ 28.469</span></p>
+                </div>
+                <p class="mt-4 text-sm leading-7 text-slate-500">
+                  Fórmula: <strong>(RBT12 × alíquota nominal - parcela a deduzir) ÷ RBT12</strong>. Aqui não tem interpretação: é o cálculo oficial do regime.
+                </p>
+              </article>
+
+              <article class="rounded-[24px] border border-amber-100 bg-amber-50 p-6">
+                <p class="text-sm font-semibold uppercase tracking-[0.14em] text-amber-700">Abertura do Presumido</p>
+                <h4 class="mt-3 text-2xl font-semibold text-slate-950">Corte federal simplificado</h4>
+                <div class="mt-4 space-y-3 text-base leading-7 text-slate-700">
+                  <p><strong>PIS + COFINS cumulativos:</strong> R$ 9.124</p>
+                  <p><strong>IRPJ estimado:</strong> R$ 3.000</p>
+                  <p><strong>CSLL estimada:</strong> R$ 2.700</p>
+                  <p><strong>Total do bloco:</strong> <span class="font-bold text-amber-700">R$ 14.823</span></p>
+                  <p><strong>Sobra após esse bloco:</strong> <span class="font-bold text-emerald-700">R$ 54.958</span></p>
+                </div>
+                <p class="mt-4 text-sm leading-7 text-slate-500">
+                  Este número mostra por que o Presumido <em>parece</em> tão atraente no papel. Mas ele ainda precisa conversar com ICMS, ICMS-ST e particularidades do produto para virar decisão real.
+                </p>
+              </article>
+
+              <article class="rounded-[24px] border border-slate-200 bg-slate-50 p-6">
+                <p class="text-sm font-semibold uppercase tracking-[0.14em] text-slate-700">Abertura do Lucro Real</p>
+                <h4 class="mt-3 text-2xl font-semibold text-slate-950">Crédito ajuda, mas não resolve sozinho</h4>
+                <div class="mt-4 space-y-3 text-base leading-7 text-slate-700">
+                  <p><strong>PIS/COFINS sobre a saída:</strong> R$ 23.121</p>
+                  <p><strong>Créditos capturados no modelo:</strong> R$ 7.322</p>
+                  <p><strong>PIS/COFINS líquidos:</strong> R$ 15.800</p>
+                  <p><strong>Base de IRPJ/CSLL:</strong> R$ 53.981</p>
+                  <p><strong>IRPJ + CSLL:</strong> R$ 12.955</p>
+                  <p><strong>Total do bloco:</strong> <span class="font-bold text-slate-900">R$ 28.755</span></p>
+                </div>
+                <p class="mt-4 text-sm leading-7 text-slate-500">
+                  Moral: o Lucro Real só passa a dominar quando os créditos são relevantes de verdade e a empresa consegue capturá-los sem erro operacional.
+                </p>
+              </article>
+            </div>
+
+            <div class="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
               <div class="rounded-2xl bg-indigo-50 p-5 border border-indigo-100">
                 <p class="text-sm font-semibold uppercase tracking-[0.14em] text-indigo-700">O que o Simples prova</p>
-                <p class="mt-3 text-base leading-7 text-slate-700">Com RBT12 de R$ 3 milhões, o DAS exato já vai para <strong>R$ 28,5 mil/mês</strong>. Isso é bem mais concreto do que falar só em “limite legal”.</p>
+                <p class="mt-3 text-base leading-7 text-slate-700">Com RBT12 perto de R$ 3 milhões, o DAS exato já vai para <strong>R$ 28,5 mil/mês</strong>. Agora dá para sentir o peso do regime em dinheiro, não só em teoria.</p>
               </div>
               <div class="rounded-2xl bg-amber-50 p-5 border border-amber-100">
                 <p class="text-sm font-semibold uppercase tracking-[0.14em] text-amber-700">O que o Presumido sugere</p>
-                <p class="mt-3 text-base leading-7 text-slate-700">Se a camada estadual não adicionar muita fricção, o Presumido pode começar a ficar atraente no papel. É exatamente por isso que a simulação por produto importa.</p>
+                <p class="mt-3 text-base leading-7 text-slate-700">Se você olhar só a camada federal, o Presumido parece respirar melhor. É por isso que o empresário precisa simular SKU por SKU — senão ele troca de regime com base em uma meia verdade.</p>
               </div>
               <div class="rounded-2xl bg-slate-50 p-5 border border-slate-200">
                 <p class="text-sm font-semibold uppercase tracking-[0.14em] text-slate-700">O que o Real exige</p>
-                <p class="mt-3 text-base leading-7 text-slate-700">Lucro Real não ganha só por existir crédito. Ele ganha quando o crédito é relevante, recorrente e bem capturado na prática, sem virar custo operacional extra.</p>
+                <p class="mt-3 text-base leading-7 text-slate-700">Lucro Real não ganha por promessa de crédito. Ele ganha quando o crédito recorrente é alto, bem documentado e superior ao custo operacional extra do regime.</p>
               </div>
               <div class="rounded-2xl bg-emerald-50 p-5 border border-emerald-100">
                 <p class="text-sm font-semibold uppercase tracking-[0.14em] text-emerald-700">Moral do exemplo</p>
-                <p class="mt-3 text-base leading-7 text-slate-700">Em ~R$ 250 mil/mês, a decisão já não deveria ser baseada em palestra. Ela deve ser baseada em <strong>planilha por SKU/NCM/UF</strong>.</p>
+                <p class="mt-3 text-base leading-7 text-slate-700">Em ~R$ 250 mil/mês, o empresário já deveria tomar decisão com <strong>planilha por SKU/NCM/UF</strong>, e não com regra genérica de palestra.</p>
               </div>
             </div>
 
             <p class="mt-6 text-sm leading-7 text-slate-500">
-              Premissas do modelo: câmbio de R$ 5,00/US$, 2.083 unidades/mês, preço de venda de R$ 120,00, comissão de marketplace de 15%, e custo posto no Brasil já carregando os tributos principais da importação. Leis de referência: LC 123/2006 (art. 18 e Anexo I), Lei 9.718/1998 (art. 13), Lei 10.637/2002, Lei 10.833/2003 e Lei 10.865/2004. Este bloco é gerencial e ilustrativo; a conta final depende do NCM e da UF.
+              Premissas do modelo: câmbio de R$ 5,00/US$, 2.083 unidades/mês, preço de venda de R$ 120,00, comissão de marketplace de 15%, frete + embalagem de R$ 18,00 por unidade e custo posto no Brasil de R$ 50,50 por unidade. Leis de referência: LC 123/2006 (art. 18 e Anexo I), Lei 9.718/1998 (art. 13), Lei 10.637/2002, Lei 10.833/2003 e Lei 10.865/2004. Este bloco é gerencial e ilustrativo; a camada estadual precisa ser recalculada por NCM e UF para uma decisão final.
             </p>
           </div>
         </div>
